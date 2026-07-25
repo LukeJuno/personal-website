@@ -7,7 +7,7 @@ export default function Wordmark({ compact = false }) {
         <span className="wordmark-dot" aria-hidden="true" />
       </span>
       {!compact && (
-        <span className="wordmark-descriptor">Creative + copywriter</span>
+        <span className="wordmark-descriptor">Creative + writer</span>
       )}
     </span>
   );
