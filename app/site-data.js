@@ -1,8 +1,73 @@
 export const primaryNav = [
   { href: "/about", label: "About" },
-  { href: "/work", label: "Work" },
+  { href: "/portfolio", label: "Portfolio" },
   { href: "/services", label: "Services" },
   { href: "/open-tabs", label: "Open Tabs" },
+];
+
+export const brands = [
+  { name: "Dove", logo: "/brands/dove.svg", shape: "standard" },
+  { name: "Vaseline", logo: "/brands/vaseline.svg", shape: "wide" },
+  { name: "Lululemon", logo: "/brands/lululemon.svg", shape: "wide" },
+  { name: "Visa", logo: "/brands/visa.svg", shape: "standard" },
+  { name: "AIA", logo: "/brands/aia.svg", shape: "standard" },
+  { name: "HSBC", logo: "/brands/hsbc.svg", shape: "wide" },
+  { name: "MetLife", logo: "/brands/metlife.svg", shape: "wide" },
+  {
+    name: "Marriott Bonvoy",
+    logo: "/brands/marriott-bonvoy.svg",
+    shape: "wide",
+  },
+  {
+    name: "Mandarin Oriental",
+    logo: "/brands/mandarin-oriental.svg",
+    shape: "wide",
+  },
+  {
+    name: "Hong Kong Disneyland",
+    logo: "/brands/hong-kong-disneyland.svg",
+    shape: "wide",
+  },
+  { name: "Hot Wheels", logo: "/brands/hot-wheels.svg", shape: "wide" },
+  { name: "vivo", logo: "/brands/vivo.svg", shape: "wide" },
+  { name: "XPENG", logo: "/brands/xpeng.svg", shape: "wide" },
+  {
+    name: "Mercedes-Benz",
+    logo: "/brands/mercedes-benz.svg",
+    shape: "standard",
+  },
+  {
+    name: "Lotus Biscoff",
+    logo: "/brands/lotus-biscoff.webp",
+    shape: "wide",
+    scale: 1.3,
+  },
+  {
+    name: "Pizza Hut",
+    logo: "/brands/pizza-hut.svg",
+    shape: "standard",
+    scale: 1.12,
+  },
+  {
+    name: "KFC",
+    logo: "/brands/kfc.svg",
+    shape: "standard",
+    scale: 1.12,
+  },
+  {
+    name: "Sunkist",
+    logo: "/brands/sunkist.svg",
+    shape: "wide",
+    scale: 1.2,
+  },
+  {
+    name: "Roche",
+    logo: "/brands/roche.svg",
+    shape: "wide",
+    scale: 1.15,
+  },
+  { name: "Novartis", logo: "/brands/novartis.svg", shape: "wide" },
+  { name: "Qeelin", logo: "/brands/qeelin.jpg", shape: "wide" },
 ];
 
 export const values = [

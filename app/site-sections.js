@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { contactLinks, openTabs, services, values, workItems } from "./site-data";
+import {
+  brands,
+  contactLinks,
+  openTabs,
+  services,
+  values,
+  workItems,
+} from "./site-data";
 
 export function HeroPortrait() {
   return (
@@ -101,6 +108,29 @@ export function WorkGrid() {
   );
 }
 
+export function BrandLogoGrid() {
+  return (
+    <div className="brand-grid" role="list" aria-label="Brands Alexandra has worked with">
+      {brands.map((brand) => (
+        <div
+          className={`brand-logo brand-logo-${brand.shape}`}
+          key={brand.name}
+          role="listitem"
+          style={brand.scale ? { "--logo-scale": brand.scale } : undefined}
+        >
+          <Image
+            src={brand.logo}
+            alt={`${brand.name} logo`}
+            width={280}
+            height={120}
+            sizes="(max-width: 520px) 42vw, (max-width: 900px) 28vw, 17vw"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function OpenTabsGrid() {
   return (
     <div className="open-tabs-stack">
@@ -178,6 +208,11 @@ export function HomeLinks() {
       href: "/about",
       kicker: "About",
       title: "Background, approach, and the way I like to work.",
+    },
+    {
+      href: "/portfolio",
+      kicker: "Portfolio",
+      title: "Brands and sectors I’ve had the pleasure of working across.",
     },
     {
       href: "/services",

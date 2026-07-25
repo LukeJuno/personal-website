@@ -1,6 +1,11 @@
 import Link from "next/link";
 import SiteShell from "./site-shell";
-import { ContactPanel, HeroPortrait, HomeLinks, OpenTabsGrid, WorkGrid } from "./site-sections";
+import {
+  ContactPanel,
+  HeroPortrait,
+  HomeLinks,
+  OpenTabsGrid,
+} from "./site-sections";
 
 export default function Home() {
   return (
@@ -22,8 +27,8 @@ export default function Home() {
             creatively across campaigns, content, websites, and brand voice.
           </p>
           <div className="hero-actions">
-            <Link className="button button-primary" href="/work">
-              View work
+            <Link className="button button-primary" href="/portfolio">
+              View portfolio
             </Link>
             <a className="button button-secondary" href="mailto:hello@alexandracolgan.com">
               Get in touch
@@ -51,18 +56,6 @@ export default function Home() {
           </p>
         </div>
         <HomeLinks />
-      </section>
-
-      <section className="section-frame feature-slab">
-        <div className="feature-slab-copy">
-          <p className="section-kicker">Selected Work</p>
-          <h2>Work that starts with a strong point of view and ends up feeling simple.</h2>
-          <p>
-            Placeholder projects for now, shaped as polished case-study cards so
-            the structure is ready when the details are.
-          </p>
-        </div>
-        <WorkGrid />
       </section>
 
       <section className="section-frame">
