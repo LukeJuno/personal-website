@@ -1,54 +1,31 @@
-# Personal Portfolio
+# Alexandra Colgan — Personal Website
 
-A clean, responsive one-page portfolio built with Next.js 15.5.21 and designed for Vercel.
-
-## Requirements
-
-- Node.js 20.9 or newer
-- npm
+A warm, responsive portfolio for Hong Kong-based freelance creative and
+copywriter Alexandra Colgan. Built with Next.js and ready for Vercel.
 
 ## Preview locally
 
-```bash
-npm install
-npm run dev
-```
+1. Install Node.js 20.9 or newer.
+2. Open a terminal in this folder.
+3. Run `npm install`.
+4. Run `npm run dev`.
+5. Open `http://localhost:3000`.
 
-Open http://localhost:3000 in your browser.
+## Update the content
 
-## Test a production build
+Most text and links are in `app/page.js`.
 
-```bash
-npm run build
-npm start
-```
+- Replace the placeholder Selected Work cards with finished case studies.
+- Confirm the email address used by the contact buttons.
+- Update the social-media URLs.
 
-## Replace placeholder content
+Global colours and styling are in `app/globals.css`. The warm cream and mustard
+theme variables are at the top of that file.
 
-Most text and portfolio entries are in `app/page.js`.
+## Publish with GitHub and Vercel
 
-- Change `Alex Morgan`, the introduction and About copy.
-- Edit the `projects` array near the top to change project titles and descriptions.
-- Replace `hello@example.com` with your email address.
-- Replace the LinkedIn and Instagram links in the footer.
-- Update the page title and description in `app/layout.js`.
+1. In Vercel, choose **Add New → Project** and import this GitHub repository.
+2. Keep the default build settings and select **Deploy**.
+3. In the Vercel project, go to **Settings → Domains** to connect the purchased domain.
 
-## Replace placeholder images
-
-The placeholder artwork is stored in `public/`:
-
-- `project-one.svg`
-- `project-two.svg`
-- `project-three.svg`
-
-You can overwrite these files, or add JPG/PNG/WebP images to `public/` and update each `image` path in the `projects` array in `app/page.js`.
-
-## Deploy with GitHub and Vercel
-
-1. Create a GitHub repository.
-2. Upload all files from this project folder and commit them.
-3. In Vercel, choose **Add New → Project**.
-4. Import the GitHub repository.
-5. Keep the detected Next.js settings and select **Deploy**.
-6. In Vercel, open **Project Settings → Domains** and add your purchased domain.
-7. Follow Vercel's DNS instructions at your domain registrar.
+Every later push to the main GitHub branch will automatically redeploy the site.
