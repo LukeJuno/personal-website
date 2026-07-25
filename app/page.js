@@ -1,4 +1,6 @@
+import Image from "next/image";
 import ThemeToggle from "./theme-toggle";
+import Wordmark from "./wordmark";
 
 const services = [
   {
@@ -56,37 +58,62 @@ const workItems = [
 
 const openTabs = [
   {
-    label: "Practicing",
-    title: "Yoga and teaching.",
-    credentials:
-      "200hr YTT & CET with Samrat Dasgupta at Pure Yoga, 2020",
+    label: "Yoga",
+    title: "Returning to practice, teaching, and the quieter side of wellbeing.",
+    description:
+      "An ongoing part of my life and one of the threads I may fold back into my work more intentionally over time.",
+    credentials: "200hr YTT & CET with Samrat Dasgupta at Pure Yoga, 2020",
+    image: "/open-tab-yoga.jpg",
+    imageAlt: "Alexandra practicing yoga outdoors.",
+    certificationLabel: "View yoga certification",
+    certificationFile: "/cert-yoga.jpg",
   },
   {
-    label: "Exploring",
-    title: "Babywearing and consultancy.",
-    credentials:
-      "Babywearing certification from the Australian Babywearing Association, 2025",
+    label: "Babywearing",
+    title: "Learning how support, movement, and care can be designed into daily life.",
+    description:
+      "A space where parenting, embodied knowledge, and practical guidance all come together in a way that feels deeply human.",
+    credentials: "Babywearing certification from the Australian Babywearing Association, 2025",
+    image: "/open-tab-babywearing.jpeg",
+    imageAlt: "Alexandra holding a baby in a babywearing setup outdoors.",
+    certificationLabel: "View babywearing certification",
+    certificationFile: "/cert-babywearing.pdf",
   },
   {
-    label: "Building",
-    title: "Apps and AI experiments.",
-    credentials:
-      "CS50x certification through Harvard University, 2025",
+    label: "Coding",
+    title: "Building small digital tools, learning in public, and following interesting problems.",
+    description:
+      "From CS50x to app experiments, this is where curiosity becomes structure, systems, and useful things people can actually use.",
+    credentials: "CS50x certification through Harvard University, 2025",
+    image: "/open-tab-coding.png",
+    imageAlt: "Screenshot of Alexandra's coding work on a laptop.",
+    certificationLabel: "View CS50x certificate",
+    certificationFile: "/cert-coding.png",
   },
 ];
 
-function HeroGraphic() {
+function HeroPortrait() {
   return (
-    <div className="graphic-shell" aria-hidden="true">
-      <div className="graphic-orbit graphic-orbit-one" />
-      <div className="graphic-orbit graphic-orbit-two" />
-      <div className="graphic-panel">
-        <div className="graphic-mark" />
-        <div className="graphic-lines">
-          <span />
-          <span />
-          <span />
+    <div className="portrait-shell">
+      <div className="portrait-stage">
+        <div className="portrait-stage-bar" aria-hidden="true" />
+        <div className="portrait-backdrop" aria-hidden="true" />
+        <div className="portrait-frame">
+          <Image
+            src="/profile-portrait.png"
+            alt="Portrait of Alexandra Colgan seated on a sofa in a mustard dress."
+            fill
+            priority
+            sizes="(max-width: 820px) 100vw, 40vw"
+            className="portrait-image"
+          />
         </div>
+      </div>
+      <div className="portrait-note">
+        <span className="portrait-note-label">Based in Hong Kong</span>
+        <span className="portrait-note-copy">
+          Creative, writer, thinker, yogi, and mom.
+        </span>
       </div>
     </div>
   );
@@ -111,17 +138,15 @@ export default function Home() {
 
       <header className="site-header">
         <a className="brand" href="#home" aria-label="Go to home">
-          Alexandra Colgan
+          <Wordmark />
         </a>
 
         <div className="header-actions">
           <nav className="site-nav" aria-label="Primary">
             <a href="#about">About</a>
-            <a href="#services">What I Do</a>
-            <a href="#values">Values</a>
             <a href="#work">Work</a>
+            <a href="#services">Services</a>
             <a href="#open-tabs">Open Tabs</a>
-            <a href="#contact">Contact</a>
           </nav>
           <ThemeToggle />
         </div>
@@ -131,16 +156,21 @@ export default function Home() {
         <section className="hero section-frame" id="home">
           <div className="hero-copy">
             <p className="section-kicker">Freelance creative + copywriter</p>
-            <h1>I find the idea. Then the words that make it land.</h1>
+            <h1 className="hero-title">
+              <span className="hero-title-line">Alexandra</span>
+              <span className="hero-title-line hero-title-line-last">Colgan</span>
+            </h1>
+            <p className="hero-standfirst">
+              Creative, writer, thinker, yogi, and mom.
+            </p>
             <p className="hero-intro">
-              I’m Alexandra, a Hong Kong-based creative and copywriter. I give
-              ideas legs and words a point of view. If you want memorable
-              campaigns and copy people will actually pay attention to, you’re
-              in the right place.
+              I shape ideas, language, and stories for brands that want to feel
+              clear, human, and memorable.
             </p>
             <p className="hero-supporting">
-              From international TV commercials to the smallest social caption,
-              I can think big, write small and make every word count.
+              From international campaigns to websites, scripts, naming, and
+              social content, I help brands find the point of view that makes
+              the work land.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
@@ -150,9 +180,12 @@ export default function Home() {
                 Tell me what you’re making
               </a>
             </div>
+            <p className="hero-footnote">
+              Luxury, lifestyle, healthcare, technology, and consumer brands.
+            </p>
           </div>
           <div className="hero-visual">
-            <HeroGraphic />
+            <HeroPortrait />
           </div>
         </section>
 
@@ -284,11 +317,28 @@ export default function Home() {
           <div className="card-grid">
             {openTabs.map((item) => (
               <article className="open-tab-card" key={item.label}>
+                <div className="open-tab-media">
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt}
+                    fill
+                    sizes="(max-width: 820px) 100vw, 33vw"
+                  />
+                </div>
                 <p className="card-label">{item.label}</p>
                 <h3>{item.title}</h3>
+                <p>{item.description}</p>
                 <p className="credential">
                   <strong>Credentials:</strong> {item.credentials}
                 </p>
+                <a
+                  className="inline-link certification-link"
+                  href={item.certificationFile}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {item.certificationLabel}
+                </a>
               </article>
             ))}
           </div>

@@ -138,10 +138,84 @@ path {
 }
 
 .brand {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.95rem;
+  display: inline-flex;
+  color: var(--text);
+}
+
+.wordmark {
+  display: inline-grid;
+  gap: 0.18rem;
+  line-height: 1;
+}
+
+.wordmark-name {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  width: max-content;
+  padding-bottom: 0.22rem;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.wordmark-name::after {
+  content: "";
+  position: absolute;
+  right: -0.28rem;
+  bottom: 0;
+  width: 44%;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--accent-bright);
+  transform: rotate(-1.5deg);
+  transform-origin: right center;
+}
+
+.wordmark-first {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-size: 1.2rem;
+  font-style: italic;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.045em;
+}
+
+.wordmark-last {
+  margin-left: 0.32rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.64rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.wordmark-dot {
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-left: 0.1rem;
+  border-radius: 50%;
+  background: var(--accent-bright);
+  transform: translateY(-0.05rem);
+}
+
+.wordmark-descriptor {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.5rem;
+  font-weight: 650;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.wordmark-compact .wordmark-name {
+  padding-bottom: 0.14rem;
+}
+
+.wordmark-compact .wordmark-first {
+  font-size: 1rem;
+}
+
+.wordmark-compact .wordmark-last {
+  font-size: 0.56rem;
 }
 
 .header-actions {
@@ -258,7 +332,7 @@ path {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
   gap: clamp(2rem, 5vw, 5rem);
   align-items: center;
   min-height: calc(100svh - 7rem);
@@ -292,6 +366,31 @@ h1 {
   text-wrap: balance;
 }
 
+.hero-title {
+  max-width: none;
+  margin-bottom: 1rem;
+  font-size: clamp(4.8rem, 11vw, 8.3rem);
+  line-height: 0.86;
+  letter-spacing: -0.075em;
+}
+
+.hero-title-line {
+  display: block;
+}
+
+.hero-title-line-last {
+  margin-left: clamp(0.6rem, 2vw, 1.4rem);
+}
+
+.hero-standfirst {
+  margin-bottom: 1.15rem;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
 h2 {
   max-width: 14ch;
   margin-bottom: 0;
@@ -315,7 +414,7 @@ p {
 }
 
 .hero-intro {
-  max-width: 33rem;
+  max-width: 27rem;
   margin-bottom: 1rem;
   color: var(--text);
   font-size: clamp(1.35rem, 2.5vw, 1.9rem);
@@ -324,7 +423,7 @@ p {
 }
 
 .hero-supporting {
-  max-width: 34rem;
+  max-width: 29rem;
   margin-bottom: 0;
 }
 
@@ -337,6 +436,15 @@ p {
 
 .hero-actions {
   margin-top: 2rem;
+}
+
+.hero-footnote {
+  margin-top: 1.4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 .button {
@@ -379,88 +487,86 @@ p {
   justify-content: center;
 }
 
-.graphic-shell {
+.portrait-shell {
   position: relative;
-  width: min(100%, 420px);
-  aspect-ratio: 1 / 1.08;
-  border-radius: 36px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.6), transparent),
-    var(--panel-strong);
+  width: min(100%, 560px);
+  padding: 0.6rem 0 2.2rem 0.6rem;
+}
+
+.portrait-stage {
+  position: relative;
+  padding: 1.15rem 1.15rem 1.25rem;
   border: 1px solid var(--line);
+  border-radius: 34px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), transparent),
+    rgba(255, 251, 239, 0.78);
+  box-shadow: var(--shadow-soft);
+}
+
+.portrait-stage-bar {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 0.9rem;
+  border-radius: 34px 34px 0 0;
+  background: rgba(160, 154, 105, 0.7);
+}
+
+.portrait-backdrop {
+  position: absolute;
+  inset: 2.2rem 1.15rem 1.25rem;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #fff6bc 0%, #f2da62 100%);
+}
+
+.portrait-frame {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 4 / 4.85;
   overflow: hidden;
+  margin: 2rem 0.35rem 0.35rem;
+  border-radius: 11rem 11rem 2.8rem 2.8rem;
+  background: var(--panel-strong);
   box-shadow: var(--shadow);
 }
 
-.graphic-shell::before {
-  content: "";
+.portrait-image {
+  object-fit: cover;
+}
+
+.portrait-note {
   position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 20% 20%, rgba(232, 183, 65, 0.3), transparent 28%),
-    radial-gradient(circle at 80% 24%, rgba(216, 143, 44, 0.18), transparent 24%),
-    linear-gradient(rgba(116, 82, 25, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(116, 82, 25, 0.05) 1px, transparent 1px);
-  background-size: auto, auto, 32px 32px, 32px 32px;
-}
-
-.graphic-orbit {
-  position: absolute;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-}
-
-.graphic-orbit-one {
-  width: 18rem;
-  height: 18rem;
-  top: -4rem;
-  right: -3rem;
-}
-
-.graphic-orbit-two {
-  width: 12rem;
-  height: 12rem;
-  bottom: -3rem;
-  left: -2rem;
-}
-
-.graphic-panel {
-  position: absolute;
-  inset: auto 1.5rem 1.5rem 1.5rem;
+  z-index: 2;
+  left: 1.4rem;
+  bottom: 0;
   display: grid;
-  gap: 1rem;
-  padding: 1.25rem;
-  border-radius: 24px;
-  background: var(--bg-elevated);
+  gap: 0.35rem;
+  max-width: 15rem;
+  padding: 0.95rem 1.05rem;
   border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 253, 247, 0.92);
+  box-shadow: var(--shadow-soft);
   backdrop-filter: blur(8px);
 }
 
-.graphic-mark {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 1rem;
-  background: linear-gradient(135deg, var(--accent-bright), #e67f32);
+.portrait-note-label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
-.graphic-lines {
-  display: grid;
-  gap: 0.75rem;
+.portrait-note-copy {
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.45;
 }
 
-.graphic-lines span {
-  display: block;
-  height: 0.75rem;
-  border-radius: 999px;
-  background: var(--accent-soft);
-}
-
-.graphic-lines span:nth-child(2) {
-  width: 80%;
-}
-
-.graphic-lines span:nth-child(3) {
-  width: 62%;
+:root[data-theme="dark"] .portrait-note {
+  background: rgba(58, 46, 29, 0.92);
 }
 
 .section-grid,
@@ -654,6 +760,33 @@ p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.76rem;
   letter-spacing: 0.04em;
+}
+
+.open-tab-card {
+  display: grid;
+  align-content: start;
+  gap: 0.9rem;
+}
+
+.open-tab-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin: -0.15rem -0.15rem 0.4rem;
+  border-radius: 18px;
+  background: var(--champagne);
+}
+
+.open-tab-media img {
+  object-fit: cover;
+}
+
+.certification-link {
+  width: fit-content;
+  margin-top: 0.15rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
 }
 
 .dual-section {
