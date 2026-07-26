@@ -137,7 +137,7 @@ export function OpenTabsGrid() {
   return (
     <div className="open-tabs-stack">
       {openTabs.map((item) => (
-        <article className="open-tab-row" key={item.slug}>
+        <article className="open-tab-row" id={item.slug} key={item.slug}>
           <div className="open-tab-media">
             <Image
               src={item.image}
