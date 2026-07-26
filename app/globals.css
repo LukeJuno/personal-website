@@ -138,7 +138,7 @@ path {
   border: 0;
   border-bottom: 1px solid var(--line);
   border-radius: 0;
-  background: var(--panel-strong);
+  background: #f7f2e8;
   box-shadow: none;
 }
 
@@ -150,16 +150,16 @@ path {
 .wordmark {
   position: relative;
   display: block;
-  width: 7.4rem;
-  height: 3.7rem;
+  width: 6.2rem;
+  height: 4.2rem;
   overflow: hidden;
-  border-radius: 9px;
-  background: #211a14;
+  border-radius: 0;
+  background: transparent;
 }
 
 .wordmark img {
   object-fit: contain;
-  transform: scale(1.65);
+  transform: scale(1.05);
 }
 
 .wordmark-compact {
@@ -262,53 +262,6 @@ path {
 .site-footer a:hover::after,
 .footer-links a:hover::after {
   transform: scaleX(1);
-}
-
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-  padding: 0.45rem 0.55rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--panel-strong);
-  color: var(--text);
-  cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
-}
-
-.theme-toggle:hover {
-  transform: translateY(-1px);
-}
-
-.theme-toggle-track {
-  display: inline-flex;
-  align-items: center;
-  width: 2.6rem;
-  padding: 0.2rem;
-  border-radius: 999px;
-  background: var(--accent-soft);
-}
-
-.theme-toggle-thumb {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background: var(--accent);
-  transform: translateX(0);
-  transition: transform 0.2s ease;
-}
-
-:root[data-theme="dark"] .theme-toggle-thumb {
-  transform: translateX(1.15rem);
-}
-
-.theme-toggle-label {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.85rem;
 }
 
 .section-frame {
@@ -1941,8 +1894,8 @@ p {
   }
 
   .wordmark {
-    width: 7rem;
-    height: 3.6rem;
+    width: 5.8rem;
+    height: 3.8rem;
   }
 
   .home-hero,
@@ -2121,12 +2074,8 @@ p {
   }
 
   .wordmark {
-    width: 5.3rem;
-    height: 3.2rem;
-  }
-
-  .theme-toggle-label {
-    display: none;
+    width: 4.8rem;
+    height: 3.4rem;
   }
 
   .home-intro,

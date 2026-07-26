@@ -7,7 +7,7 @@ export default function Wordmark({ compact = false }) {
       aria-hidden="true"
     >
       <Image
-        src="/alexandra-colgan-wordmark-dark.png"
+        src="/alexandra-colgan-wordmark-header.png"
         alt=""
         fill
         priority

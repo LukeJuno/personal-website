@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ThemeToggle from "./theme-toggle";
 import Wordmark from "./wordmark";
 import SiteNav from "./site-nav";
 import { contactLinks, primaryNav } from "./site-data";
@@ -24,7 +23,6 @@ export default function SiteShell({ children }) {
           >
             Get in touch
           </a>
-          <ThemeToggle />
         </div>
       </header>
 
