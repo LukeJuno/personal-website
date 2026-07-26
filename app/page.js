@@ -54,14 +54,13 @@ export default function Home() {
           </div>
 
           <div className="home-portrait">
-            <div className="home-portrait-accent" aria-hidden="true" />
             <div className="home-portrait-frame">
               <Image
                 src="/profile-headshot.png"
                 alt="Alexandra Colgan seated on a sofa."
                 fill
                 priority
-                sizes="(max-width: 820px) 100vw, 48vw"
+                sizes="(max-width: 820px) 100vw, 46vw"
                 className="home-portrait-image"
               />
             </div>
