@@ -41,8 +41,9 @@ export const brands = [
   { name: "XPENG", logo: "/brands/xpeng.svg", shape: "wide" },
   {
     name: "Mercedes-Benz",
-    logo: "/brands/mercedes-benz.svg",
-    shape: "standard",
+    logo: "/brands/mercedes-benz-full.png",
+    shape: "tall",
+    scale: 1.18,
   },
   {
     name: "Lotus Biscoff",

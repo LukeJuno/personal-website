@@ -1427,7 +1427,7 @@ p {
 .brand-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: clamp(1.8rem, 3.2vw, 3.2rem) clamp(1.2rem, 2.7vw, 2.8rem);
   align-items: center;
 }
@@ -1474,10 +1474,6 @@ p {
 .brand-logo-crop-location img {
   clip-path: inset(0 0 20% 0);
   transform: translateY(9%) scale(var(--logo-scale, 1));
-}
-
-.brand-logo:last-child {
-  grid-column: 2 / span 2;
 }
 
 .section-intro {
@@ -1765,11 +1761,7 @@ p {
   }
 
   .brand-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .brand-logo:last-child {
-    grid-column: 2;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .home-hero,
