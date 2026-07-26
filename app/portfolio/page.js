@@ -1,5 +1,5 @@
 import SiteShell from "../site-shell";
-import { BrandLogoGrid, ContactPanel, PageIntro } from "../site-sections";
+import { BrandLogoGrid, ContactPanel } from "../site-sections";
 
 export const metadata = {
   title: "Portfolio",
@@ -10,17 +10,21 @@ export const metadata = {
 export default function PortfolioPage() {
   return (
     <SiteShell>
-      <PageIntro
-        kicker="Portfolio"
-        title="Brands I’ve worked with"
-        intro="A selection of global and regional names across luxury, lifestyle, healthcare, technology, finance, hospitality, and consumer culture."
-      />
-
       <section
-        className="section-frame brand-field"
+        className="section-frame portfolio-showcase"
         aria-label="Selected brands"
       >
-        <BrandLogoGrid />
+        <div className="portfolio-copy">
+          <p className="section-kicker">Portfolio</p>
+          <h1 className="portfolio-title">Brands I’ve worked with</h1>
+          <p className="portfolio-intro">
+            A selection of global and regional names across luxury, lifestyle,
+            healthcare, technology, finance, hospitality, and consumer culture.
+          </p>
+        </div>
+        <div className="portfolio-logos">
+          <BrandLogoGrid />
+        </div>
       </section>
 
       <ContactPanel />

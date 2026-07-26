@@ -22,6 +22,7 @@ export const brands = [
     name: "Mandarin Oriental",
     logo: "/brands/mandarin-oriental.svg",
     shape: "wide",
+    scale: 1.8,
   },
   {
     name: "Hong Kong Disneyland",
@@ -44,21 +45,21 @@ export const brands = [
   },
   {
     name: "Pizza Hut",
-    logo: "/brands/pizza-hut.svg",
+    logo: "/brands/pizza-hut-current.png",
     shape: "standard",
-    scale: 1.12,
+    scale: 1.35,
   },
   {
     name: "KFC",
-    logo: "/brands/kfc.svg",
-    shape: "standard",
+    logo: "/brands/kfc-current.png",
+    shape: "tall",
     scale: 1.12,
   },
   {
     name: "Sunkist",
-    logo: "/brands/sunkist.svg",
+    logo: "/brands/sunkist-current.svg",
     shape: "wide",
-    scale: 1.2,
+    scale: 1.05,
   },
   {
     name: "Roche",
