@@ -19,6 +19,12 @@ export const brands = [
     shape: "wide",
   },
   {
+    name: "Asia Miles",
+    logo: "/brands/asia-miles.svg",
+    shape: "wide",
+    scale: 0.98,
+  },
+  {
     name: "Mandarin Oriental",
     logo: "/brands/mandarin-oriental-current.png",
     shape: "wide",
@@ -74,6 +80,12 @@ export const brands = [
     logo: "/brands/sunkist-current.svg",
     shape: "wide",
     scale: 1.05,
+  },
+  {
+    name: "Tropicana",
+    logo: "/brands/tropicana-current.png",
+    shape: "wide",
+    scale: 1.08,
   },
   {
     name: "Roche",
