@@ -113,7 +113,9 @@ export function BrandLogoGrid() {
     <div className="brand-grid" role="list" aria-label="Brands Alexandra has worked with">
       {brands.map((brand) => (
         <div
-          className={`brand-logo brand-logo-${brand.shape}`}
+          className={`brand-logo brand-logo-${brand.shape}${
+            brand.variant ? ` brand-logo-${brand.variant}` : ""
+          }`}
           key={brand.name}
           role="listitem"
           style={brand.scale ? { "--logo-scale": brand.scale } : undefined}

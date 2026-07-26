@@ -20,9 +20,10 @@ export const brands = [
   },
   {
     name: "Mandarin Oriental",
-    logo: "/brands/mandarin-oriental.svg",
+    logo: "/brands/mandarin-oriental-current.png",
     shape: "wide",
-    scale: 1.8,
+    variant: "crop-location",
+    scale: 0.98,
   },
   {
     name: "Hong Kong Disneyland",

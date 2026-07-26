@@ -855,6 +855,11 @@ p {
   height: clamp(3.7rem, 5vw, 4.9rem);
 }
 
+.brand-logo-crop-location img {
+  clip-path: inset(0 0 20% 0);
+  transform: translateY(9%) scale(var(--logo-scale, 1));
+}
+
 .brand-logo:last-child {
   grid-column: 2 / span 2;
 }
