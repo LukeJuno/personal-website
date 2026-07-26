@@ -2,7 +2,7 @@ import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
 import Wordmark from "./wordmark";
 import SiteNav from "./site-nav";
-import { contactLinks } from "./site-data";
+import { contactLinks, primaryNav } from "./site-data";
 
 export default function SiteShell({ children }) {
   return (
@@ -18,6 +18,12 @@ export default function SiteShell({ children }) {
 
         <div className="header-actions">
           <SiteNav />
+          <a
+            className="header-contact"
+            href="mailto:hello@alexandracolgan.com"
+          >
+            Get in touch
+          </a>
           <ThemeToggle />
         </div>
       </header>
@@ -25,13 +31,42 @@ export default function SiteShell({ children }) {
       <div id="content">{children}</div>
 
       <footer className="site-footer">
-        <p>© 2026 Alexandra Colgan</p>
-        <div className="footer-links" aria-label="Footer links">
-          {contactLinks.map((link) => (
-            <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
-              {link.label}
+        <div className="footer-main">
+          <div className="footer-profile">
+            <Wordmark compact />
+            <p>
+              Hong Kong-based creative and copywriter shaping stories,
+              language, and ideas with clarity and feeling.
+            </p>
+            <a href="mailto:hello@alexandracolgan.com">
+              hello@alexandracolgan.com
             </a>
-          ))}
+          </div>
+          <nav className="footer-nav" aria-label="Footer navigation">
+            <p className="footer-heading">Explore</p>
+            {primaryNav.map((item) => (
+              <Link href={item.href} key={item.href}>
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="footer-social">
+            <p className="footer-heading">Elsewhere</p>
+            {contactLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+        <div className="footer-base">
+          <p>© 2026 Alexandra Colgan</p>
+          <p>Creative, writer, thinker, yogi, and mom.</p>
         </div>
       </footer>
     </main>

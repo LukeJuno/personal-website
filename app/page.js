@@ -1,8 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import SiteShell from "./site-shell";
-import { ContactPanel, HomeLinks } from "./site-sections";
-import { openTabs } from "./site-data";
+import { BrandLogoGrid } from "./site-sections";
+import { openTabs, services, workItems } from "./site-data";
+
+function ServiceIcon({ index }) {
+  const icons = [
+    <path key="campaign" d="M5 18h4l8-6V6L9 12H5v6Zm12-8 2 2-2 2" />,
+    <path key="voice" d="M6 7h12M6 12h9M6 17h6" />,
+    <path key="editorial" d="M5 5h14v14H5zM9 5v14M9 10h10" />,
+  ];
+
+  return (
+    <svg
+      aria-hidden="true"
+      className="home-service-icon"
+      viewBox="0 0 24 24"
+    >
+      {icons[index]}
+    </svg>
+  );
+}
 
 export default function Home() {
   return (
@@ -50,35 +68,123 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="home-section home-statement">
-          <p className="section-kicker">What I bring</p>
-          <h2>
-            Clear thinking, thoughtful language, and a human point of view.
-          </h2>
-          <div className="home-statement-copy">
+        <section className="home-section home-intro">
+          <div className="home-intro-heading">
+            <p className="section-kicker">About</p>
+            <h2>
+              Making complicated ideas clear, useful, and human.
+            </h2>
+            <span className="home-underline" aria-hidden="true" />
+          </div>
+          <div className="home-intro-copy">
             <p>
               I’ve worked across luxury, lifestyle, healthcare, technology,
-              and consumer brands, helping organisations communicate clearly
-              and creatively across campaigns, content, websites, and brand
-              voice.
+              hospitality, and consumer brands, helping organisations
+              communicate clearly and creatively.
             </p>
             <p>
-              Thoughtful stories and modern family life, with room for side
-              projects and the occasional digital experiment.
+              My work spans campaigns, content, websites, and brand voice. I
+              enjoy finding the structure inside a complicated idea, then
+              shaping it into a story or experience people can actually use.
             </p>
+            <p>
+              Outside agency work, I’m interested in yoga, parenting,
+              babywearing, coding, digital products, and the occasional
+              experiment with AI.
+            </p>
+            <Link className="inline-link" href="/about">
+              More about Alexandra
+            </Link>
           </div>
         </section>
 
-        <section className="home-section home-browse">
-          <div className="home-browse-copy">
-            <p className="section-kicker">Browse</p>
-            <h2>A lighter, page-by-page way through the site.</h2>
+        <section className="home-section home-highlight">
+          <p className="section-kicker">What I bring</p>
+          <h2>
+            “Clear thinking, thoughtful language, and a human point of view.”
+          </h2>
+          <p>
+            The aim is simple: make the idea easier to understand without
+            sanding away everything that makes it interesting.
+          </p>
+        </section>
+
+        <section className="home-section home-services">
+          <div className="home-services-copy">
+            <p className="section-kicker">Services</p>
+            <h2>Words with structure, personality, and somewhere to go.</h2>
             <p>
-              Background, work, services, and the interests that keep
-              influencing how I think.
+              From the first strategic question to the final line, I help give
+              ideas a clearer shape and a more recognisable voice.
             </p>
+            <Link className="button button-mustard" href="/services">
+              Explore services
+            </Link>
           </div>
-          <HomeLinks />
+          <div className="home-services-list">
+            {services.map((service, index) => (
+              <article className="home-service-card" key={service.title}>
+                <ServiceIcon index={index} />
+                <p className="card-label">0{index + 1}</p>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="home-section home-portfolio">
+          <div className="home-portfolio-heading">
+            <div>
+              <p className="section-kicker">Portfolio</p>
+              <h2>Brands I’ve worked with</h2>
+            </div>
+            <div>
+              <p>
+                A selection of global and regional names across luxury,
+                lifestyle, healthcare, technology, finance, hospitality, and
+                consumer culture.
+              </p>
+              <Link className="inline-link" href="/portfolio">
+                Explore the portfolio
+              </Link>
+            </div>
+          </div>
+          <div className="home-brand-field">
+            <BrandLogoGrid />
+          </div>
+          <div className="home-projects">
+            <article className="home-project home-project-wide">
+              <div className="home-project-image">
+                <Image
+                  src="/editorial-project-placeholder.jpg"
+                  alt="Editorial placeholder showing a fictional brand campaign in progress."
+                  fill
+                  sizes="(max-width: 820px) 100vw, 62vw"
+                />
+              </div>
+              <div className="home-project-copy">
+                <p className="card-label">Selected work / placeholder</p>
+                <h3>{workItems[0].title}</h3>
+                <p>{workItems[0].summary}</p>
+              </div>
+            </article>
+            <article className="home-project">
+              <div
+                className="home-project-art home-project-art-sage"
+                aria-hidden="true"
+              >
+                <span />
+                <span />
+                <span />
+              </div>
+              <div className="home-project-copy">
+                <p className="card-label">Selected work / placeholder</p>
+                <h3>{workItems[1].title}</h3>
+                <p>{workItems[1].summary}</p>
+              </div>
+            </article>
+          </div>
         </section>
 
         <section className="home-section home-tabs">
@@ -115,9 +221,34 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="home-contact">
-          <ContactPanel />
-        </div>
+        <section className="home-section home-cta">
+          <div className="home-cta-copy">
+            <p className="section-kicker">Contact</p>
+            <h2>Have a brief, a blank page, or an idea that’s almost there?</h2>
+            <p>
+              Let’s bring shape, language, and momentum to it. Freelance
+              projects, collaborations, and interesting side paths are all
+              welcome.
+            </p>
+            <a
+              className="button button-primary"
+              href="mailto:hello@alexandracolgan.com"
+            >
+              Get in touch
+            </a>
+          </div>
+          <div className="home-cta-visual">
+            <div className="home-cta-accent" aria-hidden="true" />
+            <div className="home-cta-image">
+              <Image
+                src="/editorial-cta-placeholder.jpg"
+                alt="Open notebook, pencil, ceramic cup, and pale green textile in soft window light."
+                fill
+                sizes="(max-width: 820px) 100vw, 48vw"
+              />
+            </div>
+          </div>
+        </section>
       </div>
     </SiteShell>
   );
