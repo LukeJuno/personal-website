@@ -30,6 +30,12 @@ export const brands = [
     logo: "/brands/hong-kong-disneyland.svg",
     shape: "wide",
   },
+  {
+    name: "The Hong Kong Jockey Club",
+    logo: "/brands/hong-kong-jockey-club.svg",
+    shape: "wide",
+    scale: 0.94,
+  },
   { name: "Hot Wheels", logo: "/brands/hot-wheels.svg", shape: "wide" },
   { name: "vivo", logo: "/brands/vivo.svg", shape: "wide" },
   { name: "XPENG", logo: "/brands/xpeng.svg", shape: "wide" },
@@ -53,6 +59,12 @@ export const brands = [
   {
     name: "KFC",
     logo: "/brands/kfc-current.png",
+    shape: "tall",
+    scale: 1.12,
+  },
+  {
+    name: "Tam Jai Mixian",
+    logo: "/brands/tam-jai-mixian.png",
     shape: "tall",
     scale: 1.12,
   },
