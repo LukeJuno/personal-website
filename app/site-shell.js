@@ -19,7 +19,7 @@ export default function SiteShell({ children }) {
           <SiteNav />
           <a
             className="header-contact"
-            href="mailto:hello@alexandracolgan.com"
+            href="mailto:alexandracolgan@gmail.com"
           >
             Get in touch
           </a>
@@ -32,12 +32,9 @@ export default function SiteShell({ children }) {
         <div className="footer-main">
           <div className="footer-profile">
             <Wordmark compact />
-            <p>
-              Hong Kong-based creative and copywriter shaping stories,
-              language, and ideas with clarity and feeling.
-            </p>
-            <a href="mailto:hello@alexandracolgan.com">
-              hello@alexandracolgan.com
+            <p>Hong Kong-based creative and copywriter.</p>
+            <a href="mailto:alexandracolgan@gmail.com">
+              alexandracolgan@gmail.com
             </a>
           </div>
           <nav className="footer-nav" aria-label="Footer navigation">
@@ -49,13 +46,13 @@ export default function SiteShell({ children }) {
             ))}
           </nav>
           <div className="footer-social">
-            <p className="footer-heading">Elsewhere</p>
+            <p className="footer-heading">Find Me</p>
             {contactLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                target="_blank"
-                rel="noreferrer"
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noreferrer" : undefined}
               >
                 {link.label}
               </a>
@@ -64,7 +61,6 @@ export default function SiteShell({ children }) {
         </div>
         <div className="footer-base">
           <p>© 2026 Alexandra Colgan</p>
-          <p>Creative, writer, thinker, yogi, and mom.</p>
         </div>
       </footer>
     </main>

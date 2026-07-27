@@ -1,5 +1,6 @@
 import SiteShell from "../site-shell";
-import { BrandLogoGrid, ContactPanel } from "../site-sections";
+import { BrandLogoGrid, CaseStudyGrid, ContactPanel } from "../site-sections";
+import { caseStudies } from "../site-data";
 
 export const metadata = {
   title: "Portfolio",
@@ -25,6 +26,18 @@ export default function PortfolioPage() {
         <div className="portfolio-logos">
           <BrandLogoGrid />
         </div>
+      </section>
+
+      <section className="section-frame portfolio-case-studies">
+        <div className="portfolio-case-studies-heading">
+          <p className="section-kicker">Selected Work</p>
+          <h2>Work that made it out of the Google Doc.</h2>
+          <p>
+            A selection of campaigns, launches and ideas I’ve helped think up,
+            write for and send out into the world.
+          </p>
+        </div>
+        <CaseStudyGrid items={caseStudies} />
       </section>
 
       <ContactPanel />

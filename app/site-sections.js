@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   brands,
+  caseStudies,
   contactLinks,
   openTabs,
   services,
@@ -108,6 +109,35 @@ export function WorkGrid() {
   );
 }
 
+export function CaseStudyGrid({ items = caseStudies, featured = false }) {
+  return (
+    <div className={`case-study-grid${featured ? " case-study-grid-featured" : ""}`}>
+      {items.map((study) => (
+        <Link
+          className="case-study-card"
+          href={`/portfolio/${study.slug}`}
+          key={study.slug}
+        >
+          <div className="case-study-media">
+            <Image
+              src={study.images[0].src}
+              alt={study.images[0].alt}
+              fill
+              sizes={featured ? "(max-width: 820px) 100vw, 48vw" : "(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"}
+            />
+          </div>
+          <div className="case-study-copy">
+            <p className="card-label">{study.brand}</p>
+            <h3>{study.title}</h3>
+            <p>{study.background}</p>
+            <span className="case-study-link">View case study <span aria-hidden="true">↗</span></span>
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
 export function BrandLogoGrid() {
   return (
     <div className="brand-grid" role="list" aria-label="Brands Alexandra has worked with">
@@ -180,20 +210,30 @@ export function ContactPanel() {
       <div className="contact-layout">
         <div className="prose">
           <p className="contact-copy">
-            Let’s bring shape, language, and momentum to it.
+            Let’s breathe some life into it and get it off the ground.
           </p>
           <p className="contact-copy">
-            Freelance projects, collaborations, and interesting side paths are
-            all welcome.
+            Whether you need a campaign concept, a new voice, a website rewrite
+            or simply another brain to bounce thoughts with, tell me what
+            you’re working on. Freelance projects, creative collaborations and
+            interesting side quests welcome.
           </p>
         </div>
         <div className="contact-actions">
-          <a className="button button-primary" href="mailto:hello@alexandracolgan.com">
+          <a
+            className="button button-primary"
+            href="mailto:alexandracolgan@gmail.com"
+          >
             Get in touch
           </a>
           <div className="contact-links" aria-label="Social links">
             {contactLinks.map((link) => (
-              <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+              >
                 {link.label}
               </a>
             ))}
