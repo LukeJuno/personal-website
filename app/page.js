@@ -72,10 +72,10 @@ export default function Home() {
             <h2 className="home-intro-title">About Me</h2>
             <div className="home-intro-portrait">
               <Image
-                src="/about-portrait-placeholder.svg"
-                alt="Placeholder for Alexandra’s future About portrait."
+                src="/about-alexandra.png"
+                alt="Alexandra Colgan standing against a neutral studio background."
                 fill
-                sizes="(max-width: 820px) 100vw, 42vw"
+                sizes="(max-width: 820px) 92vw, 36vw"
               />
             </div>
             <div className="home-intro-sticker">
@@ -98,12 +98,17 @@ export default function Home() {
               <h3>I find the idea, then the words that make it land</h3>
             </div>
             <div className="home-intro-copy">
-              <p>
+              <p className="home-intro-lead">
                 I’m a Hong Kong-based copywriter and creative who has spent
-                nearly a decade turning complicated briefs into ideas people
-                can resonate with. I’ve worked across big ad agencies on
-                everything from international campaigns and brand platforms to
-                websites, scripts, naming, and social content.
+                nearly a <em>decade</em>
+              </p>
+              <p className="home-intro-pullquote">
+                turning complicated briefs into ideas people can resonate with.
+              </p>
+              <p>
+                I’ve worked across big ad agencies on everything from
+                international campaigns and brand platforms to websites,
+                scripts, naming, and social content.
               </p>
               <p>
                 Away from client work, I’m a mom to two girls and a cat, a

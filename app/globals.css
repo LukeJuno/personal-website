@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "TeX Gyre Termes";
+  src: url("/fonts/tex-gyre-termes-regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TeX Gyre Termes";
+  src: url("/fonts/tex-gyre-termes-bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TeX Gyre Termes";
+  src: url("/fonts/tex-gyre-termes-italic.otf") format("opentype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
   --bg: #f8f2e8;
@@ -837,19 +861,19 @@ p {
 }
 
 .home-intro {
-  --about-bg: #eee8dc;
-  --about-ink: #342820;
-  --about-muted: #5d5146;
-  --about-line: rgba(52, 40, 32, 0.78);
+  --about-bg: #d8d4c2;
+  --about-ink: #2e2b28;
+  --about-muted: #3f3b37;
+  --about-line: rgba(46, 43, 40, 0.9);
   display: grid;
-  grid-template-columns: minmax(22rem, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(4rem, 7vw, 7.5rem);
+  grid-template-columns: minmax(27rem, 0.96fr) minmax(0, 1.04fr);
+  gap: clamp(3.5rem, 5vw, 4.5rem);
   width: 100vw;
-  min-height: 47rem;
+  min-height: 0;
   margin-left: calc(50% - 50vw);
   padding:
-    clamp(3.75rem, 6vw, 6.5rem)
-    max(2rem, calc((100vw - 1320px) / 2 + 2rem));
+    clamp(2.5rem, 3.3vw, 3.25rem)
+    max(2rem, calc((100vw - 1376px) / 2 + 2rem));
   border: 0;
   border-radius: 0;
   background: var(--about-bg);
@@ -861,36 +885,38 @@ p {
   position: relative;
   display: grid;
   align-content: start;
-  gap: clamp(1.75rem, 3vw, 2.75rem);
+  gap: clamp(2rem, 3.2vw, 3rem);
   width: min(100%, 32rem);
 }
 
 .home-intro-title {
   margin: 0;
-  font-size: clamp(3.25rem, 5vw, 5rem);
+  font-family: "TeX Gyre Termes", "Times New Roman", serif;
+  font-size: clamp(3.4rem, 4.5vw, 4.75rem);
   font-style: italic;
-  font-weight: 500;
-  line-height: 0.95;
-  letter-spacing: -0.045em;
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
 }
 
 .home-intro-portrait {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 0.91;
   border-radius: 50% 50% 0 0;
-  background: var(--home-green);
+  background: #c9c6b8;
 }
 
 .home-intro-portrait img {
   object-fit: cover;
+  object-position: 71% 50%;
 }
 
 .home-intro-sticker {
   position: absolute;
   z-index: 1;
-  top: clamp(5.75rem, 10vw, 9rem);
-  right: clamp(-4rem, -4vw, -2rem);
+  top: clamp(5.25rem, 8vw, 7.5rem);
+  right: clamp(-4.25rem, -4vw, -2.25rem);
   display: grid;
   place-items: center;
   width: clamp(10rem, 14vw, 12.75rem);
@@ -937,27 +963,30 @@ p {
 
 .home-intro-content {
   display: grid;
-  align-content: center;
+  align-content: start;
   gap: 0;
 }
 
 .home-intro-heading {
-  padding: clamp(2.25rem, 4vw, 3.75rem) 0;
+  padding: clamp(2.5rem, 3.5vw, 3.5rem) 1.5rem;
   border-top: 2px solid var(--about-line);
 }
 
 .home-intro-heading h3 {
-  max-width: 18ch;
+  max-width: none;
   margin: 0;
-  font-size: clamp(2.4rem, 4vw, 4.35rem);
-  line-height: 1.04;
-  letter-spacing: -0.04em;
+  font-family: "TeX Gyre Termes", "Times New Roman", serif;
+  font-size: clamp(2.6rem, 3.35vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
 }
 
 .home-intro-copy {
   display: grid;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  padding: clamp(2rem, 3.5vw, 3.25rem) 0;
+  gap: clamp(1.35rem, 2vw, 2rem);
+  padding: clamp(1.15rem, 1.8vw, 1.65rem) 0
+    clamp(1.75rem, 2.5vw, 2.5rem);
   border-top: 2px solid var(--about-line);
   border-bottom: 2px solid var(--about-line);
 }
@@ -966,15 +995,35 @@ p {
   max-width: 42rem;
   margin: 0;
   color: var(--about-muted);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: clamp(1.05rem, 1.35vw, 1.2rem);
-  line-height: 1.68;
+  font-family: "TT Interphases Mono", "SFMono-Regular", Menlo, Monaco,
+    "Courier New", monospace;
+  font-size: clamp(0.92rem, 1.2vw, 1.08rem);
+  line-height: 1.45;
+  letter-spacing: 0.06em;
 }
 
-.home-intro-copy > p:first-of-type {
+.home-intro-copy .home-intro-lead {
   color: var(--about-ink);
-  font-size: clamp(1.12rem, 1.55vw, 1.35rem);
-  line-height: 1.58;
+  font-size: clamp(0.95rem, 1.25vw, 1.1rem);
+}
+
+.home-intro-lead em {
+  color: var(--home-mustard-deep);
+  font-family: "TeX Gyre Termes", "Times New Roman", serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.home-intro-copy .home-intro-pullquote {
+  max-width: none;
+  color: var(--about-ink);
+  font-family: "TeX Gyre Termes", "Times New Roman", serif;
+  font-size: clamp(1.7rem, 2.35vw, 2.35rem);
+  font-style: italic;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .home-highlight {
@@ -2204,7 +2253,7 @@ p {
   }
 
   .home-intro-sticker {
-    top: 5.5rem;
+    top: 5rem;
     right: -0.75rem;
     width: 9.25rem;
   }
