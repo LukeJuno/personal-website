@@ -69,6 +69,7 @@ export default function Home() {
 
         <section className="home-section home-intro">
           <div className="home-intro-visual">
+            <h2 className="home-intro-title">About Me</h2>
             <div className="home-intro-portrait">
               <Image
                 src="/about-portrait-placeholder.svg"
@@ -88,37 +89,27 @@ export default function Home() {
                   d="M27 19C45 7 79 4 105 14M128 46c3 15-4 30-18 42"
                 />
               </svg>
-              <span>Hi, I’m Alexandra</span>
+              <span>Hi, I’m Alexandra!</span>
             </div>
           </div>
 
           <div className="home-intro-content">
             <div className="home-intro-heading">
-              <p className="section-kicker">About</p>
-              <h2>
-                Making complicated ideas clear, useful, and human.
-              </h2>
-              <span className="home-underline" aria-hidden="true" />
+              <h3>I find the idea, then the words that make it land</h3>
             </div>
             <div className="home-intro-copy">
               <p>
-                I’ve worked across luxury, lifestyle, healthcare, technology,
-                hospitality, and consumer brands, helping organisations
-                communicate clearly and creatively.
+                I’m a Hong Kong-based copywriter and creative who has spent
+                nearly a decade turning complicated briefs into ideas people
+                can resonate with. I’ve worked across big ad agencies on
+                everything from international campaigns and brand platforms to
+                websites, scripts, naming, and social content.
               </p>
               <p>
-                My work spans campaigns, content, websites, and brand voice. I
-                enjoy finding the structure inside a complicated idea, then
-                shaping it into a story or experience people can actually use.
+                Away from client work, I’m a mom to two girls and a cat, a
+                trained yoga teacher, and an enthusiastic starter of side
+                projects.
               </p>
-              <p>
-                Outside agency work, I’m interested in yoga, parenting,
-                babywearing, coding, digital products, and the occasional
-                experiment with AI.
-              </p>
-              <Link className="inline-link" href="/about">
-                More about Alexandra
-              </Link>
             </div>
           </div>
         </section>
