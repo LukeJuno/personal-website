@@ -870,25 +870,50 @@ p {
 .home-intro-sticker {
   position: absolute;
   z-index: 1;
-  top: 8%;
-  right: clamp(-3.25rem, -4vw, -1.5rem);
+  top: 9%;
+  right: clamp(-3.5rem, -4.5vw, -1.75rem);
   display: grid;
   place-items: center;
-  width: clamp(8.5rem, 11vw, 10.5rem);
-  aspect-ratio: 1;
-  margin: 0;
-  padding: 1.25rem;
-  border: 2px solid rgba(198, 155, 60, 0.38);
-  border-radius: 50%;
-  background: #f7f2e8;
-  color: #282018;
-  box-shadow: 0 14px 36px rgba(40, 32, 24, 0.12);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
-  font-weight: 650;
-  line-height: 1.2;
+  width: clamp(9.5rem, 13vw, 12rem);
+  aspect-ratio: 1.27;
+  color: #3a2b21;
+  transform: rotate(-4deg);
+}
+
+.home-intro-sticker svg,
+.home-intro-sticker span {
+  grid-area: 1 / 1;
+}
+
+.home-intro-sticker svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.home-intro-sticker-ring {
+  fill: rgba(247, 242, 232, 0.94);
+  stroke: #3a2b21;
+  stroke-width: 2.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.home-intro-sticker-mark {
+  fill: none;
+  stroke: #3a2b21;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+}
+
+.home-intro-sticker span {
+  max-width: 7.5rem;
+  font-family: "Segoe Print", "Bradley Hand", "Snell Roundhand", cursive;
+  font-size: clamp(1rem, 1.45vw, 1.28rem);
+  font-weight: 500;
+  line-height: 1.12;
   text-align: center;
-  transform: rotate(4deg);
+  transform: rotate(1.5deg);
 }
 
 .home-intro-content {
@@ -2029,7 +2054,7 @@ p {
 
   .home-intro-sticker {
     top: 6%;
-    right: -1.25rem;
+    right: -1.5rem;
   }
 
   .home-intro-content {
@@ -2161,10 +2186,13 @@ p {
 
   .home-intro-sticker {
     top: 4%;
-    right: -0.35rem;
-    width: 7.75rem;
-    padding: 1rem;
-    font-size: 0.85rem;
+    right: -0.65rem;
+    width: 9rem;
+  }
+
+  .home-intro-sticker span {
+    max-width: 5.8rem;
+    font-size: 0.92rem;
   }
 
   .home-brand-field {

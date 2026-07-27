@@ -77,7 +77,19 @@ export default function Home() {
                 sizes="(max-width: 820px) 100vw, 42vw"
               />
             </div>
-            <p className="home-intro-sticker">Hi, I’m Alexandra</p>
+            <div className="home-intro-sticker">
+              <svg aria-hidden="true" viewBox="0 0 140 110">
+                <path
+                  className="home-intro-sticker-ring"
+                  d="M14 53C9 34 24 15 51 10c30-6 62-1 75 17 14 20 8 46-14 62-20 15-56 17-79 5C15 85 7 69 14 53Z"
+                />
+                <path
+                  className="home-intro-sticker-mark"
+                  d="M27 19C45 7 79 4 105 14M128 46c3 15-4 30-18 42"
+                />
+              </svg>
+              <span>Hi, I’m Alexandra</span>
+            </div>
           </div>
 
           <div className="home-intro-content">
