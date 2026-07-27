@@ -60,7 +60,7 @@ export default function Home() {
                 alt="Alexandra Colgan seated on a sofa."
                 fill
                 priority
-                sizes="(max-width: 820px) 100vw, 46vw"
+                sizes="(max-width: 820px) 100vw, 34vw"
                 className="home-portrait-image"
               />
             </div>
