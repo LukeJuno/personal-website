@@ -838,25 +838,74 @@ p {
 
 .home-intro {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: clamp(4rem, 10vw, 10rem);
-  min-height: 44rem;
-  padding: clamp(5rem, 10vw, 9rem);
+  grid-template-columns: minmax(18rem, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(4rem, 8vw, 8rem);
+  min-height: 48rem;
+  padding: clamp(5rem, 8vw, 8rem);
   border-color: transparent;
   border-radius: 0;
   background: #fff;
   box-shadow: none;
 }
 
-.home-intro-heading {
+.home-intro-visual {
+  position: relative;
   align-self: center;
+  width: min(100%, 31rem);
+  margin-inline: auto;
+}
+
+.home-intro-portrait {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 47% 47% 1.75rem 1.75rem;
+  background: var(--home-green);
+}
+
+.home-intro-portrait img {
+  object-fit: cover;
+}
+
+.home-intro-sticker {
+  position: absolute;
+  z-index: 1;
+  top: 8%;
+  right: clamp(-3.25rem, -4vw, -1.5rem);
+  display: grid;
+  place-items: center;
+  width: clamp(8.5rem, 11vw, 10.5rem);
+  aspect-ratio: 1;
+  margin: 0;
+  padding: 1.25rem;
+  border: 2px solid rgba(198, 155, 60, 0.38);
+  border-radius: 50%;
+  background: #f7f2e8;
+  color: #282018;
+  box-shadow: 0 14px 36px rgba(40, 32, 24, 0.12);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  font-weight: 650;
+  line-height: 1.2;
+  text-align: center;
+  transform: rotate(4deg);
+}
+
+.home-intro-content {
+  display: grid;
+  align-content: center;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.home-intro-heading {
+  align-self: end;
 }
 
 .home-intro-heading h2 {
-  max-width: 11ch;
+  max-width: 13ch;
   margin: 0;
-  font-size: clamp(3.3rem, 6.2vw, 6rem);
-  line-height: 0.98;
+  font-size: clamp(3rem, 5vw, 5.25rem);
+  line-height: 1;
 }
 
 .home-underline {
@@ -871,7 +920,6 @@ p {
 
 .home-intro-copy {
   display: grid;
-  align-content: center;
   gap: 1.5rem;
 }
 
@@ -1975,6 +2023,19 @@ p {
     gap: 3rem;
   }
 
+  .home-intro-visual {
+    width: min(88%, 29rem);
+  }
+
+  .home-intro-sticker {
+    top: 6%;
+    right: -1.25rem;
+  }
+
+  .home-intro-content {
+    gap: 2.5rem;
+  }
+
   .home-intro-heading h2,
   .home-highlight h2,
   .home-services-copy h2,
@@ -2092,6 +2153,18 @@ p {
   .home-cta-copy {
     padding-right: 1.1rem;
     padding-left: 1.1rem;
+  }
+
+  .home-intro-visual {
+    width: calc(100% - 1rem);
+  }
+
+  .home-intro-sticker {
+    top: 4%;
+    right: -0.35rem;
+    width: 7.75rem;
+    padding: 1rem;
+    font-size: 0.85rem;
   }
 
   .home-brand-field {

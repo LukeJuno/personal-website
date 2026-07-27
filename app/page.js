@@ -68,32 +68,46 @@ export default function Home() {
         </section>
 
         <section className="home-section home-intro">
-          <div className="home-intro-heading">
-            <p className="section-kicker">About</p>
-            <h2>
-              Making complicated ideas clear, useful, and human.
-            </h2>
-            <span className="home-underline" aria-hidden="true" />
+          <div className="home-intro-visual">
+            <div className="home-intro-portrait">
+              <Image
+                src="/about-portrait-placeholder.svg"
+                alt="Placeholder for Alexandra’s future About portrait."
+                fill
+                sizes="(max-width: 820px) 100vw, 42vw"
+              />
+            </div>
+            <p className="home-intro-sticker">Hi, I’m Alexandra</p>
           </div>
-          <div className="home-intro-copy">
-            <p>
-              I’ve worked across luxury, lifestyle, healthcare, technology,
-              hospitality, and consumer brands, helping organisations
-              communicate clearly and creatively.
-            </p>
-            <p>
-              My work spans campaigns, content, websites, and brand voice. I
-              enjoy finding the structure inside a complicated idea, then
-              shaping it into a story or experience people can actually use.
-            </p>
-            <p>
-              Outside agency work, I’m interested in yoga, parenting,
-              babywearing, coding, digital products, and the occasional
-              experiment with AI.
-            </p>
-            <Link className="inline-link" href="/about">
-              More about Alexandra
-            </Link>
+
+          <div className="home-intro-content">
+            <div className="home-intro-heading">
+              <p className="section-kicker">About</p>
+              <h2>
+                Making complicated ideas clear, useful, and human.
+              </h2>
+              <span className="home-underline" aria-hidden="true" />
+            </div>
+            <div className="home-intro-copy">
+              <p>
+                I’ve worked across luxury, lifestyle, healthcare, technology,
+                hospitality, and consumer brands, helping organisations
+                communicate clearly and creatively.
+              </p>
+              <p>
+                My work spans campaigns, content, websites, and brand voice. I
+                enjoy finding the structure inside a complicated idea, then
+                shaping it into a story or experience people can actually use.
+              </p>
+              <p>
+                Outside agency work, I’m interested in yoga, parenting,
+                babywearing, coding, digital products, and the occasional
+                experiment with AI.
+              </p>
+              <Link className="inline-link" href="/about">
+                More about Alexandra
+              </Link>
+            </div>
           </div>
         </section>
 
