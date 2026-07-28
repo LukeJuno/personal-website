@@ -304,3 +304,138 @@ export const contactLinks = [
     label: "Instagram",
   },
 ];
+
+/* ---------------------------------------------------------------------------
+   Homepage content (2026 design)
+   Everything the homepage renders lives here so copy can be edited in one file.
+--------------------------------------------------------------------------- */
+
+export const homeHero = {
+  kicker: "Freelance Creative + Copywriter",
+  title: "Where ideas find their",
+  titleAccent: "words",
+  intro: [
+    "I'm a Hong Kong-based creative and copywriter.",
+    "I give ideas legs and words a point of view. If you want memorable campaigns and copy people will actually pay attention to, you've found the right place.",
+  ],
+  image: "/home/hero-portrait.webp",
+  imageAlt: "Alexandra Colgan seated, looking towards the camera.",
+};
+
+export const homeAbout = {
+  kicker: "About Me",
+  title: "Turning briefs into work that resonates",
+  paragraphs: [
+    "Hi, I'm Alexandra! I've spent nearly a decade thinking, writing and creating within the advertising world.",
+    "I've worked across big ad agencies on everything from international campaigns and brand platforms to websites, scripts, naming, and social content.",
+    "Away from client work, I'm a mom to two girls and a cat, a trained yoga teacher, and an enthusiastic starter of side projects.",
+  ],
+  image: "/home/about-portrait.webp",
+  imageAlt: "Alexandra Colgan at work.",
+};
+
+export const homeServices = {
+  kicker: "What I Do",
+  title: "Concepts, copy, and the bits in between.",
+  note: "Looking for something that isn't on the list? Ask away. I like a new challenge.",
+  items: [
+    {
+      lead: "Campaigns:",
+      title: "concepts & ideas",
+      description:
+        "Big ideas, creative platforms, and integrated campaigns that can stretch further than one execution.",
+      tone: "gold",
+    },
+    {
+      lead: "Branding:",
+      title: "verbal identity",
+      description:
+        "Naming, voice, and personality. Finding the language and point of view that make a brand unmistakable and ownable.",
+      tone: "sage",
+    },
+    {
+      lead: "Content:",
+      title: "scripts, social & more",
+      description:
+        "Long-form scripts, punchy headlines, webcopy and social posts.",
+      tone: "sage-light",
+    },
+  ],
+};
+
+export const homeApproach = {
+  kicker: "My approach at a glance",
+  title: "Curiosity, creativity, craft.",
+  items: [
+    {
+      title: "Curiosity",
+      description:
+        "I start with questions, not answers. If the brief isn't fully formed yet, we can shape it together.",
+    },
+    {
+      title: "Creativity",
+      description:
+        "I bring a fresh perspective backed by experience, with ideas that feel unexpected and right at the same time.",
+    },
+    {
+      title: "Craft",
+      description:
+        "I sweat the details across every layer — the idea, the brand, the platform it lives on, down to the last word.",
+    },
+  ],
+};
+
+export const homeWork = {
+  kicker: "Selected Work",
+  title: "Work that made it out of the Word Doc.",
+  intro:
+    "A selection of campaigns, launches and ideas I've helped think up, write for, and send out into the world.",
+  items: [
+    {
+      title: "Joocies",
+      sector: "F&B — Sunkist",
+      discipline: "Activation Campaign",
+      image: "/home/work-joocies.webp",
+      imageAlt: "Sunkist Joocies activation campaign artwork.",
+      href: "/portfolio/sunkist-citrush-joocies",
+    },
+    {
+      title: "HBF Website",
+      sector: "Non-Profit — Hongkong Bank Foundation",
+      discipline: "Website Copy",
+      image: "/home/work-hbf.webp",
+      imageAlt: "The Hongkong Bank Foundation website homepage.",
+      href: "/portfolio/hongkong-bank-foundation-website",
+    },
+    {
+      title: "APAC Vision Health Survey",
+      sector: "Health — Roche",
+      discipline: "Social Video",
+      image: "/home/work-roche.webp",
+      imageAlt: "Roche APAC Vision Health Survey social video still.",
+      href: "/portfolio",
+    },
+  ],
+};
+
+export const homeTabs = {
+  kicker: "Open Tabs",
+  title:
+    "A few things I'm learning, making and thinking about beyond the brief.",
+  intro:
+    "Yoga, coding experiments, babywearing, and whatever else is currently taking over my mind's browser history.",
+  tags: ["Yoga", "Coding", "Babywearing"],
+  ctaLabel: "See what I'm exploring",
+  ctaHref: "/open-tabs",
+};
+
+export const homeContact = {
+  title: "Have a brief, a blank page or an idea that's almost there?",
+  lead: "Let's bring it to life and get it off the ground.",
+  body: [
+    "Whether you need a campaign concept, a new voice, a website rewrite or simply another brain to bounce thoughts with, tell me what you're working on.",
+    "Freelance projects, creative collaborations and interesting side quests welcome.",
+  ],
+  ctaLabel: "Get in touch",
+  ctaHref: "mailto:alexandracolgan@gmail.com",
+};

@@ -42,6 +42,25 @@
   --mustard-wash: #f6efb7;
   --sage-wash: #d8d6b3;
   --clay-wash: #ead8bc;
+
+  /* Homepage palette (from the 2026 design) */
+  --cream: #faf5e8;
+  --cream-strong: #f1e7cb;
+  --forest: #40492f;
+  --forest-deep: #2e3524;
+  --forest-line: #4a5138;
+  --sage: #7c8a54;
+  --sage-light: #a9b98a;
+  --gold: #c9992e;
+  --gold-deep: #8a6d1e;
+  --gold-light: #d4b15a;
+  --body-copy: #4a4838;
+  --body-muted: #6b6852;
+  --on-forest: #faf5e8;
+  --on-forest-soft: #dcd6be;
+  --on-forest-dim: #c7c1a7;
+  --on-forest-faint: #8a9077;
+  --hairline: #e7dcc0;
   --font-display: "TeX Gyre Termes", "Times New Roman", serif;
   --font-mono: "TT Interphases Mono", "SFMono-Regular", Menlo, Monaco,
     "Courier New", monospace;
@@ -67,6 +86,25 @@
   --mustard-wash: #5f4b1e;
   --sage-wash: #484634;
   --clay-wash: #564735;
+
+  /* Homepage palette, dark theme */
+  --cream: #221c15;
+  --cream-strong: #2b241a;
+  --forest: #333c26;
+  --forest-deep: #262d1c;
+  --forest-line: #414a30;
+  --sage: #7c8a54;
+  --sage-light: #97a878;
+  --gold: #d6a53c;
+  --gold-deep: #d4b15a;
+  --gold-light: #e2c274;
+  --body-copy: #e3dbc9;
+  --body-muted: #b9b09a;
+  --on-forest: #fff8ed;
+  --on-forest-soft: #dcd6be;
+  --on-forest-dim: #c7c1a7;
+  --on-forest-faint: #9aa085;
+  --hairline: rgba(255, 228, 181, 0.14);
 }
 
 * {
@@ -82,7 +120,7 @@ body {
     radial-gradient(circle at top right, rgba(207, 177, 114, 0.12), transparent 22%),
     var(--bg);
   color: var(--text);
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -175,23 +213,33 @@ path {
 }
 
 .wordmark {
-  position: relative;
   display: block;
-  width: 6.2rem;
-  height: 4.2rem;
-  overflow: hidden;
-  border-radius: 0;
+  height: 2.4rem;
+  aspect-ratio: 3909 / 960;
   background: transparent;
 }
 
 .wordmark img {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  transform: scale(1.05);
+}
+
+.wordmark .wordmark-dark {
+  display: none;
+}
+
+:root[data-theme="dark"] .wordmark .wordmark-light {
+  display: none;
+}
+
+:root[data-theme="dark"] .wordmark .wordmark-dark {
+  display: block;
 }
 
 .wordmark-compact {
-  width: 6rem;
-  height: 3.4rem;
+  height: 2.1rem;
 }
 
 .header-actions {
@@ -209,7 +257,7 @@ path {
   border-radius: 999px;
   background: var(--accent-bright);
   color: #30230e;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.84rem;
   font-weight: 650;
   transition:
@@ -235,7 +283,7 @@ path {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: clamp(0.25rem, 0.7vw, 0.75rem);
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.95rem;
   color: var(--text);
 }
@@ -258,7 +306,6 @@ path {
 .site-nav a::after,
 .inline-link::after,
 .contact-links a::after,
-.site-footer a::after,
 .footer-links a::after {
   content: "";
   position: absolute;
@@ -286,7 +333,6 @@ path {
 .site-nav a.is-active::after,
 .inline-link:hover::after,
 .contact-links a:hover::after,
-.site-footer a:hover::after,
 .footer-links a:hover::after {
   transform: scaleX(1);
 }
@@ -312,7 +358,7 @@ path {
 .card-label,
 .detail-label {
   margin: 0 0 1rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -355,7 +401,7 @@ h1 {
 .hero-standfirst {
   margin-bottom: 1.15rem;
   color: var(--text-soft);
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: clamp(1rem, 1.6vw, 1.12rem);
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -411,7 +457,7 @@ p {
 .hero-footnote {
   max-width: 31rem;
   margin-top: 1.5rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.84rem;
   letter-spacing: 0.04em;
   color: var(--text-soft);
@@ -425,7 +471,7 @@ p {
   padding: 0 1.2rem;
   border-radius: 999px;
   border: 1px solid transparent;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 600;
   transition:
@@ -521,7 +567,7 @@ p {
 }
 
 .portrait-note-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -603,7 +649,7 @@ p {
   max-width: 36rem;
   margin: 0;
   color: #40372f;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: clamp(1.05rem, 1.35vw, 1.22rem);
   line-height: 1.55;
   letter-spacing: -0.01em;
@@ -785,7 +831,7 @@ p {
 .home-tab-number,
 .home-tab-arrow,
 .home-tab-link small {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
 }
 
 .home-tab-number {
@@ -1095,7 +1141,7 @@ p {
 .home-services-copy > p {
   max-width: 28rem;
   color: rgba(255, 250, 241, 0.82);
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   line-height: 1.65;
 }
 
@@ -1148,7 +1194,7 @@ p {
 .home-service-card > p:last-child {
   max-width: 34rem;
   color: #62584e;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   line-height: 1.6;
 }
 
@@ -1306,7 +1352,7 @@ p {
 .home-cta-copy > p {
   max-width: 31rem;
   color: #51463c;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   line-height: 1.65;
 }
 
@@ -1693,7 +1739,7 @@ p {
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent);
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1886,7 +1932,7 @@ p {
 
 .credential strong {
   color: var(--text);
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.76rem;
   letter-spacing: 0.04em;
 }
@@ -1925,7 +1971,7 @@ p {
 .certification-link {
   width: fit-content;
   margin-top: 0.15rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.88rem;
   font-weight: 600;
 }
@@ -1942,7 +1988,7 @@ p {
 
 .nav-card-link {
   margin-top: auto;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--accent);
@@ -2016,7 +2062,7 @@ p {
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent);
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.76rem;
   font-weight: 600;
   white-space: nowrap;
@@ -2060,7 +2106,7 @@ p {
 .site-footer p,
 .site-footer a,
 .footer-links a {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.88rem;
 }
 
@@ -2228,7 +2274,7 @@ p {
     border-radius: 999px;
     background: var(--panel-strong);
     color: var(--text);
-    font-family: var(--font-mono);
+    font-family: var(--font-display);
     font-size: 0.82rem;
     cursor: pointer;
   }
@@ -2277,8 +2323,7 @@ p {
   }
 
   .wordmark {
-    width: 5.8rem;
-    height: 3.8rem;
+    height: 2.1rem;
   }
 
   .home-hero,
@@ -2475,8 +2520,7 @@ p {
   }
 
   .wordmark {
-    width: 4.8rem;
-    height: 3.4rem;
+    height: 1.85rem;
   }
 
   .home-intro,

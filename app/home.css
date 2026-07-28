@@ -1,0 +1,499 @@
+/* ===========================================================================
+   Homepage — 2026 design
+   Scoped under .hp so nothing here can leak into /about, /work, /portfolio,
+   /services or /open-tabs. Colours come from the tokens in globals.css, so
+   the page follows light/dark theme automatically.
+   =========================================================================== */
+
+.hp {
+  --hp-gutter: clamp(20px, 5vw, 64px);
+  --hp-band: clamp(60px, 8vw, 110px);
+  --hp-max: 1280px;
+  color: var(--text);
+  font-family: var(--font-display);
+}
+
+/* globals.css puts `max-width: 11ch/14ch` and tight negative letter-spacing on
+   h1/h2/h3 for the older page designs. Those constraints forced the homepage
+   headings to wrap narrow and hug the left edge inside centred sections, so
+   they're reset here. */
+.hp h1,
+.hp h2,
+.hp h3 {
+  max-width: none;
+  letter-spacing: normal;
+}
+
+.hp-centre h1,
+.hp-centre h2,
+.hp-centre h3,
+.hp-centre p {
+  margin-inline: auto;
+}
+
+.hp-inner {
+  max-width: var(--hp-max);
+  margin: 0 auto;
+}
+
+.hp-inner-narrow {
+  max-width: 900px;
+}
+
+.hp-centre {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------- typography */
+
+.hp-kicker {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  color: var(--gold-deep);
+  margin: 0 0 1.125rem 0;
+}
+
+.hp-kicker-light {
+  color: var(--gold-light);
+}
+
+.hp-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 4vw, 2.75rem);
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 0 0 1.375rem 0;
+  text-wrap: balance;
+}
+
+.hp-heading-wide {
+  max-width: 46rem;
+  margin-inline: auto;
+  margin-bottom: 3.5rem;
+}
+
+.hp-heading-narrow {
+  max-width: 38.75rem;
+  margin-bottom: 1rem;
+}
+
+.hp-heading-light {
+  color: var(--on-forest);
+}
+
+.hp-body {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--body-copy);
+  margin: 0 0 1.125rem 0;
+}
+
+.hp-body-tight {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hp-lead {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  max-width: 35rem;
+  margin-bottom: 3rem;
+}
+
+.hp-lead-centre {
+  margin-inline: auto;
+  max-width: 40rem;
+}
+
+/* Centred section headings read better on a measure than edge to edge. */
+.hp-centre .hp-heading {
+  max-width: 46rem;
+}
+
+.hp-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--sage);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+/* ------------------------------------------------------------------ buttons */
+
+.hp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.875rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--cream);
+  font-size: 0.9375rem;
+  line-height: 1;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.hp-button:hover {
+  background: var(--gold-deep);
+  color: var(--cream);
+}
+
+.hp-button-ghost {
+  background: transparent;
+  border-color: var(--text);
+  color: var(--text);
+}
+
+.hp-button-ghost:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.hp-button-invert {
+  color: var(--forest-deep);
+}
+
+.hp-button-invert:hover {
+  background: var(--gold-light);
+  color: var(--forest-deep);
+}
+
+.hp-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2.25rem;
+}
+
+.hp-inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  color: var(--gold-deep);
+  font-size: 0.9375rem;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: color 0.18s ease;
+}
+
+.hp-inline-link::after {
+  content: "→";
+  transition: transform 0.18s ease;
+}
+
+.hp-inline-link:hover {
+  color: var(--gold);
+}
+
+.hp-inline-link:hover::after {
+  transform: translateX(3px);
+}
+
+/* -------------------------------------------------------------------- bands */
+
+.hp-band {
+  padding: var(--hp-band) var(--hp-gutter);
+}
+
+.hp-band-cream {
+  background: var(--cream-strong);
+}
+
+.hp-band-forest {
+  background: var(--forest);
+  color: var(--on-forest);
+}
+
+/* --------------------------------------------------------------------- hero */
+
+.hp-hero,
+.hp-about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  max-width: var(--hp-max);
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 6.875rem) var(--hp-gutter);
+}
+
+.hp-about {
+  padding-block: clamp(2.5rem, 6vw, 5.625rem);
+}
+
+.hp-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  line-height: 1.08;
+  font-weight: 400;
+  margin: 0 0 1.5rem 0;
+  text-wrap: balance;
+}
+
+.hp-hero-intro {
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  color: var(--body-copy);
+  max-width: 30rem;
+  margin: 0 0 1rem 0;
+}
+
+.hp-portrait {
+  position: relative;
+}
+
+.hp-portrait-shadow {
+  position: absolute;
+  inset: 1.25rem -1.25rem -1.25rem 1.25rem;
+  background: var(--sage);
+  border-radius: 18px;
+  z-index: 0;
+}
+
+.hp-portrait-image,
+.hp-about-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: clamp(20rem, 40vw, 28.75rem);
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.hp-about-image {
+  height: clamp(20rem, 34vw, 26.25rem);
+}
+
+/* ----------------------------------------------------------------- services */
+
+.hp-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
+  gap: 1.75rem;
+}
+
+.hp-card {
+  background: var(--cream);
+  border-radius: 16px;
+  padding: 2.25rem 2rem;
+}
+
+.hp-dot {
+  display: block;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  margin-bottom: 1.375rem;
+}
+
+.hp-dot-gold {
+  background: var(--gold);
+}
+
+.hp-dot-sage {
+  background: var(--sage);
+}
+
+.hp-dot-sage-light {
+  background: var(--sage-light);
+}
+
+.hp-card-title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 0.875rem 0;
+}
+
+.hp-note {
+  text-align: center;
+  font-style: italic;
+  color: var(--body-muted);
+  font-size: 1rem;
+  margin: 3rem 0 1.5rem 0;
+}
+
+/* ----------------------------------------------------------------- approach */
+
+.hp-approach {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2.5rem;
+  margin-top: 3.75rem;
+}
+
+.hp-approach-number {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9375rem;
+  color: var(--gold-light);
+  margin: 0 0 0.875rem 0;
+}
+
+.hp-approach-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  color: var(--on-forest);
+}
+
+.hp-approach-copy {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--on-forest-soft);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------- work */
+
+.hp-work {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  gap: 1.75rem;
+}
+
+.hp-work-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hp-work-image {
+  display: block;
+  width: 100%;
+  height: 16.25rem;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  transition: transform 0.25s ease;
+}
+
+.hp-work-card:hover .hp-work-image {
+  transform: translateY(-4px);
+}
+
+.hp-work-title {
+  font-family: var(--font-display);
+  font-size: 1.1875rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+}
+
+.hp-work-meta {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--body-muted);
+  margin: 0;
+}
+
+.hp-work-more {
+  margin-top: 2.5rem;
+}
+
+/* ---------------------------------------------------------------- open tabs */
+
+.hp-tags {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.25rem 0;
+}
+
+.hp-tag {
+  padding: 0.5rem 1.125rem;
+  border-radius: 999px;
+  background: var(--cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.875rem;
+  color: var(--body-copy);
+}
+
+/* ------------------------------------------------------------------ contact */
+
+.hp-contact {
+  padding-block: clamp(4.375rem, 10vw, 8.125rem);
+}
+
+.hp-contact-title {
+  font-size: clamp(1.875rem, 5vw, 3rem);
+  max-width: 44rem;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
+
+.hp-contact-lead {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--gold-light);
+  margin: 0 0 0.875rem 0;
+}
+
+.hp-contact-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--on-forest-dim);
+  max-width: 35rem;
+  margin: 0 auto 1rem auto;
+}
+
+.hp-contact-body:last-of-type {
+  margin-bottom: 2.5rem;
+}
+
+/* -------------------------------------------------------------- small print */
+
+@media (max-width: 860px) {
+  .hp-hero,
+  .hp-about {
+    gap: 2.5rem;
+  }
+
+  /* Portrait first on mobile reads better than copy-then-image-then-copy. */
+  .hp-about-image {
+    order: -1;
+  }
+
+  .hp-portrait-shadow {
+    inset: 0.875rem -0.875rem -0.875rem 0.875rem;
+  }
+
+  .hp-lead {
+    margin-bottom: 2.25rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .hp-actions .hp-button {
+    flex: 1 1 100%;
+  }
+
+  .hp-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .hp-work-image {
+    height: 13.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hp-work-image,
+  .hp-inline-link::after {
+    transition: none;
+  }
+
+  .hp-work-card:hover .hp-work-image {
+    transform: none;
+  }
+}
