@@ -159,7 +159,7 @@ export default function Home() {
             </div>
             <div className="hp-work-more">
               <Link className="hp-inline-link" href="/portfolio">
-                See the brands I&rsquo;ve worked with
+                See my portfolio
               </Link>
             </div>
           </div>
