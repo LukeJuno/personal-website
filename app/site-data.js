@@ -20,15 +20,14 @@ export const brands = [
   },
   {
     name: "Asia Miles",
-    logo: "/brands/asia-miles.svg",
+    logo: "/brands/asia-miles.png",
     shape: "wide",
     scale: 0.98,
   },
   {
     name: "Mandarin Oriental",
-    logo: "/brands/mandarin-oriental-current.png",
+    logo: "/brands/mandarin-oriental.png",
     shape: "wide",
-    variant: "crop-location",
     scale: 0.98,
   },
   {
@@ -38,7 +37,7 @@ export const brands = [
   },
   {
     name: "The Hong Kong Jockey Club",
-    logo: "/brands/hong-kong-jockey-club.svg",
+    logo: "/brands/hong-kong-jockey-club.png",
     shape: "wide",
     scale: 0.94,
   },
@@ -53,13 +52,13 @@ export const brands = [
   },
   {
     name: "Lotus Biscoff",
-    logo: "/brands/lotus-biscoff.webp",
+    logo: "/brands/lotus-biscoff.png",
     shape: "wide",
     scale: 1.3,
   },
   {
     name: "Pizza Hut",
-    logo: "/brands/pizza-hut-current.png",
+    logo: "/brands/pizza-hut.png",
     shape: "standard",
     scale: 1.35,
   },
@@ -94,7 +93,7 @@ export const brands = [
     scale: 1.15,
   },
   { name: "Novartis", logo: "/brands/novartis.svg", shape: "wide" },
-  { name: "Qeelin", logo: "/brands/qeelin.jpg", shape: "wide" },
+  { name: "Qeelin", logo: "/brands/qeelin.svg", shape: "wide" },
 ];
 
 export const values = [
