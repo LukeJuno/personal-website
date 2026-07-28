@@ -306,7 +306,6 @@ path {
 .site-nav a::after,
 .inline-link::after,
 .contact-links a::after,
-.site-footer a::after,
 .footer-links a::after {
   content: "";
   position: absolute;
@@ -334,7 +333,6 @@ path {
 .site-nav a.is-active::after,
 .inline-link:hover::after,
 .contact-links a:hover::after,
-.site-footer a:hover::after,
 .footer-links a:hover::after {
   transform: scaleX(1);
 }

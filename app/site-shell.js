@@ -33,9 +33,6 @@ export default function SiteShell({ children }) {
           <div className="footer-profile">
             <Wordmark compact />
             <p>Hong Kong-based creative and copywriter.</p>
-            <a href="mailto:alexandracolgan@gmail.com">
-              alexandracolgan@gmail.com
-            </a>
           </div>
           <nav className="footer-nav" aria-label="Footer navigation">
             <p className="footer-heading">Explore</p>
