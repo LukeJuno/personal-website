@@ -1,5 +1,6 @@
 import SiteShell from "../site-shell";
-import { BrandLogoGrid, ContactPanel } from "../site-sections";
+import { LogoMarquee, PortfolioWork } from "../site-sections";
+import { homeContact, portfolioIntro, portfolioSelectedWork } from "../site-data";
 
 export const metadata = {
   title: "Portfolio",
@@ -10,24 +11,49 @@ export const metadata = {
 export default function PortfolioPage() {
   return (
     <SiteShell>
-      <section
-        className="section-frame portfolio-showcase"
-        aria-label="Selected brands"
-      >
-        <div className="portfolio-copy">
-          <p className="section-kicker">Portfolio</p>
-          <h1 className="portfolio-title">Brands I’ve worked with</h1>
-          <p className="portfolio-intro">
-            A selection of global and regional names across luxury, lifestyle,
-            healthcare, technology, finance, hospitality, and consumer culture.
-          </p>
-        </div>
-        <div className="portfolio-logos">
-          <BrandLogoGrid />
-        </div>
-      </section>
+      <div className="hp pf">
+        <section className="pf-intro">
+          <p className="hp-kicker">{portfolioIntro.kicker}</p>
+          <h1 className="pf-title">{portfolioIntro.title}</h1>
+          <p className="pf-intro-copy">{portfolioIntro.intro}</p>
+        </section>
 
-      <ContactPanel />
+        <LogoMarquee />
+
+        <section className="pf-work-section" id="work">
+          <div className="hp-inner">
+            <div className="pf-work-heading">
+              <p className="hp-kicker">{portfolioSelectedWork.kicker}</p>
+              <div>
+                <h2 className="pf-work-heading-title">
+                  {portfolioSelectedWork.title}
+                </h2>
+                <p className="pf-work-heading-copy">
+                  {portfolioSelectedWork.intro}
+                </p>
+              </div>
+            </div>
+            <PortfolioWork />
+          </div>
+        </section>
+
+        <section className="hp-band hp-band-forest hp-contact" id="contact">
+          <div className="hp-inner hp-inner-narrow hp-centre">
+            <h2 className="hp-heading hp-heading-light hp-contact-title">
+              {homeContact.title}
+            </h2>
+            <p className="hp-contact-lead">{homeContact.lead}</p>
+            {homeContact.body.map((line) => (
+              <p className="hp-contact-body" key={line}>
+                {line}
+              </p>
+            ))}
+            <a className="hp-button hp-button-invert" href={homeContact.ctaHref}>
+              {homeContact.ctaLabel}
+            </a>
+          </div>
+        </section>
+      </div>
     </SiteShell>
   );
 }
