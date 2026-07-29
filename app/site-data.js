@@ -440,6 +440,7 @@ export const openTabs = [
     image: "/tabs/coding-cantonese.webp",
     imageAlt:
       "The Cantonese For Kids web app, showing tabs for simple phrases, words, story time and local slang.",
+    cta: { label: "Get in touch", href: "mailto:alexandracolgan@gmail.com" },
     certificationLabel: "View CS50x certificate",
     certificationFile: "/cert-coding.png",
     metaTitle: "Coding",
@@ -477,6 +478,7 @@ export const openTabs = [
         note: "Almost nothing seems to happen sometimes, and yet it's very touching in a nostalgic way.",
       },
     ],
+    cta: { label: "Get in touch", href: "mailto:alexandracolgan@gmail.com" },
   },
 ];
 

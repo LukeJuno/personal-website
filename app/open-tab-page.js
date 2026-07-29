@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import SiteShell from "./site-shell";
-import { ContactPanel } from "./site-sections";
 import { openTabs } from "./site-data";
 
 export function tabBySlug(slug) {
@@ -160,8 +159,6 @@ export default function OpenTabPage({ slug, children }) {
           </ul>
         </nav>
       </article>
-
-      <ContactPanel />
     </SiteShell>
   );
 }
