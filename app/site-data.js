@@ -20,15 +20,14 @@ export const brands = [
   },
   {
     name: "Asia Miles",
-    logo: "/brands/asia-miles.svg",
+    logo: "/brands/asia-miles.png",
     shape: "wide",
     scale: 0.98,
   },
   {
     name: "Mandarin Oriental",
-    logo: "/brands/mandarin-oriental-current.png",
+    logo: "/brands/mandarin-oriental.png",
     shape: "wide",
-    variant: "crop-location",
     scale: 0.98,
   },
   {
@@ -38,7 +37,7 @@ export const brands = [
   },
   {
     name: "The Hong Kong Jockey Club",
-    logo: "/brands/hong-kong-jockey-club.svg",
+    logo: "/brands/hong-kong-jockey-club.png",
     shape: "wide",
     scale: 0.94,
   },
@@ -53,13 +52,13 @@ export const brands = [
   },
   {
     name: "Lotus Biscoff",
-    logo: "/brands/lotus-biscoff.webp",
+    logo: "/brands/lotus-biscoff.png",
     shape: "wide",
     scale: 1.3,
   },
   {
     name: "Pizza Hut",
-    logo: "/brands/pizza-hut-current.png",
+    logo: "/brands/pizza-hut.png",
     shape: "standard",
     scale: 1.35,
   },
@@ -94,7 +93,7 @@ export const brands = [
     scale: 1.15,
   },
   { name: "Novartis", logo: "/brands/novartis.svg", shape: "wide" },
-  { name: "Qeelin", logo: "/brands/qeelin.jpg", shape: "wide" },
+  { name: "Qeelin", logo: "/brands/qeelin.svg", shape: "wide" },
 ];
 
 export const values = [
@@ -250,6 +249,78 @@ export const caseStudies = [
 ];
 
 export const workItems = caseStudies;
+
+/* ---------------------------------------------------------------------------
+   Portfolio page content (2026 design)
+--------------------------------------------------------------------------- */
+
+export const portfolioIntro = {
+  kicker: "Portfolio",
+  title: "Brands I’ve worked with",
+  intro:
+    "I've worked with global and regional names across luxury, lifestyle, healthcare, entertainment, technology, finance, hospitality, and F&B.",
+};
+
+export const portfolioSelectedWork = {
+  kicker: "Selected Work",
+  title: "Work that made it out of the Word Doc.",
+  intro:
+    "A selection of campaigns, ideas and copy I've helped think up, write for and send out into the world.",
+};
+
+export const portfolioWork = [
+  {
+    slug: "joocies",
+    brand: "Sunkist",
+    title: "Joocies",
+    type: "Activation campaign",
+    background:
+      "An activation for Sunkist designed to make oranges feel more culturally relevant, desirable and portable in everyday life.",
+    insight:
+      "Accessory culture has turned cute, useful objects into status markers. People are already styling bags with charms, cases and mini objects.",
+    idea: "Joocies: collectible orange cases that work like bag charms, so carrying a Sunkist orange feels playful, visible and social.",
+    image: "/case-studies/joocies-lifestyle.webp",
+    imageAlt: "Sunkist Joocies orange keychain case shown on a desk.",
+  },
+  {
+    slug: "hbf-website",
+    brand: "Hongkong Bank Foundation",
+    title: "Hongkong Bank Foundation Website",
+    type: "Website rebrand and copywriting",
+    background: "Redo the entire HBF website with rebranding and new copywriting.",
+    insight:
+      "The Foundation needed a digital home that could bring its community work, programmes and stories together in one clearer experience.",
+    idea: "A full website revamp supported by new copywriting, alongside social content and activation ideas for volunteer appreciation and engagement.",
+    image: "/home/work-hbf.webp",
+    imageAlt: "The Hongkong Bank Foundation website homepage.",
+  },
+  {
+    slug: "roche-apac-vision-health-survey",
+    brand: "Roche",
+    title: "APAC Vision Health Survey",
+    type: "Social video",
+    background:
+      "Develop video assets that bring the APAC Vision Health Survey to life, creating new opportunities to engage key stakeholders across APAC on the need to prioritise vision health.",
+    insight:
+      "The survey data was comprehensive, but in order to easily reach stakeholders and everyday people the findings needed a format they'd actually watch and pass along.",
+    idea: "A social video summarising the survey's key findings through animated graphics, built to travel across APAC markets.",
+    image: "/home/work-roche.webp",
+    imageAlt: "Roche APAC Vision Health Survey social video still.",
+  },
+  {
+    slug: "visit-arendelle",
+    brand: "Hong Kong Disneyland",
+    title: "Visit Arendelle",
+    type: "Launch campaign",
+    background:
+      "The first ever World of Frozen was coming to HK Disneyland. We needed to create buzz for this grand opening.",
+    insight:
+      "We made Arendelle feel like a real tourist destination for both Hong Kongers and SEA travellers.",
+    idea: "We invited people to travel, explore and experience the culture and offerings of Arendelle through a series of tourism-style OOH, contextual, and banner ads.",
+    image: "/case-studies/visit-arendelle.webp",
+    imageAlt: "Visit Arendelle launch campaign key art for Hong Kong Disneyland's World of Frozen.",
+  },
+];
 
 export const openTabs = [
   {

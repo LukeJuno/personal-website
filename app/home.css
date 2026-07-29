@@ -1,8 +1,9 @@
 /* ===========================================================================
    Homepage — 2026 design
-   Scoped under .hp so nothing here can leak into /about, /work, /portfolio,
-   /services or /open-tabs. Colours come from the tokens in globals.css, so
-   the page follows light/dark theme automatically.
+   Scoped under .hp so nothing here can leak into /about, /work, /services or
+   /open-tabs. The portfolio page also renders with this class (see
+   portfolio.css) to share these tokens/utilities. Colours come from the
+   tokens in globals.css, so pages follow light/dark theme automatically.
    =========================================================================== */
 
 .hp {

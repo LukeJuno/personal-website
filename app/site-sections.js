@@ -5,6 +5,7 @@ import {
   caseStudies,
   contactLinks,
   openTabs,
+  portfolioWork,
   services,
   values,
   workItems,
@@ -138,26 +139,74 @@ export function CaseStudyGrid({ items = caseStudies, featured = false }) {
   );
 }
 
-export function BrandLogoGrid() {
+function MarqueeRow({ logos, direction }) {
+  const looped = logos.concat(logos);
   return (
-    <div className="brand-grid" role="list" aria-label="Brands Alexandra has worked with">
-      {brands.map((brand) => (
-        <div
-          className={`brand-logo brand-logo-${brand.shape}${
-            brand.variant ? ` brand-logo-${brand.variant}` : ""
-          }`}
-          key={brand.name}
-          role="listitem"
-          style={brand.scale ? { "--logo-scale": brand.scale } : undefined}
-        >
-          <Image
+    <div className="pf-marquee-row">
+      <div className={`pf-marquee-track pf-marquee-${direction}`}>
+        {looped.map((brand, index) => (
+          <img
+            key={`${brand.name}-${index}`}
             src={brand.logo}
-            alt={`${brand.name} logo`}
-            width={280}
-            height={120}
-            sizes="(max-width: 520px) 42vw, (max-width: 900px) 28vw, 17vw"
+            alt={brand.name}
+            className="pf-marquee-logo"
           />
-        </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function LogoMarquee() {
+  const half = Math.ceil(brands.length / 2);
+  const rowA = brands.slice(0, half);
+  const rowB = brands.slice(half);
+  return (
+    <div className="pf-marquee" aria-label="Brands Alexandra has worked with">
+      <MarqueeRow logos={rowA} direction="left" />
+      <MarqueeRow logos={rowB} direction="right" />
+    </div>
+  );
+}
+
+export function PortfolioWork() {
+  return (
+    <div className="pf-work-list">
+      {portfolioWork.map((item, index) => (
+        <article className="pf-work-row" key={item.slug}>
+          <p className="pf-work-number">{String(index + 1).padStart(2, "0")}</p>
+          <div
+            className={`pf-work-grid${index % 2 === 1 ? " pf-work-grid-reverse" : ""}`}
+          >
+            <div className="pf-work-media">
+              <Image
+                src={item.image}
+                alt={item.imageAlt}
+                fill
+                sizes="(max-width: 820px) 100vw, 45vw"
+              />
+            </div>
+            <div className="pf-work-copy">
+              <p className="pf-work-brand">{item.brand}</p>
+              <h3 className="pf-work-title">{item.title}</h3>
+              <p className="pf-work-type">{item.type}</p>
+              <div className="pf-work-blocks">
+                <div>
+                  <p className="pf-work-label">Background</p>
+                  <p className="pf-work-text">{item.background}</p>
+                </div>
+                <div>
+                  <p className="pf-work-label">Insight</p>
+                  <p className="pf-work-text">{item.insight}</p>
+                </div>
+                <div>
+                  <p className="pf-work-label">Idea</p>
+                  <p className="pf-work-text">{item.idea}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
       ))}
     </div>
   );
