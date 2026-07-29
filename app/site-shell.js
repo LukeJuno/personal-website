@@ -41,6 +41,9 @@ export default function SiteShell({ children }) {
                 {item.label}
               </Link>
             ))}
+            {/* Not in the top nav on purpose — the header speaks to clients
+                hiring a copywriter. This keeps the page linked and indexable. */}
+            <Link href="/babywearing">Babywearing</Link>
           </nav>
           <div className="footer-social">
             <p className="footer-heading">Find Me</p>

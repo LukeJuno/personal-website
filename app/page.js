@@ -79,8 +79,8 @@ export default function Home() {
         {/* ------------------------------------------------------ SERVICES */}
         <section className="hp-band hp-band-cream" id="services">
           <div className="hp-inner">
-            <p className="hp-kicker hp-centre">{homeServices.kicker}</p>
-            <h2 className="hp-heading hp-centre hp-heading-wide">
+            <p className="hp-kicker hp-center">{homeServices.kicker}</p>
+            <h2 className="hp-heading hp-center hp-heading-wide">
               {homeServices.title}
             </h2>
             <div className="hp-cards">
@@ -100,7 +100,7 @@ export default function Home() {
               ))}
             </div>
             <p className="hp-note">{homeServices.note}</p>
-            <div className="hp-centre">
+            <div className="hp-center">
               <Link className="hp-button" href="/services">
                 See all services
               </Link>
@@ -111,10 +111,10 @@ export default function Home() {
         {/* ------------------------------------------------------ APPROACH */}
         <section className="hp-band hp-band-forest">
           <div className="hp-inner">
-            <p className="hp-kicker hp-centre hp-kicker-light">
+            <p className="hp-kicker hp-center hp-kicker-light">
               {homeApproach.kicker}
             </p>
-            <h2 className="hp-heading hp-centre hp-heading-light">
+            <h2 className="hp-heading hp-center hp-heading-light">
               {homeApproach.title}
             </h2>
             <div className="hp-approach">
@@ -167,14 +167,16 @@ export default function Home() {
 
         {/* ----------------------------------------------------- OPEN TABS */}
         <section className="hp-band hp-band-cream" id="tabs">
-          <div className="hp-inner hp-inner-narrow hp-centre">
+          <div className="hp-inner hp-inner-narrow hp-center">
             <p className="hp-kicker">{homeTabs.kicker}</p>
             <h2 className="hp-heading">{homeTabs.title}</h2>
-            <p className="hp-body hp-lead hp-lead-centre">{homeTabs.intro}</p>
+            <p className="hp-body hp-lead hp-lead-center">{homeTabs.intro}</p>
             <ul className="hp-tags">
               {homeTabs.tags.map((tag) => (
-                <li className="hp-tag" key={tag}>
-                  {tag}
+                <li key={tag.label}>
+                  <Link className="hp-tag" href={tag.href}>
+                    {tag.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -186,7 +188,7 @@ export default function Home() {
 
         {/* ------------------------------------------------------- CONTACT */}
         <section className="hp-band hp-band-forest hp-contact" id="contact">
-          <div className="hp-inner hp-inner-narrow hp-centre">
+          <div className="hp-inner hp-inner-narrow hp-center">
             <h2 className="hp-heading hp-heading-light hp-contact-title">
               {homeContact.title}
             </h2>

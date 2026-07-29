@@ -21,7 +21,7 @@ export default function ServicesPage() {
         <div className="section-heading">
           <div>
             <p className="section-kicker">What I Do</p>
-            <h2>Creative work with clarity at the centre.</h2>
+            <h2>Creative work with clarity at the center.</h2>
           </div>
         </div>
         <ServicesGrid />

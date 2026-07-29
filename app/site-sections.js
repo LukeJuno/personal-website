@@ -217,29 +217,28 @@ export function OpenTabsGrid() {
     <div className="open-tabs-stack">
       {openTabs.map((item) => (
         <article className="open-tab-row" id={item.slug} key={item.slug}>
-          <div className="open-tab-media">
+          <Link className="open-tab-media" href={item.href}>
             <Image
               src={item.image}
               alt={item.imageAlt}
               fill
               sizes="(max-width: 960px) 100vw, 38vw"
             />
-          </div>
+          </Link>
           <div className="open-tab-copy">
             <p className="card-label">{item.label}</p>
-            <h3>{item.title}</h3>
+            <h3>
+              <Link href={item.href}>{item.title}</Link>
+            </h3>
             <p>{item.description}</p>
-            <p className="credential">
-              <strong>Credentials:</strong> {item.credentials}
-            </p>
-            <a
-              className="inline-link certification-link"
-              href={item.certificationFile}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {item.certificationLabel}
-            </a>
+            {item.credentials ? (
+              <p className="credential">
+                <strong>Credentials:</strong> {item.credentials}
+              </p>
+            ) : null}
+            <Link className="inline-link" href={item.href}>
+              Read more
+            </Link>
           </div>
         </article>
       ))}
