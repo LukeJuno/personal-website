@@ -451,6 +451,20 @@
   margin-bottom: 2.5rem;
 }
 
+.hp-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 1.5rem;
+  margin-top: 1.75rem;
+  color: var(--on-forest-dim);
+  font-size: 0.9375rem;
+}
+
+.hp-contact-links a:hover {
+  color: var(--gold-light);
+}
+
 /* -------------------------------------------------------------- small print */
 
 @media (max-width: 860px) {

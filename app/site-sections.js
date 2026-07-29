@@ -4,6 +4,7 @@ import {
   brands,
   caseStudies,
   contactLinks,
+  homeContact,
   openTabs,
   portfolioWork,
   services,
@@ -248,33 +249,22 @@ export function OpenTabsGrid() {
 
 export function ContactPanel() {
   return (
-    <section className="section-frame contact-panel">
-      <div className="section-heading">
-        <div>
-          <p className="section-kicker">Contact</p>
-          <h2>Have a brief, a blank page, or an idea that’s almost there?</h2>
-        </div>
-      </div>
-      <div className="contact-layout">
-        <div className="prose">
-          <p className="contact-copy">
-            Let’s breathe some life into it and get it off the ground.
-          </p>
-          <p className="contact-copy">
-            Whether you need a campaign concept, a new voice, a website rewrite
-            or simply another brain to bounce thoughts with, tell me what
-            you’re working on. Freelance projects, creative collaborations and
-            interesting side quests welcome.
-          </p>
-        </div>
-        <div className="contact-actions">
-          <a
-            className="button button-primary"
-            href="mailto:alexandracolgan@gmail.com"
-          >
-            Get in touch
+    <div className="hp">
+      <section className="hp-band hp-band-forest hp-contact" id="contact">
+        <div className="hp-inner hp-inner-narrow hp-center">
+          <h2 className="hp-heading hp-heading-light hp-contact-title">
+            {homeContact.title}
+          </h2>
+          <p className="hp-contact-lead">{homeContact.lead}</p>
+          {homeContact.body.map((line) => (
+            <p className="hp-contact-body" key={line}>
+              {line}
+            </p>
+          ))}
+          <a className="hp-button hp-button-invert" href={homeContact.ctaHref}>
+            {homeContact.ctaLabel}
           </a>
-          <div className="contact-links" aria-label="Social links">
+          <div className="hp-contact-links" aria-label="Social links">
             {contactLinks.map((link) => (
               <a
                 key={link.label}
@@ -287,8 +277,8 @@ export function ContactPanel() {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
 
