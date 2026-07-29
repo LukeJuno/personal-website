@@ -4,7 +4,7 @@ import { ContactPanel, OpenTabsGrid, PageIntro } from "../site-sections";
 export const metadata = {
   title: "Open Tabs",
   description:
-    "Yoga, babywearing, coding, and the interests Alexandra Colgan keeps returning to.",
+    "Yoga, babywearing, coding, and what Alexandra Colgan is currently reading, listening to and writing.",
 };
 
 export default function OpenTabsPage() {
@@ -13,7 +13,7 @@ export default function OpenTabsPage() {
       <PageIntro
         kicker="Open Tabs"
         title="The things I keep learning from outside the brief."
-        intro="A few quieter threads that still shape how I think: yoga, babywearing, coding, digital products, and small experiments."
+        intro="A few quieter threads that still shape how I think: yoga, babywearing, coding, and whatever currently has my attention."
         aside="Each one brings its own kind of discipline, patience, and perspective, which usually finds its way back into the work somehow."
       />
 
@@ -21,7 +21,7 @@ export default function OpenTabsPage() {
         <div className="section-heading">
           <div>
             <p className="section-kicker">Currently Open</p>
-            <h2>Three tabs that keep staying open in my mind.</h2>
+            <h2>Four tabs that keep staying open in my mind.</h2>
           </div>
         </div>
         <OpenTabsGrid />

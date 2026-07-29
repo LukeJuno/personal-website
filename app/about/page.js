@@ -12,9 +12,9 @@ export default function AboutPage() {
     <SiteShell>
       <PageIntro
         kicker="About"
-        title="Clear thinking, warm language, and ideas with a human centre."
+        title="Clear thinking, warm language, and ideas with a human center."
         intro="I’m Alexandra Colgan, a Hong Kong-based creative and copywriter who enjoys simplifying complex ideas into thoughtful stories and experiences."
-        aside="Over the years I’ve worked across luxury, lifestyle, healthcare, technology, and consumer brands, helping organisations find language that feels both sharp and genuinely human."
+        aside="Over the years I’ve worked across luxury, lifestyle, healthcare, technology, and consumer brands, helping organizations find language that feels both sharp and genuinely human."
       />
 
       <section className="section-frame section-grid">

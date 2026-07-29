@@ -325,39 +325,160 @@ export const portfolioWork = [
 export const openTabs = [
   {
     slug: "yoga",
+    href: "/yoga",
     label: "Yoga",
-    title: "Practice, teaching, and a quieter kind of attention.",
+    title: "Yoga student and teacher",
     description:
-      "Yoga has been part of my life for years, and I completed my 200-hour teacher training in 2020. It still shapes how I think about breath, pacing, and presence in both work and life.",
+      "Almost ten years of practice, a 200-hour teacher training, and a lifelong pursuit of greater flexibility.",
+    body: [
+      "I've been practicing yoga for nearly a decade now, and through yoga I've discovered what it's like to truly understand your own body and connect the power of breath with movement.",
+      "My teaching style is dynamic, playful and challenging, with creative flows that encourage students to explore their strengths with confidence. I particularly enjoy incorporating arm balances and inversions into my classes and my own practice.",
+      "I believe there's always something new to learn every time you step on the mat. I teach occasionally and practice most days. If you're looking for a class or a private session, get in touch.",
+    ],
     credentials: "200hr YTT & CET with Samrat Dasgupta at Pure Yoga, 2020",
-    image: "/open-tab-yoga.jpg",
-    imageAlt: "Alexandra practicing yoga outdoors.",
+    image: "/tabs/yoga-lead.webp",
+    imageAlt: "Alexandra Colgan in a low lunge with a side bend.",
+    gallery: [
+      { src: "/tabs/yoga-2.webp", alt: "Alexandra Colgan balancing in crow pose." },
+      { src: "/tabs/yoga-3.webp", alt: "Alexandra Colgan in a forearm balance against a dark background." },
+    ],
+    cta: { label: "Get in touch", href: "mailto:alexandracolgan@gmail.com" },
     certificationLabel: "View yoga certification",
     certificationFile: "/cert-yoga.jpg",
+    metaTitle: "Yoga",
+    metaDescription:
+      "Alexandra Colgan is a 200-hour certified yoga teacher trained at Pure Yoga Hong Kong. Dynamic, playful classes with a focus on arm balances and inversions.",
   },
   {
     slug: "babywearing",
+    href: "/babywearing",
     label: "Babywearing",
-    title: "Support, closeness, and practical care designed into daily life.",
-    description:
-      "A space where parenting, embodied knowledge, and gentle problem-solving meet. It is one of the most human-centred things I have studied.",
-    credentials: "Babywearing certification from the Australian Babywearing Association, 2025",
-    image: "/open-tab-babywearing.jpeg",
-    imageAlt: "Alexandra holding a baby in a babywearing setup outdoors.",
+    title: "Babywearing Consultant",
+    description: "A babywearing mom of two.",
+    body: [
+      "Babywearing has seen me through two babies. And not even as a nice-to-have, but as the thing that made it possible to have hands, leave the house, and keep my toddler close while her baby sister slept.",
+      "Babywearing isn't just practical, it's a way to keep your little ones close and comforted. Getting the right carrier, fitted properly, for the right body and the right stage, is the difference between something you abandon to the back of the closet and something you use every day for years. Most people who say babywearing \u201cdidn't work\u201d for them were sold the wrong carrier and never shown how to wear it.",
+      "I certified with the Australian Babywearing Association in 2025 so I could help with exactly that. I'm available for consultations — fitting, carrier selection, troubleshooting, and working out what suits your body and your baby rather than what's trending.",
+      "I'm also hoping to open a carrier library, carrier workshops and babywearing activities in Hong Kong, so people can try before committing and explore babywearing properly. If that's of interest, let me know and I'll keep you posted.",
+    ],
+    /* Drafted from how certified consultants elsewhere structure sessions —
+       60–90 minutes is the standard, with demo dolls and 2–3 carriers tried. */
+    sessions: {
+      heading: "What a consultation involves",
+      intro:
+        "Every session is shaped around you, your baby and how you actually live. Broadly, here's what to expect.",
+      items: [
+        {
+          name: "One to one, in person",
+          detail:
+            "60 to 90 minutes, at your home or somewhere that suits. We'll talk through what you need, try two or three carriers, and practice until you can do it yourself without me. You'll leave able to put it on, take it off and check the fit on your own.",
+        },
+        {
+          name: "One to one, online",
+          detail:
+            "45 to 60 minutes over video. Best if you already have a carrier and it isn't sitting right, or you want help choosing before you buy. Bring the carrier and the baby.",
+        },
+        {
+          name: "Small groups",
+          detail:
+            "For friends, antenatal groups or workplaces. Everyone gets hands-on time and there's usually more carriers to try between you.",
+        },
+      ],
+      note: "Follow-up support is included — babies change shape and what worked at six weeks often doesn't at six months.",
+    },
+    price: {
+      label: "Price",
+      value: "Available on request, because every need is different.",
+    },
+    credentials:
+      "Babywearing certification, Australian Babywearing Association, 2025",
+    image: "/tabs/babywearing-lead.webp",
+    imageAlt:
+      "Alexandra Colgan carrying her newborn in a red ring sling, outdoors in Hong Kong.",
+    cta: {
+      label: "Book a consultation or ask a question",
+      href: "mailto:alexandracolgan@gmail.com?subject=Babywearing%20consultation",
+    },
+    secondaryCta: { label: "Join the WhatsApp group", href: "" },
     certificationLabel: "View babywearing certification",
     certificationFile: "/cert-babywearing.pdf",
+    metaTitle: "Babywearing Consultant in Hong Kong",
+    metaDescription:
+      "Certified babywearing consultant in Hong Kong. Carrier fitting, carrier selection and troubleshooting, in person or online. Carrier library in the works.",
+    isService: true,
+    serviceName: "Babywearing consultation",
+    serviceDescription:
+      "One-to-one and small group babywearing consultations in Hong Kong: carrier fitting, carrier selection and troubleshooting for newborns through toddlers, in person or online.",
   },
   {
     slug: "coding",
+    href: "/coding",
     label: "Coding",
     title: "Small digital products, side projects, and useful experiments.",
-    description:
-      "After completing Harvard's CS50x, I built a Cantonese learning app and kept following the thread into digital products, creative tooling, and the occasional AI experiment.",
+    description: "Mostly I build things I want to exist.",
+    body: [
+      "I completed Harvard's CS50x in 2025, mostly because my husband wanted to do it together (to be honest) but also because I'd dabbled in it years ago and never got around to exploring it again.",
+      "My final project was a Cantonese learning app, built because there are hardly any resources for the language of the city I live in.",
+      "This website is another project. I designed and built it, which has been a learning curve in closing the gap between \u201cI know what good looks like\u201d and \u201cI know how to make it.\u201d",
+    ],
+    projects: [
+      {
+        name: "Cantonese For Kids",
+        description:
+          "Simple phrases, words, story time and local slang, with Jyutping and audio so you can hear it out loud and repeat it.",
+        href: "",
+      },
+      {
+        name: "This website",
+        description:
+          "Designed and built from scratch. Next.js, and a lot of learning in public.",
+        href: "",
+      },
+      { name: "In the works", description: "Watch this space.", href: "" },
+    ],
     credentials: "CS50x certification through Harvard University, 2025",
-    image: "/open-tab-coding.png",
-    imageAlt: "Screenshot of Alexandra's coding work on a laptop.",
+    image: "/tabs/coding-cantonese.webp",
+    imageAlt:
+      "The Cantonese For Kids web app, showing tabs for simple phrases, words, story time and local slang.",
+    cta: { label: "Get in touch", href: "mailto:alexandracolgan@gmail.com" },
     certificationLabel: "View CS50x certificate",
     certificationFile: "/cert-coding.png",
+    metaTitle: "Coding",
+    metaDescription:
+      "Harvard CS50x, a Cantonese learning app, and this website. Alexandra Colgan's side projects and digital experiments.",
+  },
+  {
+    slug: "currently",
+    href: "/currently",
+    label: "Currently",
+    title: "Books, podcasts, shows\u2026",
+    description:
+      "What I'm reading, listening to, watching or writing at the moment. Updated when it changes, which is often.",
+    body: [
+      "A running list of what's got my attention: books I'm in the middle of, podcasts I've been shouting about, and the writing I do that nobody's commissioned.",
+      "Most of my best ideas at work have come from somewhere well outside the brief, so I've stopped treating this as a separate thing from the job.",
+    ],
+    metaTitle: "Currently",
+    metaDescription:
+      "What Alexandra Colgan is reading, listening to and watching at the moment.",
+    nowList: [
+      {
+        label: "Reading",
+        value: "Dungeon Crawler Carl",
+        note: "A man in his boxer shorts and his ex's cat fight through a dungeon on live intergalactic TV. Not at all what I imagined I'd like, but I read all eight books faster than any other series I've picked up.",
+      },
+      {
+        label: "Listening",
+        value: "Sleep Token",
+        note: "Possibly re-entering my emo rock phase.",
+      },
+      {
+        label: "Watching",
+        value: "Frieren: Beyond Journey's End",
+        note: "Almost nothing seems to happen sometimes, and yet it's very touching in a nostalgic way.",
+      },
+    ],
+    cta: { label: "Get in touch", href: "mailto:alexandracolgan@gmail.com" },
   },
 ];
 
@@ -495,7 +616,12 @@ export const homeTabs = {
     "A few things I'm learning, making and thinking about beyond the brief.",
   intro:
     "Yoga, coding experiments, babywearing, and whatever else is currently taking over my mind's browser history.",
-  tags: ["Yoga", "Coding", "Babywearing"],
+  tags: [
+    { label: "Yoga", href: "/yoga" },
+    { label: "Babywearing", href: "/babywearing" },
+    { label: "Coding", href: "/coding" },
+    { label: "Currently", href: "/currently" },
+  ],
   ctaLabel: "See what I'm exploring",
   ctaHref: "/open-tabs",
 };

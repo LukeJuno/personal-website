@@ -1,9 +1,8 @@
 /* ===========================================================================
    Homepage — 2026 design
-   Scoped under .hp so nothing here can leak into /about, /work, /services or
-   /open-tabs. The portfolio page also renders with this class (see
-   portfolio.css) to share these tokens/utilities. Colours come from the
-   tokens in globals.css, so pages follow light/dark theme automatically.
+   Scoped under .hp so nothing here can leak into /about, /work, /portfolio,
+   /services or /open-tabs. Colors come from the tokens in globals.css, so
+   the page follows light/dark theme automatically.
    =========================================================================== */
 
 .hp {
@@ -16,7 +15,7 @@
 
 /* globals.css puts `max-width: 11ch/14ch` and tight negative letter-spacing on
    h1/h2/h3 for the older page designs. Those constraints forced the homepage
-   headings to wrap narrow and hug the left edge inside centred sections, so
+   headings to wrap narrow and hug the left edge inside centered sections, so
    they're reset here. */
 .hp h1,
 .hp h2,
@@ -25,10 +24,10 @@
   letter-spacing: normal;
 }
 
-.hp-centre h1,
-.hp-centre h2,
-.hp-centre h3,
-.hp-centre p {
+.hp-center h1,
+.hp-center h2,
+.hp-center h3,
+.hp-center p {
   margin-inline: auto;
 }
 
@@ -41,7 +40,7 @@
   max-width: 900px;
 }
 
-.hp-centre {
+.hp-center {
   text-align: center;
 }
 
@@ -104,13 +103,13 @@
   margin-bottom: 3rem;
 }
 
-.hp-lead-centre {
+.hp-lead-center {
   margin-inline: auto;
   max-width: 40rem;
 }
 
-/* Centred section headings read better on a measure than edge to edge. */
-.hp-centre .hp-heading {
+/* Centered section headings read better on a measure than edge to edge. */
+.hp-center .hp-heading {
   max-width: 46rem;
 }
 
@@ -452,6 +451,20 @@
   margin-bottom: 2.5rem;
 }
 
+.hp-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 1.5rem;
+  margin-top: 1.75rem;
+  color: var(--on-forest-dim);
+  font-size: 0.9375rem;
+}
+
+.hp-contact-links a:hover {
+  color: var(--gold-light);
+}
+
 /* -------------------------------------------------------------- small print */
 
 @media (max-width: 860px) {
@@ -496,5 +509,327 @@
 
   .hp-work-card:hover .hp-work-image {
     transform: none;
+  }
+}
+
+/* ===========================================================================
+   Open Tabs detail pages (/yoga, /babywearing, /coding, /currently)
+   =========================================================================== */
+
+.tab-page {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(20px, 5vw, 64px);
+  font-family: var(--font-display);
+}
+
+.tab-page-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  color: var(--gold-deep);
+  text-decoration: none;
+  margin-bottom: 1.125rem;
+}
+
+.tab-page-back::before {
+  content: "←";
+}
+
+.tab-page-back:hover {
+  color: var(--gold);
+}
+
+.tab-page-title {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.15;
+  font-weight: 400;
+  max-width: none;
+  letter-spacing: normal;
+  margin: 0 0 2rem 0;
+  text-wrap: balance;
+}
+
+.tab-page-image {
+  display: block;
+  width: 100%;
+  height: clamp(15rem, 34vw, 24rem);
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 2.5rem;
+}
+
+.tab-page-body p {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--body-copy);
+  margin: 0 0 1.25rem 0;
+}
+
+.tab-page-credential {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 2.5rem 0 0.75rem 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.tab-page-credential strong {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--gold-deep);
+  font-weight: 400;
+}
+
+.tab-page-credential span {
+  font-size: 1rem;
+  color: var(--body-copy);
+}
+
+.now-list {
+  margin: 2rem 0 0 0;
+}
+
+.now-list > div {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.now-list dt {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--gold-deep);
+  margin-bottom: 0.5rem;
+}
+
+.now-list dd {
+  margin: 0;
+  font-size: 1.125rem;
+  color: var(--text);
+}
+
+.now-list .now-note {
+  font-size: 1rem;
+  color: var(--body-muted);
+  margin-top: 0.35rem;
+}
+
+.tab-page-more {
+  margin-top: 3.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.tab-page-more ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tab-page-more a {
+  display: inline-flex;
+  padding: 0.5rem 1.125rem;
+  border-radius: 999px;
+  background: var(--cream-strong);
+  font-size: 0.9375rem;
+  color: var(--body-copy);
+  text-decoration: none;
+  transition: background 0.18s ease;
+}
+
+.tab-page-more a:hover {
+  background: var(--sage-light);
+}
+
+/* Open Tabs index — cards are now links */
+.open-tab-copy h3 a,
+.open-tab-media {
+  text-decoration: none;
+  color: inherit;
+}
+
+.open-tab-copy h3 a:hover {
+  color: var(--gold-deep);
+}
+
+/* Yoga gallery — three shots, small enough to read as a credential rather
+   than a personal album. */
+.tab-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 2.25rem 0 0 0;
+}
+
+.tab-gallery li {
+  margin: 0;
+}
+
+.tab-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Project list on the coding page. */
+.tab-projects {
+  list-style: none;
+  padding: 0;
+  margin: 2.25rem 0 0 0;
+}
+
+.tab-projects li {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.tab-projects h2 {
+  font-family: var(--font-display);
+  font-size: 1.1875rem;
+  font-weight: 700;
+  max-width: none;
+  letter-spacing: normal;
+  margin: 0 0 0.35rem 0;
+}
+
+.tab-projects h2 a {
+  color: var(--gold-deep);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.tab-projects h2 a:hover {
+  color: var(--gold);
+}
+
+.tab-projects p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--body-copy);
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .tab-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Babywearing: what a consultation involves. This is the block that turns a
+   description into a bookable service, so it gets its own panel. */
+.tab-sessions {
+  margin: 2.75rem 0 0 0;
+  padding: 1.75rem 1.75rem 1.25rem;
+  background: var(--cream-strong);
+  border-radius: 16px;
+}
+
+.tab-sessions h2 {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  max-width: none;
+  letter-spacing: normal;
+  margin: 0 0 0.5rem 0;
+}
+
+.tab-sessions > p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--body-copy);
+  margin: 0 0 1.25rem 0;
+}
+
+.tab-sessions dl {
+  margin: 0;
+}
+
+.tab-sessions dl > div {
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.tab-sessions dt {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--gold-deep);
+  margin-bottom: 0.4rem;
+}
+
+.tab-sessions dd {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--body-copy);
+}
+
+.tab-sessions-note {
+  margin: 1.25rem 0 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--body-muted);
+}
+
+.tab-price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 2rem 0 0 0;
+}
+
+.tab-price strong {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--gold-deep);
+  font-weight: 400;
+}
+
+.tab-price span {
+  font-size: 1.0625rem;
+  color: var(--text);
+}
+
+.tab-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 2.25rem;
+}
+
+.tab-actions .hp-inline-link {
+  margin-top: 0;
+}
+
+@media (max-width: 560px) {
+  .tab-sessions {
+    padding: 1.25rem 1.25rem 1rem;
+  }
+
+  .tab-actions .hp-button {
+    flex: 1 1 100%;
   }
 }

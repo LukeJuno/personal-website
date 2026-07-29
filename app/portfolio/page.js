@@ -38,7 +38,7 @@ export default function PortfolioPage() {
         </section>
 
         <section className="hp-band hp-band-forest hp-contact" id="contact">
-          <div className="hp-inner hp-inner-narrow hp-centre">
+          <div className="hp-inner hp-inner-narrow hp-center">
             <h2 className="hp-heading hp-heading-light hp-contact-title">
               {homeContact.title}
             </h2>
