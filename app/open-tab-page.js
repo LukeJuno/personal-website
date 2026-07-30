@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import SiteShell from "./site-shell";
+import TabCredentials from "./tab-credentials";
+import TabGalleryCarousel from "./tab-gallery-carousel";
 import { openTabs } from "./site-data";
 
 export function tabBySlug(slug) {
@@ -32,8 +34,8 @@ export default function OpenTabPage({ slug, children }) {
             className="tab-page-image"
             src={tab.image}
             alt={tab.imageAlt}
-            width={1400}
-            height={933}
+            width={tab.imageWidth}
+            height={tab.imageHeight}
             priority
             sizes="(max-width: 900px) 92vw, 900px"
           />
@@ -93,21 +95,7 @@ export default function OpenTabPage({ slug, children }) {
           {children}
 
           {/* Yoga: photo gallery */}
-          {tab.gallery?.length ? (
-            <ul className="tab-gallery">
-              {tab.gallery.map((shot) => (
-                <li key={shot.src}>
-                  <Image
-                    src={shot.src}
-                    alt={shot.alt}
-                    width={1000}
-                    height={1000}
-                    sizes="(max-width: 700px) 45vw, 220px"
-                  />
-                </li>
-              ))}
-            </ul>
-          ) : null}
+          {tab.gallery?.length ? <TabGalleryCarousel shots={tab.gallery} /> : null}
 
           {tab.cta?.href ? (
             <div className="tab-actions">
@@ -127,23 +115,13 @@ export default function OpenTabPage({ slug, children }) {
             </div>
           ) : null}
 
-          {tab.credentials ? (
-            <p className="tab-page-credential">
-              <strong>Credentials</strong>
-              <span>{tab.credentials}</span>
-            </p>
-          ) : null}
-
-          {tab.certificationFile ? (
-            <a
-              className="hp-inline-link"
-              href={tab.certificationFile}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {tab.certificationLabel}
-            </a>
-          ) : null}
+          <TabCredentials
+            credentials={tab.credentials}
+            certificationLabel={tab.certificationLabel}
+            certificationFile={tab.certificationFile}
+            resumeLabel={tab.resumeLabel}
+            resumeFile={tab.resumeFile}
+          />
         </div>
 
         <nav className="tab-page-more" aria-label="Other open tabs">

@@ -3,7 +3,15 @@ export const primaryNav = [
   { href: "/portfolio", label: "Portfolio" },
   { href: "/services", label: "Services" },
   { href: "/open-tabs", label: "Open Tabs" },
+  { href: "/contact", label: "Contact" },
 ];
+
+// Trimmed for the top header — About and Services stay reachable from the
+// footer instead, keeping the header focused on the pages people look for
+// first.
+export const headerNav = primaryNav.filter(
+  (item) => item.href !== "/about" && item.href !== "/services",
+);
 
 export const brands = [
   { name: "Dove", logo: "/brands/dove.svg", shape: "standard" },
@@ -449,13 +457,17 @@ export const openTabs = [
     credentials: "200hr YTT & CET with Samrat Dasgupta at Pure Yoga, 2020",
     image: "/tabs/yoga-lead.webp",
     imageAlt: "Alexandra Colgan in a low lunge with a side bend.",
+    imageWidth: 1400,
+    imageHeight: 933,
     gallery: [
       { src: "/tabs/yoga-2.webp", alt: "Alexandra Colgan balancing in crow pose." },
       { src: "/tabs/yoga-3.webp", alt: "Alexandra Colgan in a forearm balance against a dark background." },
+      { src: "/tabs/yoga-4.webp", alt: "Alexandra Colgan smiling in a forearm stand with one leg extended." },
     ],
-    cta: { label: "Get in touch", href: "mailto:alexandracolgan@gmail.com" },
-    certificationLabel: "View yoga certification",
+    certificationLabel: "Yoga certification",
     certificationFile: "/cert-yoga.jpg",
+    resumeLabel: "Yoga resume",
+    resumeFile: "/cert-yoga-resume.webp",
     metaTitle: "Yoga",
     metaDescription:
       "Alexandra Colgan is a 200-hour certified yoga teacher trained at Pure Yoga Hong Kong. Dynamic, playful classes with a focus on arm balances and inversions.",
@@ -506,6 +518,8 @@ export const openTabs = [
     image: "/tabs/babywearing-lead.webp",
     imageAlt:
       "Alexandra Colgan carrying her newborn in a red ring sling, outdoors in Hong Kong.",
+    imageWidth: 1100,
+    imageHeight: 1375,
     cta: {
       label: "Book a consultation or ask a question",
       href: "mailto:alexandracolgan@gmail.com?subject=Babywearing%20consultation",
@@ -551,6 +565,8 @@ export const openTabs = [
     image: "/tabs/coding-cantonese.webp",
     imageAlt:
       "The Cantonese For Kids web app, showing tabs for simple phrases, words, story time and local slang.",
+    imageWidth: 1400,
+    imageHeight: 388,
     cta: { label: "Get in touch", href: "mailto:alexandracolgan@gmail.com" },
     certificationLabel: "View CS50x certificate",
     certificationFile: "/cert-coding.png",

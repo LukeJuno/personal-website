@@ -39,7 +39,7 @@
   --accent: #8e6209;
   --accent-bright: #c89b2f;
   --accent-soft: rgba(200, 155, 47, 0.14);
-  --mustard-wash: #f6efb7;
+  --mustard-wash: #dfe8c9;
   --sage-wash: #d8d6b3;
   --clay-wash: #ead8bc;
 
@@ -83,7 +83,7 @@
   --accent: #efbf51;
   --accent-bright: #d6a53c;
   --accent-soft: rgba(239, 191, 81, 0.16);
-  --mustard-wash: #5f4b1e;
+  --mustard-wash: #3f4a30;
   --sage-wash: #484634;
   --clay-wash: #564735;
 
@@ -292,9 +292,7 @@ path {
 .inline-link,
 .site-footer a {
   position: relative;
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .site-nav a {
@@ -302,35 +300,15 @@ path {
   border-radius: 999px;
 }
 
-.site-nav a::after,
-.inline-link::after,
-.footer-links a::after {
-  content: "";
-  position: absolute;
-  left: 0.9rem;
-  right: 0.9rem;
-  bottom: 0.42rem;
-  height: 1px;
-  background: currentColor;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.2s ease;
-}
-
 .site-nav a:hover,
 .site-nav a.is-active,
-.inline-link:hover,
-.site-footer a:hover,
-.footer-links a:hover {
+.site-footer a:hover {
   color: var(--text);
   background: rgba(255, 255, 255, 0.34);
 }
 
-.site-nav a:hover::after,
-.site-nav a.is-active::after,
-.inline-link:hover::after,
-.footer-links a:hover::after {
-  transform: scaleX(1);
+.inline-link:hover {
+  color: var(--gold-deep);
 }
 
 .section-frame {
