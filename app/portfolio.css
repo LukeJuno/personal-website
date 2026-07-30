@@ -296,19 +296,26 @@
 
 .pf-modal-media {
   position: relative;
-  aspect-ratio: 4 / 3;
   border-radius: 12px;
   overflow: hidden;
   background: var(--cream-strong);
 }
 
-.pf-modal-media img {
-  object-fit: cover;
+.pf-modal-media img,
+.pf-modal-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.pf-modal-media-wide {
+  grid-column: 1 / -1;
 }
 
 .pf-modal-media-video {
+  position: relative;
   aspect-ratio: 16 / 9;
-  grid-column: 1 / -1;
 }
 
 .pf-modal-media-video iframe {

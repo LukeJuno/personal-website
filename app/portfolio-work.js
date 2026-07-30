@@ -42,27 +42,49 @@ function CaseModal({ item, onClose }) {
 
         {item.gallery?.length ? (
           <div className="pf-modal-gallery">
-            {item.gallery.map((media, index) =>
-              media.type === "video" ? (
-                <div className="pf-modal-media pf-modal-media-video" key={index}>
-                  <iframe
-                    src={`https://www.youtube.com/embed/${media.src}`}
-                    title={media.title || item.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
-              ) : (
-                <div className="pf-modal-media" key={index}>
+            {item.gallery.map((media, index) => {
+              if (media.type === "video") {
+                return (
+                  <div className="pf-modal-media pf-modal-media-wide" key={index}>
+                    <div className="pf-modal-media-video">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${media.src}`}
+                        title={media.title || item.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
+                );
+              }
+              if (media.type === "video-file") {
+                return (
+                  <div
+                    className={`pf-modal-media${media.wide ? " pf-modal-media-wide" : ""}`}
+                    key={index}
+                  >
+                    <video controls poster={media.poster} preload="metadata">
+                      <source src={media.src} type="video/mp4" />
+                    </video>
+                  </div>
+                );
+              }
+              return (
+                <div
+                  className={`pf-modal-media${media.wide ? " pf-modal-media-wide" : ""}`}
+                  key={index}
+                >
                   <Image
                     src={media.src}
                     alt={media.alt}
-                    fill
+                    width={media.width}
+                    height={media.height}
                     sizes="(max-width: 700px) 90vw, 45vw"
+                    priority
                   />
                 </div>
-              ),
-            )}
+              );
+            })}
           </div>
         ) : null}
 
