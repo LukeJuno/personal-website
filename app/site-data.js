@@ -297,6 +297,13 @@ export const portfolioWork = [
       },
       {
         type: "image",
+        src: "/case-studies/joocies-gallery-6.webp",
+        alt: "'Visit the giant Joocy at K11 Art Mall' promotional key visual with an oversized inflatable Joocies character.",
+        width: 724,
+        height: 900,
+      },
+      {
+        type: "image",
         src: "/case-studies/joocies-gallery-1.webp",
         alt: "A pickleball player kneeling on court with a Joocies keychain clipped to his sports bag.",
         width: 719,
