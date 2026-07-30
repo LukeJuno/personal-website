@@ -17,7 +17,7 @@ export default function AboutPage() {
         aside="Over the years I’ve worked across luxury, lifestyle, healthcare, technology, and consumer brands, helping organizations find language that feels both sharp and genuinely human."
       />
 
-      <section className="section-frame section-grid">
+      <section className="section-frame section-frame-mustard section-grid">
         <div className="section-meta">
           <p className="section-kicker">Biography</p>
         </div>
@@ -44,7 +44,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-frame">
+      <section className="section-frame section-frame-sage">
         <div className="section-heading">
           <div>
             <p className="section-kicker">Values</p>
@@ -54,7 +54,7 @@ export default function AboutPage() {
         <ValueGrid />
       </section>
 
-      <section className="section-frame section-grid">
+      <section className="section-frame section-frame-clay section-grid">
         <div className="section-meta">
           <p className="section-kicker">Experience</p>
         </div>

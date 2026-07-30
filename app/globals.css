@@ -342,6 +342,28 @@ path {
   box-shadow: var(--shadow-soft);
 }
 
+/* Section colour rotation — each page cycles through these so no two
+   sections in a row share a background. */
+.section-frame-mustard {
+  background: var(--mustard-wash);
+  border-color: transparent;
+}
+
+.section-frame-sage {
+  background: var(--sage-wash);
+  border-color: transparent;
+}
+
+.section-frame-clay {
+  background: var(--clay-wash);
+  border-color: transparent;
+}
+
+.section-frame-cream {
+  background: var(--cream-strong);
+  border-color: transparent;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 0.96fr) minmax(320px, 1.04fr);
@@ -1527,7 +1549,7 @@ p {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   padding: 1rem;
-  background: var(--panel-strong);
+  background: var(--mustard-wash);
 }
 
 .case-study-gallery figure {

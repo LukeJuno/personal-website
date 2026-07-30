@@ -13,10 +13,12 @@ export default function PortfolioPage() {
   return (
     <SiteShell>
       <div className="hp pf">
-        <section className="pf-intro">
-          <p className="hp-kicker">{portfolioIntro.kicker}</p>
-          <h1 className="pf-title">{portfolioIntro.title}</h1>
-          <p className="pf-intro-copy">{portfolioIntro.intro}</p>
+        <section className="pf-intro-band">
+          <div className="pf-intro">
+            <p className="hp-kicker">{portfolioIntro.kicker}</p>
+            <h1 className="pf-title">{portfolioIntro.title}</h1>
+            <p className="pf-intro-copy">{portfolioIntro.intro}</p>
+          </div>
         </section>
 
         <LogoMarquee />

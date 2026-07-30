@@ -17,7 +17,7 @@ export default function OpenTabsPage() {
         aside="Each one brings its own kind of discipline, patience, and perspective, which usually finds its way back into the work somehow."
       />
 
-      <section className="section-frame">
+      <section className="section-frame section-frame-mustard">
         <div className="section-heading">
           <div>
             <p className="section-kicker">Currently Open</p>
