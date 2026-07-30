@@ -180,12 +180,21 @@ export function PortfolioWork() {
             className={`pf-work-grid${index % 2 === 1 ? " pf-work-grid-reverse" : ""}`}
           >
             <div className="pf-work-media">
-              <Image
-                src={item.image}
-                alt={item.imageAlt}
-                fill
-                sizes="(max-width: 820px) 100vw, 45vw"
-              />
+              {item.video ? (
+                <iframe
+                  src={`https://www.youtube.com/embed/${item.video}`}
+                  title={item.videoTitle}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              ) : (
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt}
+                  fill
+                  sizes="(max-width: 820px) 100vw, 45vw"
+                />
+              )}
             </div>
             <div className="pf-work-copy">
               <p className="pf-work-brand">{item.brand}</p>
