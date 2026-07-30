@@ -304,8 +304,8 @@ export const portfolioWork = [
     insight:
       "The survey data was comprehensive, but in order to easily reach stakeholders and everyday people the findings needed a format they'd actually watch and pass along.",
     idea: "A social video summarising the survey's key findings through animated graphics, built to travel across APAC markets.",
-    image: "/home/work-roche.webp",
-    imageAlt: "Roche APAC Vision Health Survey social video still.",
+    video: "Ql30jMMuSs8",
+    videoTitle: "Roche APAC Vision Health Survey — social video",
   },
   {
     slug: "visit-arendelle",

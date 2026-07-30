@@ -166,6 +166,14 @@
   object-fit: cover;
 }
 
+.pf-work-media iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .pf-work-brand {
   font-size: 0.9375rem;
   color: var(--body-muted);
