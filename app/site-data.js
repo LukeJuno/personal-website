@@ -462,13 +462,13 @@ export const openTabs = [
     gallery: [
       { src: "/tabs/yoga-2.webp", alt: "Alexandra Colgan balancing in crow pose." },
       { src: "/tabs/yoga-3.webp", alt: "Alexandra Colgan in a forearm balance against a dark background." },
+      { src: "/tabs/yoga-4.webp", alt: "Alexandra Colgan smiling in a forearm stand with one leg extended." },
     ],
     cta: { label: "Get in touch", href: "mailto:alexandracolgan@gmail.com" },
     certificationLabel: "View yoga certification",
     certificationFile: "/cert-yoga.jpg",
-    // Add the PDF to public/ and set this path once the resume is provided.
     resumeLabel: "View yoga resume",
-    resumeFile: "",
+    resumeFile: "/cert-yoga-resume.webp",
     metaTitle: "Yoga",
     metaDescription:
       "Alexandra Colgan is a 200-hour certified yoga teacher trained at Pure Yoga Hong Kong. Dynamic, playful classes with a focus on arm balances and inversions.",
