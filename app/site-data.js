@@ -464,10 +464,9 @@ export const openTabs = [
       { src: "/tabs/yoga-3.webp", alt: "Alexandra Colgan in a forearm balance against a dark background." },
       { src: "/tabs/yoga-4.webp", alt: "Alexandra Colgan smiling in a forearm stand with one leg extended." },
     ],
-    cta: { label: "Get in touch", href: "mailto:alexandracolgan@gmail.com" },
-    certificationLabel: "View yoga certification",
+    certificationLabel: "Yoga certification",
     certificationFile: "/cert-yoga.jpg",
-    resumeLabel: "View yoga resume",
+    resumeLabel: "Yoga resume",
     resumeFile: "/cert-yoga-resume.webp",
     metaTitle: "Yoga",
     metaDescription:
