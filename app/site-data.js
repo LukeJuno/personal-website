@@ -281,6 +281,56 @@ export const portfolioWork = [
     idea: "Joocies: collectible orange cases that work like bag charms, so carrying a Sunkist orange feels playful, visible and social.",
     image: "/case-studies/joocies-lifestyle.webp",
     imageAlt: "Sunkist Joocies orange keychain case shown on a desk.",
+    gallery: [
+      {
+        type: "video-file",
+        src: "/case-studies/joocies-activation.mp4",
+        poster: "/case-studies/joocies-video-poster.webp",
+        wide: true,
+      },
+      {
+        type: "image",
+        src: "/case-studies/joocies-gallery-5.webp",
+        alt: "Sunkist Joocies key visual: all four keychain characters with the line 'Your juicy little sidekicks.'",
+        width: 724,
+        height: 900,
+      },
+      {
+        type: "image",
+        src: "/case-studies/joocies-gallery-6.webp",
+        alt: "'Visit the giant Joocy at K11 Art Mall' promotional key visual with an oversized inflatable Joocies character.",
+        width: 724,
+        height: 900,
+      },
+      {
+        type: "image",
+        src: "/case-studies/joocies-gallery-1.webp",
+        alt: "A pickleball player kneeling on court with a Joocies keychain clipped to his sports bag.",
+        width: 719,
+        height: 900,
+      },
+      {
+        type: "image",
+        src: "/case-studies/joocies-gallery-2.webp",
+        alt: "A Joocies keychain clipped to a red leather handbag layered with charms and pearls.",
+        width: 715,
+        height: 900,
+      },
+      {
+        type: "image",
+        src: "/case-studies/joocies-gallery-3.webp",
+        alt: "A schoolboy laughing at his desk with a Joocies keychain clipped to his backpack.",
+        width: 722,
+        height: 900,
+      },
+      {
+        type: "image",
+        src: "/case-studies/joocies-gallery-4.webp",
+        alt: "A woman on the phone at her desk with a Joocies keychain sitting beside her laptop.",
+        width: 719,
+        height: 900,
+      },
+    ],
   },
   {
     slug: "hbf-website",
@@ -293,6 +343,17 @@ export const portfolioWork = [
     idea: "A full website revamp supported by new copywriting, alongside social content and activation ideas for volunteer appreciation and engagement.",
     image: "/home/work-hbf.webp",
     imageAlt: "The Hongkong Bank Foundation website homepage.",
+    gallery: [
+      {
+        type: "image",
+        src: "/home/work-hbf.webp",
+        alt: "The Hongkong Bank Foundation website homepage.",
+      },
+    ],
+    // Live site link — fill in and it renders as a "Visit the website" link in the pop-up.
+    websiteUrl: "https://www.hongkongbankfoundation.org.hk/",
+    // Other HBF work to show alongside the website — title + short description each.
+    relatedWork: [],
   },
   {
     slug: "roche-apac-vision-health-survey",
@@ -308,9 +369,9 @@ export const portfolioWork = [
     videoTitle: "Roche APAC Vision Health Survey — social video",
   },
   {
-    slug: "visit-arendelle",
+    slug: "tourism-arendelle",
     brand: "Hong Kong Disneyland",
-    title: "Visit Arendelle",
+    title: "Tourism Arendelle",
     type: "Launch campaign",
     background:
       "The first ever World of Frozen was coming to HK Disneyland. We needed to create buzz for this grand opening.",
@@ -318,7 +379,57 @@ export const portfolioWork = [
       "We made Arendelle feel like a real tourist destination for both Hong Kongers and SEA travellers.",
     idea: "We invited people to travel, explore and experience the culture and offerings of Arendelle through a series of tourism-style OOH, contextual, and banner ads.",
     image: "/case-studies/visit-arendelle.webp",
-    imageAlt: "Visit Arendelle launch campaign key art for Hong Kong Disneyland's World of Frozen.",
+    imageAlt: "Tourism Arendelle launch campaign key art for Hong Kong Disneyland's World of Frozen.",
+    gallery: [
+      {
+        type: "image",
+        src: "/case-studies/arendelle-gallery-1.webp",
+        alt: "Tourism Arendelle key art and minisite shown on laptop and phone, with the tagline 'Step into the World of Frozen.'",
+        width: 1600,
+        height: 859,
+        wide: true,
+      },
+      {
+        type: "image",
+        src: "/case-studies/arendelle-gallery-2.webp",
+        alt: "Tourism Arendelle out-of-home takeover on a Hong Kong bus, tram, and bus shelter.",
+        width: 1600,
+        height: 899,
+        wide: true,
+      },
+      {
+        type: "image",
+        src: "/case-studies/arendelle-gallery-3.webp",
+        alt: "Tourism Arendelle ads inside the Klook, Expedia, and Kayak travel booking apps.",
+        width: 1600,
+        height: 900,
+        wide: true,
+      },
+      {
+        type: "image",
+        src: "/case-studies/arendelle-gallery-4.webp",
+        alt: "Tourism Arendelle contextual ads appearing alongside travel searches on Instagram, Hypebeast, and Google.",
+        width: 1600,
+        height: 903,
+        wide: true,
+      },
+      {
+        type: "image",
+        src: "/case-studies/arendelle-gallery-5.webp",
+        alt: "Digital Arendelle Passport app screens: stamps, profile, passport cover, hotel check-in QR code, and autographs.",
+        width: 1600,
+        height: 899,
+        wide: true,
+      },
+      {
+        type: "image",
+        src: "/case-studies/arendelle-gallery-6.webp",
+        alt: "Arendelle Passport phone mockup surrounded by icons for sliding sleighs, character meet-and-greets, merchandise, and the Golden Crocus Inn.",
+        width: 1600,
+        height: 902,
+        wide: true,
+      },
+    ],
   },
 ];
 
