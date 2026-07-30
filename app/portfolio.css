@@ -215,6 +215,131 @@
   margin: 0;
 }
 
+.pf-work-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.75rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------- modal */
+
+.pf-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 3rem);
+  background: rgba(30, 25, 15, 0.62);
+  backdrop-filter: blur(2px);
+}
+
+.pf-modal {
+  position: relative;
+  width: min(100%, 52rem);
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  padding: clamp(2rem, 5vw, 3.25rem);
+  border-radius: 20px;
+  background: var(--cream);
+  color: var(--text);
+}
+
+.pf-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.pf-modal-close:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--cream);
+}
+
+.pf-modal-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  max-width: 85%;
+}
+
+.pf-modal .hp-inline-link {
+  margin-bottom: 1.75rem;
+}
+
+.pf-modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+.pf-modal-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--cream-strong);
+}
+
+.pf-modal-media img {
+  object-fit: cover;
+}
+
+.pf-modal-media-video {
+  aspect-ratio: 16 / 9;
+  grid-column: 1 / -1;
+}
+
+.pf-modal-media-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.pf-modal-related {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.pf-modal-related ul {
+  list-style: none;
+  margin: 0.75rem 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.pf-modal-related li {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--body-copy);
+}
+
 @media (max-width: 820px) {
   .pf-work-heading {
     grid-template-columns: 1fr;

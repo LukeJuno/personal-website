@@ -281,6 +281,19 @@ export const portfolioWork = [
     idea: "Joocies: collectible orange cases that work like bag charms, so carrying a Sunkist orange feels playful, visible and social.",
     image: "/case-studies/joocies-lifestyle.webp",
     imageAlt: "Sunkist Joocies orange keychain case shown on a desk.",
+    gallery: [
+      {
+        type: "image",
+        src: "/case-studies/joocies-lifestyle.webp",
+        alt: "Sunkist Joocies orange keychain case shown on a desk.",
+      },
+      {
+        type: "image",
+        src: "/home/work-joocies.webp",
+        alt: "Sunkist Joocies activation campaign artwork.",
+      },
+      // More photos and videos of the activation to come.
+    ],
   },
   {
     slug: "hbf-website",
@@ -293,6 +306,17 @@ export const portfolioWork = [
     idea: "A full website revamp supported by new copywriting, alongside social content and activation ideas for volunteer appreciation and engagement.",
     image: "/home/work-hbf.webp",
     imageAlt: "The Hongkong Bank Foundation website homepage.",
+    gallery: [
+      {
+        type: "image",
+        src: "/home/work-hbf.webp",
+        alt: "The Hongkong Bank Foundation website homepage.",
+      },
+    ],
+    // Live site link — fill in and it renders as a "Visit the website" link in the pop-up.
+    websiteUrl: "",
+    // Other HBF work to show alongside the website — title + short description each.
+    relatedWork: [],
   },
   {
     slug: "roche-apac-vision-health-survey",
@@ -319,6 +343,14 @@ export const portfolioWork = [
     idea: "We invited people to travel, explore and experience the culture and offerings of Arendelle through a series of tourism-style OOH, contextual, and banner ads.",
     image: "/case-studies/visit-arendelle.webp",
     imageAlt: "Visit Arendelle launch campaign key art for Hong Kong Disneyland's World of Frozen.",
+    gallery: [
+      {
+        type: "image",
+        src: "/case-studies/visit-arendelle.webp",
+        alt: "Visit Arendelle launch campaign key art for Hong Kong Disneyland's World of Frozen.",
+      },
+      // More launch visuals to come.
+    ],
   },
 ];
 

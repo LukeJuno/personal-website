@@ -1,5 +1,6 @@
 import SiteShell from "../site-shell";
-import { LogoMarquee, PortfolioWork } from "../site-sections";
+import { LogoMarquee } from "../site-sections";
+import { PortfolioWork } from "../portfolio-work";
 import { homeContact, portfolioIntro, portfolioSelectedWork } from "../site-data";
 
 export const metadata = {

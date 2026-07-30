@@ -6,7 +6,6 @@ import {
   contactLinks,
   homeContact,
   openTabs,
-  portfolioWork,
   services,
   values,
   workItems,
@@ -166,58 +165,6 @@ export function LogoMarquee() {
     <div className="pf-marquee" aria-label="Brands Alexandra has worked with">
       <MarqueeRow logos={rowA} direction="left" />
       <MarqueeRow logos={rowB} direction="right" />
-    </div>
-  );
-}
-
-export function PortfolioWork() {
-  return (
-    <div className="pf-work-list">
-      {portfolioWork.map((item, index) => (
-        <article className="pf-work-row" key={item.slug}>
-          <p className="pf-work-number">{String(index + 1).padStart(2, "0")}</p>
-          <div
-            className={`pf-work-grid${index % 2 === 1 ? " pf-work-grid-reverse" : ""}`}
-          >
-            <div className="pf-work-media">
-              {item.video ? (
-                <iframe
-                  src={`https://www.youtube.com/embed/${item.video}`}
-                  title={item.videoTitle}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              ) : (
-                <Image
-                  src={item.image}
-                  alt={item.imageAlt}
-                  fill
-                  sizes="(max-width: 820px) 100vw, 45vw"
-                />
-              )}
-            </div>
-            <div className="pf-work-copy">
-              <p className="pf-work-brand">{item.brand}</p>
-              <h3 className="pf-work-title">{item.title}</h3>
-              <p className="pf-work-type">{item.type}</p>
-              <div className="pf-work-blocks">
-                <div>
-                  <p className="pf-work-label">Background</p>
-                  <p className="pf-work-text">{item.background}</p>
-                </div>
-                <div>
-                  <p className="pf-work-label">Insight</p>
-                  <p className="pf-work-text">{item.insight}</p>
-                </div>
-                <div>
-                  <p className="pf-work-label">Idea</p>
-                  <p className="pf-work-text">{item.idea}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      ))}
     </div>
   );
 }
