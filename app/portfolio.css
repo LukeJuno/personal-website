@@ -5,6 +5,10 @@
    rendered with both classes on its wrapper (className="hp pf").
    =========================================================================== */
 
+.pf-intro-band {
+  background: var(--mustard-wash);
+}
+
 .pf-intro {
   max-width: 62.5rem;
   margin: 0 auto;

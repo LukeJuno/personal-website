@@ -210,6 +210,14 @@
   color: var(--on-forest);
 }
 
+.hp-band-mustard {
+  background: var(--mustard-wash);
+}
+
+.hp-band-clay {
+  background: var(--clay-wash);
+}
+
 /* --------------------------------------------------------------------- hero */
 
 .hp-hero,
@@ -225,6 +233,7 @@
 
 .hp-about {
   padding-block: clamp(2.5rem, 6vw, 5.625rem);
+  background: var(--sage-wash);
 }
 
 .hp-hero-title {
@@ -625,8 +634,9 @@
 
 .tab-page-more {
   margin-top: 3.5rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--hairline);
+  padding: 1.75rem 1.75rem 2rem;
+  border-radius: 16px;
+  background: var(--sage-wash);
 }
 
 .tab-page-more ul {

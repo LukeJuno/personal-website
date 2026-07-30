@@ -17,7 +17,7 @@ export default function ServicesPage() {
         aside="Whether the brief is a launch, a website, a script, or a verbal identity project, the aim is always to make the idea feel sharper and easier to understand."
       />
 
-      <section className="section-frame">
+      <section className="section-frame section-frame-mustard">
         <div className="section-heading">
           <div>
             <p className="section-kicker">What I Do</p>
@@ -27,7 +27,7 @@ export default function ServicesPage() {
         <ServicesGrid />
       </section>
 
-      <section className="section-frame section-grid">
+      <section className="section-frame section-frame-sage section-grid">
         <div className="section-meta">
           <p className="section-kicker">Approach</p>
         </div>

@@ -132,7 +132,7 @@ export default function Home() {
         </section>
 
         {/* ---------------------------------------------------------- WORK */}
-        <section className="hp-band" id="work">
+        <section className="hp-band hp-band-mustard" id="work">
           <div className="hp-inner">
             <p className="hp-kicker">{homeWork.kicker}</p>
             <h2 className="hp-heading hp-heading-narrow">{homeWork.title}</h2>
@@ -166,7 +166,7 @@ export default function Home() {
         </section>
 
         {/* ----------------------------------------------------- OPEN TABS */}
-        <section className="hp-band hp-band-cream" id="tabs">
+        <section className="hp-band hp-band-clay" id="tabs">
           <div className="hp-inner hp-inner-narrow hp-center">
             <p className="hp-kicker">{homeTabs.kicker}</p>
             <h2 className="hp-heading">{homeTabs.title}</h2>
