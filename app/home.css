@@ -276,6 +276,12 @@
   border-radius: 18px;
 }
 
+/* The hero photo is portrait. A taller slot uses more of the frame,
+   so it crops less and reads sharper. */
+.hp-portrait-image {
+  height: clamp(24rem, 46vw, 37.5rem);
+}
+
 .hp-about-image {
   height: clamp(20rem, 34vw, 26.25rem);
 }
