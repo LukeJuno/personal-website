@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { primaryNav } from "./site-data";
+import { headerNav } from "./site-data";
 
 export default function SiteNav() {
   const pathname = usePathname();
@@ -29,7 +29,7 @@ export default function SiteNav() {
         id="primary-navigation"
         aria-label="Primary"
       >
-        {primaryNav.map((item) => {
+        {headerNav.map((item) => {
           const isActive =
             item.href === "/"
               ? pathname === "/"

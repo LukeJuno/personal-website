@@ -378,7 +378,8 @@
 .hp-work-image {
   display: block;
   width: 100%;
-  height: 16.25rem;
+  height: auto;
+  aspect-ratio: 21 / 13;
   object-fit: cover;
   border-radius: 14px;
   margin-bottom: 1rem;
@@ -504,10 +505,6 @@
   .hp-card {
     padding: 1.75rem 1.5rem;
   }
-
-  .hp-work-image {
-    height: 13.75rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -566,8 +563,7 @@
 .tab-page-image {
   display: block;
   width: 100%;
-  height: clamp(15rem, 34vw, 24rem);
-  object-fit: cover;
+  height: auto;
   border-radius: 18px;
   margin-bottom: 2.5rem;
 }
@@ -674,28 +670,84 @@
   color: var(--gold-deep);
 }
 
-/* Yoga gallery — three shots, small enough to read as a credential rather
-   than a personal album. */
-.tab-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-  gap: 0.75rem;
-  list-style: none;
-  padding: 0;
+/* Yoga gallery carousel */
+.tab-carousel {
+  position: relative;
   margin: 2.25rem 0 0 0;
 }
 
-.tab-gallery li {
-  margin: 0;
+.tab-carousel-viewport {
+  overflow: hidden;
+  border-radius: 12px;
 }
 
-.tab-gallery img {
+.tab-carousel-track {
+  display: flex;
+  transition: transform 0.35s ease;
+}
+
+.tab-carousel-slide {
+  flex: 0 0 100%;
+  aspect-ratio: 1;
+}
+
+.tab-carousel-slide img {
   display: block;
   width: 100%;
   height: 100%;
-  aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 12px;
+}
+
+.tab-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--panel-strong);
+  color: var(--text);
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.tab-carousel-arrow:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--cream);
+}
+
+.tab-carousel-arrow-prev {
+  left: 0.75rem;
+}
+
+.tab-carousel-arrow-next {
+  right: 0.75rem;
+}
+
+.tab-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.875rem;
+}
+
+.tab-carousel-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0;
+  background: var(--line-strong);
+  cursor: pointer;
+}
+
+.tab-carousel-dot.is-active {
+  background: var(--gold-deep);
 }
 
 /* Project list on the coding page. */
@@ -736,11 +788,6 @@
   margin: 0;
 }
 
-@media (max-width: 560px) {
-  .tab-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 /* Babywearing: what a consultation involves. This is the block that turns a
    description into a bookable service, so it gets its own panel. */
@@ -842,4 +889,98 @@
   .tab-actions .hp-button {
     flex: 1 1 100%;
   }
+}
+
+/* --------------------------------------------------------------- contact form */
+
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 34rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: var(--panel-strong);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.form-input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.form-status {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.form-status-success {
+  color: var(--text);
+}
+
+.form-status-error {
+  color: #a23b1e;
+}
+
+:root[data-theme="dark"] .form-status-error {
+  color: #e5896a;
+}
+
+/* ----------------------------------------------------------- tab credentials */
+
+.tab-credential-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.tab-credential-links button {
+  border: 0;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.tab-credential-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 0 1.25rem 0;
+}
+
+.tab-credential-pdf {
+  display: block;
+  width: 100%;
+  height: min(75vh, 46rem);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin: 0 0 1.25rem 0;
 }
