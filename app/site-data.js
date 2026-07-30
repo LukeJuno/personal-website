@@ -344,7 +344,7 @@ export const portfolioWork = [
       },
     ],
     // Live site link — fill in and it renders as a "Visit the website" link in the pop-up.
-    websiteUrl: "",
+    websiteUrl: "https://www.hongkongbankfoundation.org.hk/",
     // Other HBF work to show alongside the website — title + short description each.
     relatedWork: [],
   },
