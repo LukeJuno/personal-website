@@ -44,8 +44,8 @@ export default function Home() {
               className="hp-portrait-image"
               src={homeHero.image}
               alt={homeHero.imageAlt}
-              width={758}
-              height={764}
+              width={1060}
+              height={1190}
               priority
               sizes="(max-width: 860px) 92vw, 44vw"
             />
