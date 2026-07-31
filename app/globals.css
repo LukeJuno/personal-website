@@ -248,25 +248,6 @@ path {
   gap: clamp(0.6rem, 1.4vw, 1.25rem);
 }
 
-/* Same weight/padding/hover treatment as .site-nav a (not a button), but
-   colored to stand out from the plain-text Portfolio/Open Tabs links. */
-.header-contact {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.6rem 0.9rem;
-  border-radius: 999px;
-  color: var(--gold-deep);
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 400;
-  transition: color 0.2s ease;
-}
-
-.header-contact:hover {
-  color: var(--gold);
-  background: rgba(255, 255, 255, 0.34);
-}
-
 .site-nav-shell {
   position: relative;
 }
@@ -306,6 +287,26 @@ path {
 
 .inline-link:hover {
   color: var(--gold-deep);
+}
+
+/* The nav's primary CTA — a compact, squared-off button (not a pill),
+   mustard background with espresso text, inverting on hover. Sits inside
+   .site-nav so it collapses into the mobile menu along with the rest of
+   the nav automatically. */
+.site-nav a.site-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 1rem;
+  border-radius: 4px;
+  background: var(--gold);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.site-nav a.site-nav-cta:hover {
+  background: var(--text);
+  color: var(--cream);
 }
 
 .section-frame {
@@ -1989,6 +1990,22 @@ p {
   text-transform: uppercase;
 }
 
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+.footer-social a svg {
+  flex-shrink: 0;
+}
+
+.footer-social a:hover {
+  color: var(--gold);
+  background: none;
+}
+
 .footer-base {
   display: flex;
   align-items: center;
@@ -2082,10 +2099,6 @@ p {
     flex-direction: row;
     align-items: center;
     margin-left: auto;
-  }
-
-  .header-contact {
-    display: none;
   }
 
   .menu-toggle {

@@ -12,11 +12,7 @@ export default function OpenTabsPage() {
     <SiteShell>
       <section className="ot-hero">
         <p className="ot-hero-eyebrow">Open Tabs</p>
-        <h1 className="ot-hero-title">
-          Things I&rsquo;m exploring
-          <br />
-          outside the brief.
-        </h1>
+        <h1 className="ot-hero-title">Beyond the brief.</h1>
         <p className="ot-hero-subline">
           Tabs that keep staying open in my mind.
         </p>
