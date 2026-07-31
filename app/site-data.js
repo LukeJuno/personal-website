@@ -18,7 +18,6 @@ export const headerNav = primaryNav.filter(
 
 export const footerNav = [
   { href: "/portfolio", label: "Portfolio" },
-  { href: "/services", label: "Services" },
   { href: "/yoga", label: "Yoga" },
   { href: "/babywearing", label: "Babywearing" },
 ];
@@ -515,8 +514,8 @@ export const openTabs = [
     slug: "babywearing",
     href: "/babywearing",
     label: "Babywearing",
-    title: "Babywearing Consultant",
-    description: "A babywearing mom of two.",
+    title: "Babywearing consultant",
+    description: "Mom of two.",
     body: [
       "Babywearing has seen me through two babies. And not even as a nice-to-have, but as the thing that made it possible to have hands, leave the house, and keep my toddler close while her baby sister slept.",
       "Babywearing isn't just practical, it's a way to keep your little ones close and comforted. Getting the right carrier, fitted properly, for the right body and the right stage, is the difference between something you abandon to the back of the closet and something you use every day for years. Most people who say babywearing \u201cdidn't work\u201d for them were sold the wrong carrier and never shown how to wear it.",
