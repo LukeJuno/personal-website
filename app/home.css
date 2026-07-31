@@ -1061,14 +1061,13 @@
   margin: 0;
 }
 
-/* Open Tabs hero — its own simplified, single-column hero (distinct from
-   .wide-hero, which Contact also uses): small eyebrow, one confident
-   headline, one supporting line, then a clean transition into the first
-   editorial row. */
+/* Open Tabs hero — compact and left-aligned within the same narrow
+   editorial column as the rows below (not the wide .hp-hero pattern):
+   small eyebrow, one modestly-scaled headline, one supporting line. */
 .ot-hero {
-  max-width: 58rem;
+  max-width: 42.5rem;
   margin: 0 auto;
-  padding: clamp(2rem, 5vw, 3rem) var(--hp-gutter) clamp(2.25rem, 5vw, 3.5rem);
+  padding: clamp(2rem, 5vw, 2.75rem) var(--hp-gutter) clamp(1.25rem, 3vw, 1.75rem);
 }
 
 .ot-hero-eyebrow {
@@ -1077,65 +1076,57 @@
   text-transform: uppercase;
   font-size: 0.75rem;
   color: var(--gold-deep);
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.875rem 0;
 }
 
 .ot-hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  line-height: 1.1;
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  line-height: 1.2;
   font-weight: 400;
   max-width: none;
   letter-spacing: normal;
-  margin: 0 0 0.875rem 0;
+  margin: 0 0 0.75rem 0;
 }
 
 .ot-hero-subline {
-  font-size: 1.0625rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
   color: var(--body-muted);
   margin: 0;
 }
 
-/* Four full-width editorial rows, one per tab, each its own restrained
-   brand-palette band. A narrower inner column than the rest of the site
-   (54rem vs. the 1280px .hp-max) and an asymmetric image/text split keep
-   it calm and unhurried rather than tiled like a card grid. */
+/* Four compact editorial rows, one per tab, in a narrow centered column
+   (42.5rem — matching the reading-column width used on the tab detail
+   pages) rather than stretching close to the edges of a wide desktop
+   screen. Understated two-tone alternating bands, small consistent
+   image-left layout (no side alternation), reduced type/padding so
+   several rows are visible at once. */
 .ot-section {
-  padding: clamp(2.25rem, 5vw, 3.25rem) var(--hp-gutter);
+  padding: clamp(1.25rem, 3vw, 1.75rem) var(--hp-gutter);
 }
 
 .ot-section-inner {
-  max-width: 54rem;
+  max-width: 42.5rem;
   margin: 0 auto;
 }
 
 .ot-row {
   display: grid;
-  grid-template-columns: minmax(14rem, 0.85fr) minmax(14rem, 1.15fr);
-  gap: clamp(1.75rem, 4vw, 3rem);
+  grid-template-columns: 11rem 1fr;
+  gap: clamp(1.25rem, 3vw, 1.75rem);
   align-items: center;
 }
 
-/* Reversed rows swap the track sizes (not just element order), so the
-   image stays the same relative size on either side. */
-.ot-row-reverse {
-  grid-template-columns: minmax(14rem, 1.15fr) minmax(14rem, 0.85fr);
-}
-
-.ot-row-reverse .ot-row-media {
-  order: 2;
-}
-
 /* No border/card panel — the photo's own contrast plus the surrounding
-   margin against the section's flat color is what separates it, matching
-   how images sit directly on color bands elsewhere on the site. */
+   margin against the section's flat color is what separates it. Small,
+   consistent landscape crop with gently softened corners. */
 .ot-row-media {
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: 12px;
+  aspect-ratio: 3 / 2;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -1146,23 +1137,24 @@
 .ot-row-copy {
   display: grid;
   align-content: start;
-  gap: 0.5rem;
+  gap: 0.3125rem;
 }
 
-/* Quieter meta — the row title and image are the focus. */
+/* Quiet meta — the row title and image are the focus. */
 .ot-row-label {
   font-family: Georgia, "Times New Roman", serif;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   color: var(--body-muted);
   margin: 0;
 }
 
 .ot-row-title {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.0625rem;
   font-weight: 700;
+  line-height: 1.3;
   margin: 0;
 }
 
@@ -1171,24 +1163,37 @@
 }
 
 .ot-row-desc {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.8125rem;
+  line-height: 1.5;
   color: var(--body-copy);
   margin: 0;
 }
 
 .ot-row-credential {
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   color: var(--body-muted);
   margin: 0;
+}
+
+/* "Read more →", quiet and small, with the fine mustard rule already
+   built into .hp-inline-link's border-bottom. */
+.ot-row-more {
+  font-size: 0.75rem;
+  margin-top: 0.125rem;
 }
 
 @media (max-width: 860px) {
   .wide-hero-grid {
     align-items: start;
   }
+}
 
+@media (max-width: 560px) {
   .ot-row {
     grid-template-columns: 1fr;
+  }
+
+  .ot-row-media {
+    max-width: 14rem;
   }
 }
