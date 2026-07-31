@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Wordmark from "./wordmark";
 import SiteNav from "./site-nav";
-import { contactLinks, primaryNav } from "./site-data";
+import { contactLinks, footerNav } from "./site-data";
 
 export default function SiteShell({ children }) {
   return (
@@ -36,14 +36,11 @@ export default function SiteShell({ children }) {
           </div>
           <nav className="footer-nav" aria-label="Footer navigation">
             <p className="footer-heading">Explore</p>
-            {primaryNav.map((item) => (
+            {footerNav.map((item) => (
               <Link href={item.href} key={item.href}>
                 {item.label}
               </Link>
             ))}
-            {/* Not in the top nav on purpose — the header speaks to clients
-                hiring a copywriter. This keeps the page linked and indexable. */}
-            <Link href="/babywearing">Babywearing</Link>
           </nav>
           <div className="footer-social">
             <p className="footer-heading">Find Me</p>

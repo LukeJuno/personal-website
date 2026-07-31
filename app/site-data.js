@@ -13,6 +13,13 @@ export const headerNav = primaryNav.filter(
   (item) => item.href !== "/about" && item.href !== "/services",
 );
 
+export const footerNav = [
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/services", label: "Services" },
+  { href: "/yoga", label: "Yoga" },
+  { href: "/babywearing", label: "Babywearing" },
+];
+
 export const brands = [
   { name: "Dove", logo: "/brands/dove.svg", shape: "standard" },
   { name: "Vaseline", logo: "/brands/vaseline.svg", shape: "wide" },
