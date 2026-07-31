@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteShell from "./site-shell";
 import TabCredentials from "./tab-credentials";
-import TabGalleryCarousel from "./tab-gallery-carousel";
 import { openTabs } from "./site-data";
 
 export function tabBySlug(slug) {
@@ -95,7 +94,21 @@ export default function OpenTabPage({ slug, children }) {
           {children}
 
           {/* Yoga: photo gallery */}
-          {tab.gallery?.length ? <TabGalleryCarousel shots={tab.gallery} /> : null}
+          {tab.gallery?.length ? (
+            <div className="tab-photo-stack">
+              {tab.gallery.map((shot) => (
+                <Image
+                  key={shot.src}
+                  className="tab-photo-stack-image"
+                  src={shot.src}
+                  alt={shot.alt}
+                  width={shot.width || 1000}
+                  height={shot.height || 1000}
+                  sizes="(max-width: 900px) 92vw, 900px"
+                />
+              ))}
+            </div>
+          ) : null}
 
           {tab.cta?.href ? (
             <div className="tab-actions">

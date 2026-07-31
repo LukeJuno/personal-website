@@ -676,84 +676,20 @@
   color: var(--gold-deep);
 }
 
-/* Yoga gallery carousel */
-.tab-carousel {
-  position: relative;
+/* Yoga gallery — stacked, full-width photos. No object-fit crop, so the
+   whole photo always shows regardless of its source aspect ratio. */
+.tab-photo-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   margin: 2.25rem 0 0 0;
 }
 
-.tab-carousel-viewport {
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.tab-carousel-track {
-  display: flex;
-  transition: transform 0.35s ease;
-}
-
-.tab-carousel-slide {
-  flex: 0 0 100%;
-  aspect-ratio: 1;
-}
-
-.tab-carousel-slide img {
+.tab-photo-stack-image {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.tab-carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  background: var(--panel-strong);
-  color: var(--text);
-  font-size: 1.125rem;
-  cursor: pointer;
-}
-
-.tab-carousel-arrow:hover {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--cream);
-}
-
-.tab-carousel-arrow-prev {
-  left: 0.75rem;
-}
-
-.tab-carousel-arrow-next {
-  right: 0.75rem;
-}
-
-.tab-carousel-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 0.875rem;
-}
-
-.tab-carousel-dot {
-  width: 0.5rem;
-  height: 0.5rem;
-  border: 0;
-  border-radius: 999px;
-  padding: 0;
-  background: var(--line-strong);
-  cursor: pointer;
-}
-
-.tab-carousel-dot.is-active {
-  background: var(--gold-deep);
+  height: auto;
+  border-radius: 12px;
 }
 
 /* Project list on the coding page. */
