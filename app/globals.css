@@ -248,14 +248,14 @@ path {
   gap: clamp(0.6rem, 1.4vw, 1.25rem);
 }
 
-/* Styled to match .site-nav a exactly — same weight and hover treatment
-   as Portfolio/Open Tabs, not a button. */
+/* Same weight/padding/hover treatment as .site-nav a (not a button), but
+   colored to stand out from the plain-text Portfolio/Open Tabs links. */
 .header-contact {
   display: inline-flex;
   align-items: center;
   padding: 0.6rem 0.9rem;
   border-radius: 999px;
-  color: var(--text);
+  color: var(--gold-deep);
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 400;
@@ -263,6 +263,7 @@ path {
 }
 
 .header-contact:hover {
+  color: var(--gold);
   background: rgba(255, 255, 255, 0.34);
 }
 
