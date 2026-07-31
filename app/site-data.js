@@ -460,9 +460,30 @@ export const openTabs = [
     imageWidth: 1400,
     imageHeight: 933,
     gallery: [
-      { src: "/tabs/yoga-2.webp", alt: "Alexandra Colgan balancing in crow pose." },
-      { src: "/tabs/yoga-3.webp", alt: "Alexandra Colgan in a forearm balance against a dark background." },
-      { src: "/tabs/yoga-4.webp", alt: "Alexandra Colgan smiling in a forearm stand with one leg extended." },
+      {
+        src: "/tabs/yoga-2.webp",
+        alt: "Alexandra Colgan balancing in crow pose.",
+        width: 1000,
+        height: 1000,
+      },
+      {
+        src: "/tabs/yoga-5.webp",
+        alt: "Alexandra Colgan in a wheel pose backbend.",
+        width: 1400,
+        height: 933,
+      },
+      {
+        src: "/tabs/yoga-4.webp",
+        alt: "Alexandra Colgan smiling in a forearm stand with one leg extended.",
+        width: 1000,
+        height: 1000,
+      },
+      {
+        src: "/tabs/yoga-6.webp",
+        alt: "Alexandra Colgan in a camel pose backbend.",
+        width: 1400,
+        height: 933,
+      },
     ],
     certificationLabel: "Yoga certification",
     certificationFile: "/cert-yoga.jpg",

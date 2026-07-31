@@ -104,7 +104,7 @@ export default function OpenTabPage({ slug, children }) {
                   alt={shot.alt}
                   width={shot.width || 1000}
                   height={shot.height || 1000}
-                  sizes="(max-width: 900px) 92vw, 900px"
+                  sizes="(max-width: 640px) 92vw, 440px"
                 />
               ))}
             </div>

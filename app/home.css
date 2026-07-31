@@ -676,12 +676,12 @@
   color: var(--gold-deep);
 }
 
-/* Yoga gallery — stacked, full-width photos. No object-fit crop, so the
-   whole photo always shows regardless of its source aspect ratio. */
+/* Yoga gallery — two-column masonry. Photos keep their native aspect
+   ratio (no object-fit crop), so mixed heights create the staggered,
+   alternating flow instead of a rigid grid. */
 .tab-photo-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  column-count: 2;
+  column-gap: 1.5rem;
   margin: 2.25rem 0 0 0;
 }
 
@@ -689,7 +689,15 @@
   display: block;
   width: 100%;
   height: auto;
+  margin: 0 0 1.5rem 0;
   border-radius: 12px;
+  break-inside: avoid;
+}
+
+@media (max-width: 640px) {
+  .tab-photo-stack {
+    column-count: 1;
+  }
 }
 
 /* Project list on the coding page. */
