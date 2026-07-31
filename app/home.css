@@ -966,6 +966,17 @@
   color: #e5896a;
 }
 
+.form-privacy-note {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--body-muted);
+  margin: -0.5rem 0 0 0;
+}
+
+.contact-section {
+  padding: clamp(3rem, 7vw, 5.5rem) var(--hp-gutter);
+}
+
 /* ----------------------------------------------------------- tab credentials */
 
 .tab-credential-links {
@@ -999,4 +1010,133 @@
   border: 1px solid var(--line);
   border-radius: 12px;
   margin: 0 0 1.25rem 0;
+}
+
+/* ===========================================================================
+   Open Tabs index page — wide editorial hero + unboxed interest rows.
+   New, self-contained classes (not reusing .page-intro/.open-tab-row) so
+   /about and /services, which still use those, are unaffected.
+   =========================================================================== */
+
+.wide-hero {
+  padding: clamp(2rem, 5vw, 3.5rem) var(--hp-gutter) clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.wide-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
+  gap: clamp(1.5rem, 5vw, 3rem);
+  align-items: end;
+  max-width: var(--hp-max);
+  margin: 0 auto;
+}
+
+.wide-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.625rem);
+  line-height: 1.1;
+  font-weight: 400;
+  max-width: none;
+  letter-spacing: normal;
+  margin: 0;
+}
+
+.wide-hero-intro {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--body-copy);
+  max-width: 34rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.wide-hero-aside {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--body-muted);
+  max-width: 32rem;
+  margin: 0;
+}
+
+.ot-tabs-section {
+  padding: clamp(3rem, 7vw, 5.5rem) var(--hp-gutter);
+}
+
+.ot-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 7vw, 5rem);
+}
+
+.ot-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+
+.ot-row-reverse .ot-row-media {
+  order: 2;
+}
+
+.ot-row-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3.2;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.ot-row-media img {
+  object-fit: cover;
+}
+
+.ot-row-copy {
+  display: grid;
+  align-content: start;
+  gap: 0.625rem;
+}
+
+.ot-row-label {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  color: var(--gold-deep);
+  margin: 0;
+}
+
+.ot-row-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ot-row-title a {
+  color: inherit;
+}
+
+.ot-row-desc {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--body-copy);
+  margin: 0;
+}
+
+.ot-row-credential {
+  font-size: 0.9375rem;
+  color: var(--body-muted);
+  margin: 0;
+}
+
+.ot-row-credential strong {
+  color: var(--text);
+  font-family: var(--font-display);
+}
+
+@media (max-width: 860px) {
+  .wide-hero-grid {
+    align-items: start;
+  }
 }

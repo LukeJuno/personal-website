@@ -43,7 +43,7 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <p className="form-status form-status-success">
-        Thanks — your message is on its way. I'll be in touch soon.
+        Thanks — I&rsquo;ll be in touch soon.
       </p>
     );
   }
@@ -59,7 +59,7 @@ export default function ContactForm() {
 
       <div className="form-field">
         <label className="form-label" htmlFor="email">
-          Email
+          Email address
         </label>
         <input
           className="form-input"
@@ -71,21 +71,8 @@ export default function ContactForm() {
       </div>
 
       <div className="form-field">
-        <label className="form-label" htmlFor="subject">
-          Subject
-        </label>
-        <input
-          className="form-input"
-          type="text"
-          id="subject"
-          name="subject"
-          required
-        />
-      </div>
-
-      <div className="form-field">
         <label className="form-label" htmlFor="message">
-          Message
+          What are you making, and how can I help?
         </label>
         <textarea
           className="form-input form-textarea"
@@ -105,8 +92,12 @@ export default function ContactForm() {
       ) : null}
 
       <button className="hp-button" type="submit" disabled={status === "sending"}>
-        {status === "sending" ? "Sending…" : "Send message"}
+        {status === "sending" ? "Sending…" : "Send it my way"}
       </button>
+
+      <p className="form-privacy-note">
+        Your details will only be used to reply to your message.
+      </p>
     </form>
   );
 }

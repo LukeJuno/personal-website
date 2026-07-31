@@ -34,8 +34,11 @@
 
 /* ------------------------------------------------------------------ marquee */
 
+/* Shares the intro band's background so the fading logos read as one
+   continuous field instead of being cut by a background seam. */
 .pf-marquee {
-  padding: 0 0 clamp(4rem, 8vw, 6.875rem) 0;
+  background: var(--mustard-wash);
+  padding: 0.5rem 0 clamp(4rem, 8vw, 6.875rem) 0;
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
@@ -98,10 +101,10 @@
 
 .pf-work-heading {
   display: grid;
-  grid-template-columns: minmax(10rem, 17.5rem) 1fr;
-  gap: clamp(1.5rem, 5vw, 4rem);
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  gap: clamp(2rem, 6vw, 5rem);
   align-items: start;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .pf-work-heading .hp-kicker {
@@ -129,7 +132,7 @@
 .pf-work-list {
   display: flex;
   flex-direction: column;
-  gap: 4.5rem;
+  gap: 5.5rem;
 }
 
 .pf-work-row {
@@ -201,7 +204,7 @@
 .pf-work-blocks {
   display: flex;
   flex-direction: column;
-  gap: 1.125rem;
+  gap: 1.625rem;
 }
 
 .pf-work-label {

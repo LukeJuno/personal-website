@@ -171,10 +171,14 @@ export function LogoMarquee() {
 
 export function OpenTabsGrid() {
   return (
-    <div className="open-tabs-stack">
-      {openTabs.map((item) => (
-        <article className="open-tab-row" id={item.slug} key={item.slug}>
-          <Link className="open-tab-media" href={item.href}>
+    <div className="ot-list">
+      {openTabs.map((item, index) => (
+        <article
+          className={`ot-row${index % 2 === 1 ? " ot-row-reverse" : ""}`}
+          id={item.slug}
+          key={item.slug}
+        >
+          <Link className="ot-row-media" href={item.href}>
             <Image
               src={item.image}
               alt={item.imageAlt}
@@ -182,18 +186,18 @@ export function OpenTabsGrid() {
               sizes="(max-width: 960px) 100vw, 38vw"
             />
           </Link>
-          <div className="open-tab-copy">
-            <p className="card-label">{item.label}</p>
-            <h3>
+          <div className="ot-row-copy">
+            <p className="ot-row-label">{item.label}</p>
+            <h3 className="ot-row-title">
               <Link href={item.href}>{item.title}</Link>
             </h3>
-            <p>{item.description}</p>
+            <p className="ot-row-desc">{item.description}</p>
             {item.credentials ? (
-              <p className="credential">
+              <p className="ot-row-credential">
                 <strong>Credentials:</strong> {item.credentials}
               </p>
             ) : null}
-            <Link className="inline-link" href={item.href}>
+            <Link className="hp-inline-link" href={item.href}>
               Read more
             </Link>
           </div>

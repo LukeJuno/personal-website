@@ -17,10 +17,7 @@ export default function SiteShell({ children }) {
 
         <div className="header-actions">
           <SiteNav />
-          <a
-            className="header-contact"
-            href="mailto:alexandracolgan@gmail.com"
-          >
+          <a className="header-contact" href="/contact">
             Get in touch
           </a>
         </div>
