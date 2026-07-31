@@ -574,6 +574,38 @@
   margin-bottom: 2.5rem;
 }
 
+/* Full-bleed color band behind the intro paragraphs — breaks out of
+   .tab-page's max-width regardless of how deep it's nested. */
+.tab-intro-band {
+  background: var(--sage-wash);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  padding: 3rem 0;
+}
+
+.tab-intro-band-inner {
+  max-width: 42.5rem;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 32px);
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.tab-intro-band-inner p {
+  margin: 0 0 1.625rem 0;
+}
+
+.tab-intro-band-inner p:last-child {
+  margin-bottom: 0;
+}
+
 .tab-page-body p {
   font-size: 1.0625rem;
   line-height: 1.75;
@@ -677,37 +709,63 @@
 }
 
 /* Yoga gallery — two columns, with the second column pushed down so the
-   pairs stagger deliberately instead of a masonry fill that can land flush
-   and read as a grid. Photos keep their native aspect ratio (no object-fit
-   crop). */
+   pairs stagger deliberately. Photos crop to fixed, alternating heights via
+   object-fit: cover, with a title + caption underneath each. */
 .tab-photo-stack {
-  display: flex;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+  align-items: start;
   margin: 2.25rem 0 0 0;
 }
 
 .tab-photo-stack-col {
-  flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.5rem;
   min-width: 0;
 }
 
 .tab-photo-stack-col-offset {
-  margin-top: 3.5rem;
+  margin-top: 4rem;
+}
+
+.tab-photo-stack-item {
+  margin: 0;
 }
 
 .tab-photo-stack-image {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: 12px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+}
+
+.tab-photo-stack-image.is-tall {
+  height: 16.25rem;
+}
+
+.tab-photo-stack-image.is-short {
+  height: 13.75rem;
+}
+
+.tab-photo-stack-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin: 0 0 0.375rem 0;
+}
+
+.tab-photo-stack-caption {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--body-muted);
+  margin: 0;
 }
 
 @media (max-width: 640px) {
   .tab-photo-stack {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .tab-photo-stack-col-offset {

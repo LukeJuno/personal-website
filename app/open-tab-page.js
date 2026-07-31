@@ -40,11 +40,17 @@ export default function OpenTabPage({ slug, children }) {
           />
         ) : null}
 
-        <div className="tab-page-body">
-          {tab.body?.map((line) => (
-            <p key={line}>{line}</p>
-          ))}
+        {tab.body?.length ? (
+          <div className="tab-intro-band">
+            <div className="tab-intro-band-inner">
+              {tab.body.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
+        <div className="tab-page-body">
           {/* Babywearing: what a session actually involves */}
           {tab.sessions ? (
             <section className="tab-sessions">
@@ -93,8 +99,9 @@ export default function OpenTabPage({ slug, children }) {
 
           {children}
 
-          {/* Yoga: photo gallery — two columns, second column offset down
-              so the pairs stagger instead of lining up in a grid. */}
+          {/* Yoga: photo gallery — two columns, second column offset down so
+              the pairs stagger. Alternating photo heights (tall, short,
+              short, tall) crop each photo to fit via object-fit: cover. */}
           {tab.gallery?.length ? (
             <div className="tab-photo-stack">
               {[0, 1].map((col) => (
@@ -103,17 +110,31 @@ export default function OpenTabPage({ slug, children }) {
                   key={col}
                 >
                   {tab.gallery
-                    .filter((_, i) => i % 2 === col)
-                    .map((shot) => (
-                      <Image
-                        key={shot.src}
-                        className="tab-photo-stack-image"
-                        src={shot.src}
-                        alt={shot.alt}
-                        width={shot.width || 1000}
-                        height={shot.height || 1000}
-                        sizes="(max-width: 640px) 92vw, 440px"
-                      />
+                    .map((shot, i) => ({ shot, i }))
+                    .filter(({ i }) => i % 2 === col)
+                    .map(({ shot, i }) => (
+                      <figure className="tab-photo-stack-item" key={shot.src}>
+                        <Image
+                          className={`tab-photo-stack-image${
+                            i === 0 || i === 3 ? " is-tall" : " is-short"
+                          }`}
+                          src={shot.src}
+                          alt={shot.alt}
+                          width={shot.width || 1000}
+                          height={shot.height || 1000}
+                          sizes="(max-width: 640px) 92vw, 440px"
+                        />
+                        {shot.title ? (
+                          <figcaption>
+                            <p className="tab-photo-stack-title">
+                              {shot.title}
+                            </p>
+                            <p className="tab-photo-stack-caption">
+                              {shot.caption}
+                            </p>
+                          </figcaption>
+                        ) : null}
+                      </figure>
                     ))}
                 </div>
               ))}
