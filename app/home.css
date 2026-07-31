@@ -595,7 +595,7 @@
   padding: 0 clamp(20px, 5vw, 32px);
   font-size: 1.125rem;
   line-height: 1.75;
-  color: var(--text);
+  color: #2b2a20;
 }
 
 .tab-intro-band-inner p {
