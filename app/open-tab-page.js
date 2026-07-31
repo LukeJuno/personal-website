@@ -100,8 +100,9 @@ export default function OpenTabPage({ slug, children }) {
           {children}
 
           {/* Yoga: photo gallery — two columns, second column offset down so
-              the pairs stagger. Alternating photo heights (tall, short,
-              short, tall) crop each photo to fit via object-fit: cover. */}
+              the pairs stagger. Each photo renders at its own native aspect
+              ratio (no fixed/cropped height), since the source photos come
+              in different sizes. */}
           {tab.gallery?.length ? (
             <div className="tab-photo-stack">
               {[0, 1].map((col) => (
@@ -110,14 +111,11 @@ export default function OpenTabPage({ slug, children }) {
                   key={col}
                 >
                   {tab.gallery
-                    .map((shot, i) => ({ shot, i }))
-                    .filter(({ i }) => i % 2 === col)
-                    .map(({ shot, i }) => (
+                    .filter((_, i) => i % 2 === col)
+                    .map((shot) => (
                       <figure className="tab-photo-stack-item" key={shot.src}>
                         <Image
-                          className={`tab-photo-stack-image${
-                            i === 0 || i === 3 ? " is-tall" : " is-short"
-                          }`}
+                          className="tab-photo-stack-image"
                           src={shot.src}
                           alt={shot.alt}
                           width={shot.width || 1000}

@@ -709,8 +709,9 @@
 }
 
 /* Yoga gallery — two columns, with the second column pushed down so the
-   pairs stagger deliberately. Photos crop to fixed, alternating heights via
-   object-fit: cover, with a title + caption underneath each. */
+   pairs stagger deliberately. Each photo keeps its own native aspect ratio
+   (no fixed height / object-fit crop) since the source photos vary in
+   size, with a title + caption underneath each. */
 .tab-photo-stack {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -737,17 +738,9 @@
 .tab-photo-stack-image {
   display: block;
   width: 100%;
-  object-fit: cover;
+  height: auto;
   border-radius: 14px;
   margin-bottom: 1rem;
-}
-
-.tab-photo-stack-image.is-tall {
-  height: 16.25rem;
-}
-
-.tab-photo-stack-image.is-short {
-  height: 13.75rem;
 }
 
 .tab-photo-stack-title {
