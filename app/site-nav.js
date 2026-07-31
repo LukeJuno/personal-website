@@ -47,6 +47,13 @@ export default function SiteNav() {
             </Link>
           );
         })}
+        <Link
+          className="site-nav-cta"
+          href="/contact"
+          onClick={() => setIsOpen(false)}
+        >
+          Get in touch <span aria-hidden="true">→</span>
+        </Link>
       </nav>
     </div>
   );

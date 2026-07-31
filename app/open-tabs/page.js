@@ -1,5 +1,5 @@
 import SiteShell from "../site-shell";
-import { ContactPanel, OpenTabsGrid, PageIntro } from "../site-sections";
+import { ContactPanel, OpenTabsGrid } from "../site-sections";
 
 export const metadata = {
   title: "Open Tabs",
@@ -10,22 +10,15 @@ export const metadata = {
 export default function OpenTabsPage() {
   return (
     <SiteShell>
-      <PageIntro
-        kicker="Open Tabs"
-        title="The things I keep learning from outside the brief."
-        intro="A few quieter threads that still shape how I think: yoga, babywearing, coding, and whatever currently has my attention."
-        aside="Each one brings its own kind of discipline, patience, and perspective, which usually finds its way back into the work somehow."
-      />
-
-      <section className="section-frame section-frame-mustard">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Currently Open</p>
-            <h2>Four tabs that keep staying open in my mind.</h2>
-          </div>
-        </div>
-        <OpenTabsGrid />
+      <section className="ot-hero">
+        <p className="ot-hero-eyebrow">Open Tabs</p>
+        <h1 className="ot-hero-title">Beyond the brief.</h1>
+        <p className="ot-hero-subline">
+          Tabs that keep staying open in my mind.
+        </p>
       </section>
+
+      <OpenTabsGrid />
 
       <ContactPanel />
     </SiteShell>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Wordmark from "./wordmark";
 import SiteNav from "./site-nav";
+import { socialIcons } from "./social-icons";
 import { contactLinks, footerNav } from "./site-data";
 
 export default function SiteShell({ children }) {
@@ -17,12 +18,6 @@ export default function SiteShell({ children }) {
 
         <div className="header-actions">
           <SiteNav />
-          <a
-            className="header-contact"
-            href="mailto:alexandracolgan@gmail.com"
-          >
-            Get in touch
-          </a>
         </div>
       </header>
 
@@ -44,16 +39,20 @@ export default function SiteShell({ children }) {
           </nav>
           <div className="footer-social">
             <p className="footer-heading">Find Me</p>
-            {contactLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.href.startsWith("http") ? "_blank" : undefined}
-                rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-              >
-                {link.label}
-              </a>
-            ))}
+            {contactLinks.map((link) => {
+              const Icon = socialIcons[link.label];
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+                >
+                  {Icon ? <Icon /> : null}
+                  {link.label}
+                </a>
+              );
+            })}
           </div>
         </div>
         <div className="footer-base">

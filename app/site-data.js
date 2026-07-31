@@ -6,16 +6,18 @@ export const primaryNav = [
   { href: "/contact", label: "Contact" },
 ];
 
-// Trimmed for the top header — About and Services stay reachable from the
-// footer instead, keeping the header focused on the pages people look for
-// first.
+// Trimmed for the top header — About, Services and Contact stay reachable
+// from the footer/header CTA instead, keeping the header focused on the
+// pages people look for first.
 export const headerNav = primaryNav.filter(
-  (item) => item.href !== "/about" && item.href !== "/services",
+  (item) =>
+    item.href !== "/about" &&
+    item.href !== "/services" &&
+    item.href !== "/contact",
 );
 
 export const footerNav = [
   { href: "/portfolio", label: "Portfolio" },
-  { href: "/services", label: "Services" },
   { href: "/yoga", label: "Yoga" },
   { href: "/babywearing", label: "Babywearing" },
 ];
@@ -457,8 +459,8 @@ export const openTabs = [
     description:
       "Almost ten years of practice, a 200-hour teacher training, and a lifelong pursuit of greater flexibility.",
     body: [
-      "I've been practicing yoga for nearly a decade now, and through yoga I've discovered what it's like to truly understand your own body and connect the power of breath with movement.",
-      "My teaching style is dynamic, playful and challenging, with creative flows that encourage students to explore their strengths with confidence. I particularly enjoy incorporating arm balances and inversions into my classes and my own practice.",
+      "I've been practicing yoga for nearly a decade now and through yoga, I've discovered what it's like to truly understand your own body and connect the power of breath with movement.",
+      "My teaching style is dynamic, playful, and challenging, with creative flows that encourage students to explore their strengths with confidence. I particularly enjoy incorporating arm balances and inversions into my classes and personal practice.",
       "I believe there's always something new to learn every time you step on the mat. I teach occasionally and practice most days. If you're looking for a class or a private session, get in touch.",
     ],
     credentials: "200hr YTT & CET with Samrat Dasgupta at Pure Yoga, 2020",
@@ -512,8 +514,8 @@ export const openTabs = [
     slug: "babywearing",
     href: "/babywearing",
     label: "Babywearing",
-    title: "Babywearing Consultant",
-    description: "A babywearing mom of two.",
+    title: "Babywearing consultant",
+    description: "Mom of two.",
     body: [
       "Babywearing has seen me through two babies. And not even as a nice-to-have, but as the thing that made it possible to have hands, leave the house, and keep my toddler close while her baby sister slept.",
       "Babywearing isn't just practical, it's a way to keep your little ones close and comforted. Getting the right carrier, fitted properly, for the right body and the right stage, is the difference between something you abandon to the back of the closet and something you use every day for years. Most people who say babywearing \u201cdidn't work\u201d for them were sold the wrong carrier and never shown how to wear it.",
@@ -603,7 +605,7 @@ export const openTabs = [
       "The Cantonese For Kids web app, showing tabs for simple phrases, words, story time and local slang.",
     imageWidth: 1400,
     imageHeight: 388,
-    cta: { label: "Get in touch", href: "mailto:alexandracolgan@gmail.com" },
+    cta: { label: "Get in touch", href: "/contact" },
     certificationLabel: "View CS50x certificate",
     certificationFile: "/cert-coding.png",
     metaTitle: "Coding",
@@ -617,6 +619,11 @@ export const openTabs = [
     title: "Books, podcasts, shows\u2026",
     description:
       "What I'm reading, listening to, watching or writing at the moment. Updated when it changes, which is often.",
+    image: "/tabs/currently-lead.webp",
+    imageAlt:
+      "A book open on a sofa arm with two tabby cats perched behind it, in a reading nook.",
+    imageWidth: 768,
+    imageHeight: 1024,
     body: [
       "A running list of what's got my attention: books I'm in the middle of, podcasts I've been shouting about, and the writing I do that nobody's commissioned.",
       "Most of my best ideas at work have come from somewhere well outside the brief, so I've stopped treating this as a separate thing from the job.",
@@ -641,7 +648,7 @@ export const openTabs = [
         note: "Almost nothing seems to happen sometimes, and yet it's very touching in a nostalgic way.",
       },
     ],
-    cta: { label: "Get in touch", href: "mailto:alexandracolgan@gmail.com" },
+    cta: { label: "Get in touch", href: "/contact" },
   },
 ];
 
@@ -797,5 +804,5 @@ export const homeContact = {
     "Freelance projects, creative collaborations and interesting side quests welcome.",
   ],
   ctaLabel: "Get in touch",
-  ctaHref: "mailto:alexandracolgan@gmail.com",
+  ctaHref: "/contact",
 };

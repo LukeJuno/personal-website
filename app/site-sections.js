@@ -169,37 +169,53 @@ export function LogoMarquee() {
   );
 }
 
+// Each tab gets its own approved brand-palette wash, cycling through
+// tones already used elsewhere on the site (sage/clay/mustard/cream), so
+// the four sections read as distinct but consistent.
+const OT_SECTION_TONES = ["sage", "clay", "mustard", "cream"];
+
 export function OpenTabsGrid() {
   return (
-    <div className="open-tabs-stack">
-      {openTabs.map((item) => (
-        <article className="open-tab-row" id={item.slug} key={item.slug}>
-          <Link className="open-tab-media" href={item.href}>
-            <Image
-              src={item.image}
-              alt={item.imageAlt}
-              fill
-              sizes="(max-width: 960px) 100vw, 38vw"
-            />
-          </Link>
-          <div className="open-tab-copy">
-            <p className="card-label">{item.label}</p>
-            <h3>
-              <Link href={item.href}>{item.title}</Link>
-            </h3>
-            <p>{item.description}</p>
-            {item.credentials ? (
-              <p className="credential">
-                <strong>Credentials:</strong> {item.credentials}
-              </p>
-            ) : null}
-            <Link className="inline-link" href={item.href}>
-              Read more
-            </Link>
-          </div>
-        </article>
-      ))}
-    </div>
+    <>
+      {openTabs.map((item, index) => {
+        const reversed = index % 2 === 1;
+        return (
+          <section
+            className={`hp-band hp-band-${OT_SECTION_TONES[index % OT_SECTION_TONES.length]} ot-section`}
+            id={item.slug}
+            key={item.slug}
+          >
+            <div className="ot-section-inner">
+              <article className={`ot-row${reversed ? " ot-row-reverse" : ""}`}>
+                <Link className="ot-row-media" href={item.href}>
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt}
+                    fill
+                    sizes="(max-width: 960px) 100vw, 26rem"
+                  />
+                </Link>
+                <div className="ot-row-copy">
+                  <p className="ot-row-label">{item.label}</p>
+                  <h3 className="ot-row-title">
+                    <Link href={item.href}>{item.title}</Link>
+                  </h3>
+                  <p className="ot-row-desc">{item.description}</p>
+                  {item.credentials ? (
+                    <p className="ot-row-credential">
+                      Credentials: {item.credentials}
+                    </p>
+                  ) : null}
+                  <Link className="hp-inline-link" href={item.href}>
+                    Read more
+                  </Link>
+                </div>
+              </article>
+            </div>
+          </section>
+        );
+      })}
+    </>
   );
 }
 

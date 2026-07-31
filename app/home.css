@@ -218,6 +218,10 @@
   background: var(--clay-wash);
 }
 
+.hp-band-sage {
+  background: var(--sage-wash);
+}
+
 /* --------------------------------------------------------------------- hero */
 
 .hp-hero,
@@ -966,6 +970,17 @@
   color: #e5896a;
 }
 
+.form-privacy-note {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--body-muted);
+  margin: -0.5rem 0 0 0;
+}
+
+.contact-section {
+  padding: clamp(3rem, 7vw, 5.5rem) var(--hp-gutter);
+}
+
 /* ----------------------------------------------------------- tab credentials */
 
 .tab-credential-links {
@@ -999,4 +1014,181 @@
   border: 1px solid var(--line);
   border-radius: 12px;
   margin: 0 0 1.25rem 0;
+}
+
+/* ===========================================================================
+   Open Tabs index page — wide editorial hero + unboxed interest rows.
+   New, self-contained classes (not reusing .page-intro/.open-tab-row) so
+   /about and /services, which still use those, are unaffected.
+   =========================================================================== */
+
+.wide-hero {
+  padding: clamp(2rem, 5vw, 3.5rem) var(--hp-gutter) clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.wide-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
+  gap: clamp(1.5rem, 5vw, 3rem);
+  align-items: end;
+  max-width: var(--hp-max);
+  margin: 0 auto;
+}
+
+.wide-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.625rem);
+  line-height: 1.1;
+  font-weight: 400;
+  max-width: none;
+  letter-spacing: normal;
+  margin: 0;
+}
+
+.wide-hero-intro {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--body-copy);
+  max-width: 34rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.wide-hero-aside {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--body-muted);
+  max-width: 32rem;
+  margin: 0;
+}
+
+/* Open Tabs hero — its own simplified, single-column hero (distinct from
+   .wide-hero, which Contact also uses): small eyebrow, one confident
+   headline, one supporting line, then a clean transition into the first
+   editorial row. */
+.ot-hero {
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3rem) var(--hp-gutter) clamp(2.25rem, 5vw, 3.5rem);
+}
+
+.ot-hero-eyebrow {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--gold-deep);
+  margin: 0 0 1rem 0;
+}
+
+.ot-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
+  font-weight: 400;
+  max-width: none;
+  letter-spacing: normal;
+  margin: 0 0 0.875rem 0;
+}
+
+.ot-hero-subline {
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  color: var(--body-muted);
+  margin: 0;
+}
+
+/* Four full-width editorial rows, one per tab, each its own restrained
+   brand-palette band. A narrower inner column than the rest of the site
+   (54rem vs. the 1280px .hp-max) and an asymmetric image/text split keep
+   it calm and unhurried rather than tiled like a card grid. */
+.ot-section {
+  padding: clamp(2.25rem, 5vw, 3.25rem) var(--hp-gutter);
+}
+
+.ot-section-inner {
+  max-width: 54rem;
+  margin: 0 auto;
+}
+
+.ot-row {
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.85fr) minmax(14rem, 1.15fr);
+  gap: clamp(1.75rem, 4vw, 3rem);
+  align-items: center;
+}
+
+/* Reversed rows swap the track sizes (not just element order), so the
+   image stays the same relative size on either side. */
+.ot-row-reverse {
+  grid-template-columns: minmax(14rem, 1.15fr) minmax(14rem, 0.85fr);
+}
+
+.ot-row-reverse .ot-row-media {
+  order: 2;
+}
+
+/* No border/card panel — the photo's own contrast plus the surrounding
+   margin against the section's flat color is what separates it, matching
+   how images sit directly on color bands elsewhere on the site. */
+.ot-row-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ot-row-media img {
+  object-fit: cover;
+}
+
+.ot-row-copy {
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+}
+
+/* Quieter meta — the row title and image are the focus. */
+.ot-row-label {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  color: var(--body-muted);
+  margin: 0;
+}
+
+.ot-row-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ot-row-title a {
+  color: inherit;
+}
+
+.ot-row-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--body-copy);
+  margin: 0;
+}
+
+.ot-row-credential {
+  font-size: 0.8125rem;
+  color: var(--body-muted);
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .wide-hero-grid {
+    align-items: start;
+  }
+
+  .ot-row {
+    grid-template-columns: 1fr;
+  }
 }
