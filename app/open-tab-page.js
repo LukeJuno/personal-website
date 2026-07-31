@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteShell from "./site-shell";
 import TabCredentials from "./tab-credentials";
-import TabGalleryCarousel from "./tab-gallery-carousel";
 import { openTabs } from "./site-data";
 
 export function tabBySlug(slug) {
@@ -41,11 +40,17 @@ export default function OpenTabPage({ slug, children }) {
           />
         ) : null}
 
-        <div className="tab-page-body">
-          {tab.body?.map((line) => (
-            <p key={line}>{line}</p>
-          ))}
+        {tab.body?.length ? (
+          <div className="tab-intro-band">
+            <div className="tab-intro-band-inner">
+              {tab.body.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
+        <div className="tab-page-body">
           {/* Babywearing: what a session actually involves */}
           {tab.sessions ? (
             <section className="tab-sessions">
@@ -94,8 +99,45 @@ export default function OpenTabPage({ slug, children }) {
 
           {children}
 
-          {/* Yoga: photo gallery */}
-          {tab.gallery?.length ? <TabGalleryCarousel shots={tab.gallery} /> : null}
+          {/* Yoga: photo gallery — two columns, second column offset down so
+              the pairs stagger. Each photo renders at its own native aspect
+              ratio (no fixed/cropped height), since the source photos come
+              in different sizes. */}
+          {tab.gallery?.length ? (
+            <div className="tab-photo-stack">
+              {[0, 1].map((col) => (
+                <div
+                  className={`tab-photo-stack-col${col === 1 ? " tab-photo-stack-col-offset" : ""}`}
+                  key={col}
+                >
+                  {tab.gallery
+                    .filter((_, i) => i % 2 === col)
+                    .map((shot) => (
+                      <figure className="tab-photo-stack-item" key={shot.src}>
+                        <Image
+                          className="tab-photo-stack-image"
+                          src={shot.src}
+                          alt={shot.alt}
+                          width={shot.width || 1000}
+                          height={shot.height || 1000}
+                          sizes="(max-width: 640px) 92vw, 440px"
+                        />
+                        {shot.title ? (
+                          <figcaption>
+                            <p className="tab-photo-stack-title">
+                              {shot.title}
+                            </p>
+                            <p className="tab-photo-stack-caption">
+                              {shot.caption}
+                            </p>
+                          </figcaption>
+                        ) : null}
+                      </figure>
+                    ))}
+                </div>
+              ))}
+            </div>
+          ) : null}
 
           {tab.cta?.href ? (
             <div className="tab-actions">

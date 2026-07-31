@@ -574,6 +574,38 @@
   margin-bottom: 2.5rem;
 }
 
+/* Full-bleed color band behind the intro paragraphs — breaks out of
+   .tab-page's max-width regardless of how deep it's nested. */
+.tab-intro-band {
+  background: var(--sage-wash);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  padding: 3rem 0;
+}
+
+.tab-intro-band-inner {
+  max-width: 42.5rem;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 32px);
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #2b2a20;
+}
+
+.tab-intro-band-inner p {
+  margin: 0 0 1.625rem 0;
+}
+
+.tab-intro-band-inner p:last-child {
+  margin-bottom: 0;
+}
+
 .tab-page-body p {
   font-size: 1.0625rem;
   line-height: 1.75;
@@ -676,84 +708,62 @@
   color: var(--gold-deep);
 }
 
-/* Yoga gallery carousel */
-.tab-carousel {
-  position: relative;
+/* Yoga gallery — two columns, with the second column pushed down so the
+   pairs stagger deliberately. Each photo keeps its own native aspect ratio
+   (no fixed height / object-fit crop) since the source photos vary in
+   size, with a title + caption underneath each. */
+.tab-photo-stack {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+  align-items: start;
   margin: 2.25rem 0 0 0;
 }
 
-.tab-carousel-viewport {
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.tab-carousel-track {
+.tab-photo-stack-col {
   display: flex;
-  transition: transform 0.35s ease;
+  flex-direction: column;
+  gap: 2.5rem;
+  min-width: 0;
 }
 
-.tab-carousel-slide {
-  flex: 0 0 100%;
-  aspect-ratio: 1;
+.tab-photo-stack-col-offset {
+  margin-top: 4rem;
 }
 
-.tab-carousel-slide img {
+.tab-photo-stack-item {
+  margin: 0;
+}
+
+.tab-photo-stack-image {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  border-radius: 14px;
+  margin-bottom: 1rem;
 }
 
-.tab-carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  background: var(--panel-strong);
-  color: var(--text);
-  font-size: 1.125rem;
-  cursor: pointer;
+.tab-photo-stack-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin: 0 0 0.375rem 0;
 }
 
-.tab-carousel-arrow:hover {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--cream);
+.tab-photo-stack-caption {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--body-muted);
+  margin: 0;
 }
 
-.tab-carousel-arrow-prev {
-  left: 0.75rem;
-}
+@media (max-width: 640px) {
+  .tab-photo-stack {
+    grid-template-columns: 1fr;
+  }
 
-.tab-carousel-arrow-next {
-  right: 0.75rem;
-}
-
-.tab-carousel-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 0.875rem;
-}
-
-.tab-carousel-dot {
-  width: 0.5rem;
-  height: 0.5rem;
-  border: 0;
-  border-radius: 999px;
-  padding: 0;
-  background: var(--line-strong);
-  cursor: pointer;
-}
-
-.tab-carousel-dot.is-active {
-  background: var(--gold-deep);
+  .tab-photo-stack-col-offset {
+    margin-top: 0;
+  }
 }
 
 /* Project list on the coding page. */
