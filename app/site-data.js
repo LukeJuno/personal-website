@@ -473,10 +473,10 @@ export const openTabs = [
         height: 933,
       },
       {
-        src: "/tabs/yoga-4.webp",
-        alt: "Alexandra Colgan smiling in a forearm stand with one leg extended.",
-        width: 1000,
-        height: 1000,
+        src: "/tabs/yoga-7.webp",
+        alt: "Alexandra Colgan in a one-arm balance with her legs bent overhead.",
+        width: 933,
+        height: 1400,
       },
       {
         src: "/tabs/yoga-6.webp",

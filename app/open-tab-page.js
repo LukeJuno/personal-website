@@ -93,19 +93,29 @@ export default function OpenTabPage({ slug, children }) {
 
           {children}
 
-          {/* Yoga: photo gallery */}
+          {/* Yoga: photo gallery — two columns, second column offset down
+              so the pairs stagger instead of lining up in a grid. */}
           {tab.gallery?.length ? (
             <div className="tab-photo-stack">
-              {tab.gallery.map((shot) => (
-                <Image
-                  key={shot.src}
-                  className="tab-photo-stack-image"
-                  src={shot.src}
-                  alt={shot.alt}
-                  width={shot.width || 1000}
-                  height={shot.height || 1000}
-                  sizes="(max-width: 640px) 92vw, 440px"
-                />
+              {[0, 1].map((col) => (
+                <div
+                  className={`tab-photo-stack-col${col === 1 ? " tab-photo-stack-col-offset" : ""}`}
+                  key={col}
+                >
+                  {tab.gallery
+                    .filter((_, i) => i % 2 === col)
+                    .map((shot) => (
+                      <Image
+                        key={shot.src}
+                        className="tab-photo-stack-image"
+                        src={shot.src}
+                        alt={shot.alt}
+                        width={shot.width || 1000}
+                        height={shot.height || 1000}
+                        sizes="(max-width: 640px) 92vw, 440px"
+                      />
+                    ))}
+                </div>
               ))}
             </div>
           ) : null}
