@@ -5,7 +5,7 @@ import "./portfolio.css";
 export const metadata = {
   metadataBase: new URL("https://www.alexandracolgan.com"),
   title: {
-    default: "Alexandra Colgan | Creative, Writer, Thinker",
+    default: "Freelance Creative + Copywriter in Hong Kong",
     template: "%s | Alexandra Colgan",
   },
   description:
@@ -21,7 +21,7 @@ export const metadata = {
     "storytelling",
   ],
   openGraph: {
-    title: "Alexandra Colgan | Creative, Writer, Thinker",
+    title: "Freelance Creative + Copywriter in Hong Kong",
     description:
       "Thoughtful stories, brand language, and creative work with warmth and clarity.",
     url: "https://www.alexandracolgan.com",
@@ -39,7 +39,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alexandra Colgan | Creative, Writer, Thinker",
+    title: "Freelance Creative + Copywriter in Hong Kong",
     description:
       "Thoughtful stories, brand language, and creative work with warmth and clarity.",
     images: ["/og.png"],
