@@ -32,9 +32,6 @@ export default function Home() {
               <Link className="hp-button" href="/portfolio">
                 See my work
               </Link>
-              <a className="hp-button hp-button-ghost" href={homeContact.ctaHref}>
-                Get in touch
-              </a>
             </div>
           </div>
 
@@ -100,11 +97,6 @@ export default function Home() {
               ))}
             </div>
             <p className="hp-note">{homeServices.note}</p>
-            <div className="hp-center">
-              <Link className="hp-button" href="/services">
-                See all services
-              </Link>
-            </div>
           </div>
         </section>
 
