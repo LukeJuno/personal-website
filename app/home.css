@@ -911,12 +911,87 @@
   }
 }
 
-/* --------------------------------------------------------------- contact form */
+/* --------------------------------------------------------------- contact page */
 
+/* Two-column enquiry layout: info left, form right. align-items: start so
+   the shorter column doesn't stretch to match the taller one (no dead
+   space beneath it), stacking info-first on mobile. Sits on one flat
+   cream band — no floating card around the form. */
+.contact-section {
+  position: relative;
+  padding: clamp(2.5rem, 6vw, 4rem) var(--hp-gutter);
+  overflow: hidden;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.85fr) minmax(18rem, 1.15fr);
+  gap: clamp(2.5rem, 6vw, 4.5rem);
+  align-items: start;
+  max-width: var(--hp-max);
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: grid;
+  align-content: start;
+  gap: 1.5rem;
+}
+
+.contact-info-label {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  color: var(--gold-deep);
+  margin: 0 0 0.3125rem 0;
+}
+
+.contact-info-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--body-copy);
+  margin: 0;
+}
+
+a.contact-info-text {
+  color: var(--gold-deep);
+  text-decoration: none;
+}
+
+a.contact-info-text:hover {
+  color: var(--gold);
+}
+
+.contact-info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.375rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--body-copy);
+}
+
+/* Form itself */
 .contact-form {
   display: grid;
-  gap: 1.5rem;
-  max-width: 34rem;
+  gap: 2rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.form-group-label {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  color: var(--body-muted);
+  margin: 0;
 }
 
 .form-field {
@@ -932,11 +1007,19 @@
   color: var(--text-muted);
 }
 
+.form-label-optional {
+  text-transform: none;
+  letter-spacing: normal;
+  font-style: italic;
+}
+
+/* Clean rectangular fields — fine espresso/muted-brown border, only a
+   slight radius, not the rounded/pill treatment used elsewhere. */
 .form-input {
   width: 100%;
   padding: 0.875rem 1rem;
-  border: 1px solid var(--line-strong);
-  border-radius: 12px;
+  border: 1px solid rgba(43, 42, 32, 0.32);
+  border-radius: 6px;
   background: var(--panel-strong);
   color: var(--text);
   font-family: var(--font-display);
@@ -977,8 +1060,60 @@
   margin: -0.5rem 0 0 0;
 }
 
-.contact-section {
-  padding: clamp(3rem, 7vw, 5.5rem) var(--hp-gutter);
+/* Primary mustard button — matches the nav's "Get in touch" styling
+   exactly (mustard bg, espresso text, slight radius, invert on hover)
+   rather than the rounded .hp-button pill used elsewhere. */
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  border-radius: 4px;
+  background: var(--gold);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.form-submit:hover {
+  background: var(--text);
+  color: var(--cream);
+}
+
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Two small mustard graphic marks at the outer edges — the only
+   decoration on the page, kept subtle so they don't compete with the
+   form. */
+.contact-accent {
+  position: absolute;
+  color: var(--gold);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.contact-accent-top {
+  top: 0.5rem;
+  right: var(--hp-gutter);
+}
+
+.contact-accent-bottom {
+  bottom: 0.5rem;
+  left: var(--hp-gutter);
+}
+
+@media (max-width: 720px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ----------------------------------------------------------- tab credentials */
