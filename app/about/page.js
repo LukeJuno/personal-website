@@ -68,6 +68,9 @@ export default function AboutPage() {
             few projects ongoing; they might take a while to finish but I
             hope to get them off the ground!
           </p>
+          <Link className="hp-button hp-button-sage" href="/open-tabs">
+            Check out what I&rsquo;m doing
+          </Link>
         </section>
 
         <section className="hp-band hp-band-cream hp-center">
