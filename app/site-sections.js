@@ -170,19 +170,17 @@ export function LogoMarquee() {
 }
 
 // Understated two-tone alternating bands (not a per-row color cycle) —
-// flat color fields, not distinct card-like blocks.
-const OT_SECTION_TONES = ["cream", "clay"];
+// flat color fields confined to the narrow column, not full-bleed cards.
+const OT_SECTION_TONES = ["cream", "parchment"];
 
 export function OpenTabsGrid() {
   return (
     <>
       {openTabs.map((item, index) => (
-        <section
-          className={`hp-band hp-band-${OT_SECTION_TONES[index % OT_SECTION_TONES.length]} ot-section`}
-          id={item.slug}
-          key={item.slug}
-        >
-          <div className="ot-section-inner">
+        <section className="ot-section" id={item.slug} key={item.slug}>
+          <div
+            className={`ot-section-inner ot-section-inner-${OT_SECTION_TONES[index % OT_SECTION_TONES.length]}`}
+          >
             <article className="ot-row">
               <Link className="ot-row-media" href={item.href}>
                 <Image
