@@ -5,11 +5,11 @@ import "./portfolio.css";
 export const metadata = {
   metadataBase: new URL("https://www.alexandracolgan.com"),
   title: {
-    default: "Alexandra Colgan | Creative, Writer, Thinker",
+    default: "Alexandra Colgan — Freelance Creative + Copywriter in Hong Kong",
     template: "%s | Alexandra Colgan",
   },
   description:
-    "Alexandra Colgan is a Hong Kong-based creative and copywriter working across campaigns, websites, brand voice, and thoughtful side projects.",
+    "Creative campaigns, branding and copy. Hong Kong-based, available for freelance projects.",
   keywords: [
     "Alexandra Colgan",
     "creative",
@@ -21,9 +21,9 @@ export const metadata = {
     "storytelling",
   ],
   openGraph: {
-    title: "Alexandra Colgan | Creative, Writer, Thinker",
+    title: "Alexandra Colgan — Freelance Creative + Copywriter in Hong Kong",
     description:
-      "Thoughtful stories, brand language, and creative work with warmth and clarity.",
+      "Creative campaigns, branding and copy. Hong Kong-based, available for freelance projects.",
     url: "https://www.alexandracolgan.com",
     siteName: "Alexandra Colgan",
     locale: "en_HK",
@@ -39,9 +39,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alexandra Colgan | Creative, Writer, Thinker",
+    title: "Alexandra Colgan — Freelance Creative + Copywriter in Hong Kong",
     description:
-      "Thoughtful stories, brand language, and creative work with warmth and clarity.",
+      "Creative campaigns, branding and copy. Hong Kong-based, available for freelance projects.",
     images: ["/og.png"],
   },
   alternates: {
