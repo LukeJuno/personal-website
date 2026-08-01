@@ -912,29 +912,54 @@
 
 /* --------------------------------------------------------------- contact page */
 
-/* Two-column enquiry layout: info left, form right. align-items: start so
-   the shorter column doesn't stretch to match the taller one (no dead
-   space beneath it), stacking info-first on mobile. Sits on one flat
-   cream band — no floating card around the form. */
+/* Single flat tan band holding kicker, heading, info and form — matches
+   the approved prototype (one section, not a separate hero band above
+   it). Two-column enquiry layout: info left, form right. align-items:
+   start so the shorter column doesn't stretch to match the taller one,
+   stacking info-first on mobile. */
 .contact-section {
-  position: relative;
-  padding: clamp(2.5rem, 6vw, 4rem) var(--hp-gutter);
-  overflow: hidden;
+  background: var(--cream-strong);
+  padding: clamp(3.5rem, 8vw, 5.625rem) var(--hp-gutter) clamp(4.375rem, 9vw, 6.875rem);
+}
+
+.contact-inner {
+  max-width: var(--hp-max);
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.2vw, 2.875rem);
+  line-height: 1.2;
+  font-weight: 400;
+  max-width: 32.5rem;
+  margin: 0 0 2.5rem 0;
+}
+
+.contact-intro {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--body-copy);
+  max-width: 26.25rem;
+  margin: 0 0 2.75rem 0;
 }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: minmax(16rem, 0.85fr) minmax(18rem, 1.15fr);
-  gap: clamp(2.5rem, 6vw, 4.5rem);
+  grid-template-columns: minmax(17.5rem, 1fr) minmax(21.25rem, 1.1fr);
+  gap: clamp(2.5rem, 6vw, 5.625rem);
   align-items: start;
-  max-width: var(--hp-max);
-  margin: 0 auto;
 }
 
 .contact-info {
   display: grid;
   align-content: start;
-  gap: 1.5rem;
+}
+
+.contact-info-blocks {
+  display: grid;
+  align-content: start;
+  gap: 1.75rem;
 }
 
 .contact-info-label {
@@ -1061,22 +1086,22 @@ a.contact-info-text:hover {
   margin: -0.5rem 0 0 0;
 }
 
-/* Primary mustard button — matches the nav's "Get in touch" styling
-   exactly (mustard bg, espresso text, slight radius, invert on hover)
-   rather than the rounded .hp-button pill used elsewhere. */
+/* Primary mustard button — mustard bg, espresso text, invert on hover;
+   radius matches the approved prototype's contact form (8px, slightly
+   more rounded than the nav's square-cornered CTA). */
 .form-submit {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: fit-content;
-  padding: 0.75rem 1.5rem;
+  padding: 0.875rem 1.875rem;
   border: 0;
-  border-radius: 4px;
+  border-radius: 8px;
   background: var(--gold);
   color: var(--text);
   font-family: var(--font-display);
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -1089,26 +1114,6 @@ a.contact-info-text:hover {
 .form-submit:disabled {
   opacity: 0.6;
   cursor: default;
-}
-
-/* Two small mustard graphic marks at the outer edges — the only
-   decoration on the page, kept subtle so they don't compete with the
-   form. */
-.contact-accent {
-  position: absolute;
-  color: var(--gold);
-  opacity: 0.55;
-  pointer-events: none;
-}
-
-.contact-accent-top {
-  top: 0.5rem;
-  right: var(--hp-gutter);
-}
-
-.contact-accent-bottom {
-  bottom: 0.5rem;
-  left: var(--hp-gutter);
 }
 
 @media (max-width: 720px) {
