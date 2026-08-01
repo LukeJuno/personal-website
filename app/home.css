@@ -152,6 +152,16 @@
   color: var(--bg);
 }
 
+.hp-button-sage {
+  background: var(--sage);
+  color: var(--cream);
+}
+
+.hp-button-sage:hover {
+  background: var(--forest);
+  color: var(--cream);
+}
+
 .hp-button-invert {
   color: var(--forest-deep);
 }
@@ -1383,7 +1393,7 @@ a.contact-info-text:hover {
   font-size: 1.125rem;
   line-height: 1.75;
   color: var(--text);
-  margin: 0;
+  margin: 0 0 2rem 0;
 }
 
 .about-cta-quote {
