@@ -16,6 +16,7 @@ export const headerNav = [
 ];
 
 export const footerNav = [
+  { href: "/about", label: "About" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/yoga", label: "Yoga" },
   { href: "/babywearing", label: "Babywearing" },
