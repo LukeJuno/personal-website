@@ -990,8 +990,10 @@ a.contact-info-text:hover {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 0.6875rem;
-  color: var(--body-muted);
+  color: var(--gold-deep);
   margin: 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(43, 42, 32, 0.18);
 }
 
 .form-field {

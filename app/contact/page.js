@@ -72,16 +72,6 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <p className="contact-info-label">Email</p>
-              <a
-                className="contact-info-text"
-                href="mailto:alexandracolgan@gmail.com"
-              >
-                alexandracolgan@gmail.com
-              </a>
-            </div>
-
-            <div>
               <p className="contact-info-label">What I can help with</p>
               <ul className="contact-info-list">
                 {services.map((service) => (
