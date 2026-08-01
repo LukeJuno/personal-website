@@ -14,7 +14,9 @@ export default function OpenTabsPage() {
         <p className="ot-hero-eyebrow">Open Tabs</p>
         <h1 className="ot-hero-title">Beyond the brief.</h1>
         <p className="ot-hero-subline">
-          Tabs that keep staying open in my mind.
+          Yoga, babywearing and coding are the open tabs I keep returning
+          to. This is a space where I share what I&rsquo;m learning, making
+          and still figuring out.
         </p>
       </section>
 
