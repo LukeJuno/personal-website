@@ -64,6 +64,13 @@
   --font-display: "TeX Gyre Termes", "Times New Roman", serif;
   --font-mono: "TT Interphases Mono", "SFMono-Regular", Menlo, Monaco,
     "Courier New", monospace;
+
+  /* Shared layout tokens — global (not scoped to .hp) so any page can use
+     them without needing an .hp wrapper. Portfolio/Open Tabs/Contact all
+     rely on --hp-gutter for horizontal padding. */
+  --hp-gutter: clamp(20px, 5vw, 64px);
+  --hp-band: clamp(60px, 8vw, 110px);
+  --hp-max: 1280px;
 }
 
 :root[data-theme="dark"] {

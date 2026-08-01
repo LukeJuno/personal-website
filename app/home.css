@@ -6,9 +6,8 @@
    =========================================================================== */
 
 .hp {
-  --hp-gutter: clamp(20px, 5vw, 64px);
-  --hp-band: clamp(60px, 8vw, 110px);
-  --hp-max: 1280px;
+  /* --hp-gutter/--hp-band/--hp-max now live at :root in globals.css so
+     every page can use them, not just ones wrapped in .hp. */
   color: var(--text);
   font-family: var(--font-display);
 }
