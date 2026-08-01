@@ -6,15 +6,14 @@ export const primaryNav = [
   { href: "/contact", label: "Contact" },
 ];
 
-// Trimmed for the top header — About, Services and Contact stay reachable
-// from the footer/header CTA instead, keeping the header focused on the
-// pages people look for first.
-export const headerNav = primaryNav.filter(
-  (item) =>
-    item.href !== "/about" &&
-    item.href !== "/services" &&
-    item.href !== "/contact",
-);
+// Trimmed for the top header — Services and Contact stay reachable from
+// the footer/header CTA instead. Order: About, Portfolio, Open Tabs, then
+// the "Get in touch" CTA (appended separately in site-nav.js).
+export const headerNav = [
+  primaryNav.find((item) => item.href === "/about"),
+  primaryNav.find((item) => item.href === "/portfolio"),
+  primaryNav.find((item) => item.href === "/open-tabs"),
+];
 
 export const footerNav = [
   { href: "/portfolio", label: "Portfolio" },

@@ -1,80 +1,86 @@
+import Image from "next/image";
+import Link from "next/link";
 import SiteShell from "../site-shell";
-import { ContactPanel, PageIntro, ValueGrid } from "../site-sections";
 
 export const metadata = {
-  title: "About",
+  // The doc's title is already a complete SEO title (name included), so it
+  // uses `absolute` to skip layout.js's "%s | Alexandra Colgan" template.
+  title: { absolute: "About Alexandra Colgan | Creative Copywriter in Hong Kong" },
   description:
-    "About Alexandra Colgan, a Hong Kong-based creative and copywriter working across campaigns, content, and brand voice.",
+    "Meet Alexandra Colgan, a Hong Kong-based freelance creative and copywriter who helps brands make sense of what they want to say.",
 };
 
 export default function AboutPage() {
   return (
     <SiteShell>
-      <PageIntro
-        kicker="About"
-        title="Clear thinking, warm language, and ideas with a human center."
-        intro="I’m Alexandra Colgan, a Hong Kong-based creative and copywriter who enjoys simplifying complex ideas into thoughtful stories and experiences."
-        aside="Over the years I’ve worked across luxury, lifestyle, healthcare, technology, and consumer brands, helping organizations find language that feels both sharp and genuinely human."
-      />
-
-      <section className="section-frame section-frame-mustard section-grid">
-        <div className="section-meta">
-          <p className="section-kicker">Biography</p>
-        </div>
-        <div className="section-content section-content-wide">
-          <div className="prose">
-            <p>
-              My background is in agency creative work, where I have spent
-              nearly a decade thinking through campaigns, writing across
-              formats, and finding the idea underneath the brief.
-            </p>
-            <p>
-              I’ve worked on everything from international brand campaigns and
-              scripts to websites, naming, social content, decks, and verbal
-              systems. The surface changes, but the job is usually the same:
-              make it clearer, more resonant, and more memorable.
-            </p>
-            <p>
-              Outside client work, I’m interested in design, digital products,
-              parenting, babywearing, yoga, and building small useful things.
-              I completed Harvard’s CS50x, built a Cantonese learning app, and
-              still like following a curious thread further than necessary.
+      <div className="hp">
+        <section className="hp-hero">
+          <div className="hp-hero-copy">
+            <p className="hp-kicker">About</p>
+            <h1 className="hp-hero-title">Hi, I&rsquo;m Alexandra.</h1>
+            <p className="hp-hero-intro">
+              A Hong Kong-based creative and copywriter.
             </p>
           </div>
-        </div>
-      </section>
 
-      <section className="section-frame section-frame-sage">
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">Values</p>
-            <h2>The principles I return to most often.</h2>
+          <div className="hp-portrait">
+            <span className="hp-portrait-shadow" aria-hidden="true" />
+            <Image
+              className="hp-portrait-image"
+              src="/about/portrait.webp"
+              alt="Portrait of Alexandra Colgan"
+              width={1074}
+              height={1464}
+              priority
+              sizes="(max-width: 860px) 92vw, 44vw"
+            />
           </div>
-        </div>
-        <ValueGrid />
-      </section>
+        </section>
 
-      <section className="section-frame section-frame-clay section-grid">
-        <div className="section-meta">
-          <p className="section-kicker">Experience</p>
-        </div>
-        <div className="section-content section-content-wide">
-          <div className="prose">
+        <section className="hp-band hp-band-sage">
+          <div className="about-intro">
             <p>
-              I’ve created work across luxury, lifestyle, healthcare,
-              technology, and consumer categories for both local and global
-              clients.
+              I work with clients who have something to say but need help
+              working out the best way to say it.
             </p>
             <p>
-              From campaign platforms and launch copy to websites, social, and
-              scripts, I like helping teams find the sharpest version of what
-              they mean.
+              Sometimes that means brainstorming what a brand is and how
+              they want to present themselves. Other times it means
+              thinking of an idea for a campaign, getting into the weeds of
+              a website, or writing a script, or creating a series of
+              social content pieces.
+            </p>
+            <p>
+              I&rsquo;ve been doing this for close to ten years. I&rsquo;m
+              interested in good thinking, useful writing and work that
+              feels like it came from actual people.
             </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <ContactPanel />
+        <section className="about-personal">
+          <p className="hp-kicker">Outside work</p>
+          <p className="about-personal-copy">
+            I&rsquo;m a mom of two, so usually you&rsquo;ll find me
+            babywearing one of my kids and hanging out with them.
+            I&rsquo;ve also recently started spending a surprising amount
+            of time learning to code and trying out new AI tools. I have a
+            few projects ongoing; they might take a while to finish but I
+            hope to get them off the ground!
+          </p>
+        </section>
+
+        <section className="hp-band hp-band-cream hp-center">
+          <h2 className="hp-heading">Have a project in mind?</h2>
+          <p className="about-cta-quote">
+            Tell me what you&rsquo;ve been working on.
+          </p>
+          <p className="hp-body hp-lead-center">I&rsquo;d love to hear about it.</p>
+          <Link className="hp-button" href="/contact">
+            Get in touch
+          </Link>
+        </section>
+      </div>
     </SiteShell>
   );
 }
