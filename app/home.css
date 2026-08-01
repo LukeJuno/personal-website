@@ -1109,7 +1109,7 @@
 .ot-section-inner {
   max-width: 44rem;
   margin: 0 auto;
-  padding: 1.25rem var(--hp-gutter);
+  padding: 3.75rem 2rem;
 }
 
 .ot-section-inner-cream {
@@ -1120,10 +1120,12 @@
   background: var(--clay-wash);
 }
 
+/* Image column is ~41% of the row width (18rem of the 44rem column),
+   matching the PDF's proportions exactly — not a small thumbnail. */
 .ot-row {
   display: grid;
-  grid-template-columns: 11rem 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 18rem 1fr;
+  gap: 2.25rem;
   align-items: center;
 }
 
@@ -1198,11 +1200,12 @@
 }
 
 @media (max-width: 560px) {
-  .ot-row {
-    grid-template-columns: 1fr;
+  .ot-section-inner {
+    padding: 2rem 1.25rem;
   }
 
-  .ot-row-media {
-    max-width: 14rem;
+  .ot-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }

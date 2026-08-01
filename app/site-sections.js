@@ -187,7 +187,7 @@ export function OpenTabsGrid() {
                   src={item.image}
                   alt={item.imageAlt}
                   fill
-                  sizes="(max-width: 640px) 100vw, 11rem"
+                  sizes="(max-width: 560px) 100vw, 18rem"
                 />
               </Link>
               <div className="ot-row-copy">
