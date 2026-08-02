@@ -101,7 +101,7 @@
 
 .pf-work-heading {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(18.75rem, 100%), 1fr));
   gap: clamp(2rem, 6vw, 5rem);
   align-items: start;
   margin-bottom: 5rem;
@@ -151,7 +151,7 @@
 
 .pf-work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
   gap: clamp(2rem, 5vw, 3.5rem);
   align-items: center;
 }
@@ -297,7 +297,7 @@
 
 .pf-modal-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
   gap: 1rem;
 }
 
@@ -357,6 +357,30 @@
 @media (max-width: 820px) {
   .pf-work-heading {
     grid-template-columns: 1fr;
+  }
+
+  /* 20rem is a hard floor that auto-fit cannot go below, so on narrow
+     screens the grid stayed 320px wide inside a ~262px column and ran
+     off the edge. min() lets it shrink to the container. */
+  .pf-work-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Stack the row number above the content instead of beside it —
+     that alone gives back 88px of width. */
+  .pf-work-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem 0;
+  }
+
+  .pf-work-number {
+    padding-top: 0;
+  }
+
+  /* The image is ordered second on alternating rows for the desktop
+     zigzag. On mobile every row should read image-then-text. */
+  .pf-work-grid-reverse .pf-work-media {
+    order: 0;
   }
 }
 

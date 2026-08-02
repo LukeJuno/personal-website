@@ -236,7 +236,7 @@
 .hp-hero,
 .hp-about {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(21.25rem, 100%), 1fr));
   gap: clamp(2rem, 6vw, 5rem);
   align-items: center;
   max-width: var(--hp-max);
@@ -303,7 +303,7 @@
 
 .hp-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(16.25rem, 100%), 1fr));
   gap: 1.75rem;
 }
 
@@ -353,7 +353,7 @@
 
 .hp-approach {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
   gap: 2.5rem;
   margin-top: 3.75rem;
 }
@@ -384,7 +384,7 @@
 
 .hp-work {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(18.75rem, 100%), 1fr));
   gap: 1.75rem;
 }
 
@@ -1179,7 +1179,7 @@ a.contact-info-text:hover {
 
 .wide-hero-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(21.25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(21.25rem, 100%), 1fr));
   gap: clamp(1.5rem, 5vw, 3rem);
   align-items: end;
   max-width: var(--hp-max);
