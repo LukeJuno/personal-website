@@ -1,10 +1,10 @@
-import { caseStudies } from "./site-data";
-
 const BASE_URL = "https://alexandracolgan.com";
 
 // /services stays out of the sitemap deliberately — it's unpublished and
 // unlinked for now. /work is just a redirect to /portfolio, so it's skipped
-// too.
+// too. The old /portfolio/<slug> case-study pages were removed and now
+// redirect to /portfolio (see next.config.mjs), so they don't get their own
+// entries either.
 const staticRoutes = [
   "",
   "/about",
@@ -18,15 +18,8 @@ const staticRoutes = [
 ];
 
 export default function sitemap() {
-  const staticEntries = staticRoutes.map((route) => ({
+  return staticRoutes.map((route) => ({
     url: `${BASE_URL}${route}`,
     lastModified: new Date(),
   }));
-
-  const caseStudyEntries = caseStudies.map((study) => ({
-    url: `${BASE_URL}/portfolio/${study.slug}`,
-    lastModified: new Date(),
-  }));
-
-  return [...staticEntries, ...caseStudyEntries];
 }
