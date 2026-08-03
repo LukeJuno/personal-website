@@ -458,7 +458,7 @@ export const portfolioWork = [
     insight:
       "The daily grind quietly drains the fun out of ordinary moments without people noticing, so the brand needed to behave like a playful jolt of energy rather than a passive product ad.",
     idea:
-      "We introduced Juicester, a larger-than-life brand character built from Tropicana's own orange pattern, who crashes into people's “meh” moments to Make it Juicier — brought to life here in the platform's hero film.",
+      "We introduced Juicester, a larger-than-life brand character built from Tropicana's own orange pattern, who crashes into people's “meh” moments to Make it Juicier. We brought him to life with a video where he injects some juicy fun in a tired mom's day.",
     video: "0IYMulq5R7o",
     videoTitle: "Tropicana Twister — Make it Juicier ft. Juicester",
   },
