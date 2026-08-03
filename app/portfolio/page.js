@@ -3,10 +3,18 @@ import { LogoMarquee } from "../site-sections";
 import { PortfolioWork } from "../portfolio-work";
 import { homeContact, portfolioIntro, portfolioSelectedWork } from "../site-data";
 
+const pageDescription =
+  "Selected work for Sunkist, Hongkong Bank Foundation, Roche, Hong Kong Disneyland and Tropicana. Campaigns, brand platforms and copy by Alexandra Colgan.";
+
 export const metadata = {
   title: "Portfolio",
-  description:
-    "Brands Alexandra Colgan has worked with across beauty, finance, hospitality, technology, automotive, food, healthcare, and luxury.",
+  description: pageDescription,
+  alternates: { canonical: "portfolio" },
+  openGraph: {
+    title: "Portfolio | Alexandra Colgan",
+    description: pageDescription,
+    url: "portfolio",
+  },
 };
 
 export default function PortfolioPage() {

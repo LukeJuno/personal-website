@@ -1,10 +1,18 @@
 import SiteShell from "../site-shell";
 import { ContactPanel, OpenTabsGrid } from "../site-sections";
 
+const pageDescription =
+  "Yoga, babywearing, coding, and what Alexandra Colgan is currently reading, listening to and writing.";
+
 export const metadata = {
   title: "Open Tabs",
-  description:
-    "Yoga, babywearing, coding, and what Alexandra Colgan is currently reading, listening to and writing.",
+  description: pageDescription,
+  alternates: { canonical: "open-tabs" },
+  openGraph: {
+    title: "Open Tabs | Alexandra Colgan",
+    description: pageDescription,
+    url: "open-tabs",
+  },
 };
 
 export default function OpenTabsPage() {

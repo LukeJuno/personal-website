@@ -2,12 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteShell from "../site-shell";
 
+const pageTitle = "About Alexandra Colgan | Creative Copywriter in Hong Kong";
+const pageDescription =
+  "Meet Alexandra Colgan, a Hong Kong-based freelance creative and copywriter who helps brands make sense of what they want to say.";
+
 export const metadata = {
   // The doc's title is already a complete SEO title (name included), so it
   // uses `absolute` to skip layout.js's "%s | Alexandra Colgan" template.
-  title: { absolute: "About Alexandra Colgan | Creative Copywriter in Hong Kong" },
-  description:
-    "Meet Alexandra Colgan, a Hong Kong-based freelance creative and copywriter who helps brands make sense of what they want to say.",
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: "about" },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: "about",
+  },
 };
 
 export default function AboutPage() {

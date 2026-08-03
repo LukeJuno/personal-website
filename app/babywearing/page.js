@@ -13,6 +13,12 @@ export const metadata = {
     "babywearing consultation",
   ],
   alternates: { canonical: "babywearing" },
+  openGraph: {
+    title: "Babywearing Consultant in Hong Kong | Alexandra Colgan",
+    description:
+      "Certified babywearing consultant in Hong Kong. Carrier fitting, carrier selection and troubleshooting, in person or online.",
+    url: "babywearing",
+  },
 };
 
 // Tells search engines explicitly what this page offers, where, and by whom.
@@ -26,7 +32,7 @@ const serviceSchema = {
   provider: {
     "@type": "Person",
     name: "Alexandra Colgan",
-    url: "https://www.alexandracolgan.com",
+    url: "https://alexandracolgan.com",
     email: "alexandracolgan@gmail.com",
     hasCredential: {
       "@type": "EducationalOccupationalCredential",

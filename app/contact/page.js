@@ -2,12 +2,21 @@ import SiteShell from "../site-shell";
 import ContactForm from "../contact-form";
 import { services } from "../site-data";
 
+const pageTitle = "Contact Alexandra Colgan | Freelance Creative Copywriter";
+const pageDescription =
+  "Get in touch with Alexandra Colgan for freelance copywriting, creative concepts, brand voice, website copy and creative collaborations.";
+
 export const metadata = {
   // The doc's title is already a complete SEO title (name included), so it
   // uses `absolute` to skip layout.js's "%s | Alexandra Colgan" template.
-  title: { absolute: "Contact Alexandra Colgan | Freelance Creative Copywriter" },
-  description:
-    "Get in touch with Alexandra Colgan for freelance copywriting, creative concepts, brand voice, website copy and creative collaborations.",
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: "contact" },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: "contact",
+  },
 };
 
 export default function ContactPage() {

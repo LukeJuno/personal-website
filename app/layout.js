@@ -45,7 +45,7 @@ export const metadata = {
     images: ["/og.png"],
   },
   alternates: {
-    canonical: "https://alexandracolgan.com",
+    canonical: "/",
   },
   category: "portfolio",
 };
