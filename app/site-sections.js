@@ -2,13 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   brands,
-  caseStudies,
   contactLinks,
   homeContact,
   openTabs,
   services,
   values,
-  workItems,
 } from "./site-data";
 
 export function HeroPortrait() {
@@ -78,62 +76,6 @@ export function ServicesGrid() {
           <h3>{service.title}</h3>
           <p>{service.description}</p>
         </article>
-      ))}
-    </div>
-  );
-}
-
-function ProjectGraphic({ accent }) {
-  return (
-    <div className={`project-graphic ${accent}`} aria-hidden="true">
-      <span className="project-graphic-panel project-graphic-panel-a" />
-      <span className="project-graphic-panel project-graphic-panel-b" />
-      <span className="project-graphic-line" />
-    </div>
-  );
-}
-
-export function WorkGrid() {
-  return (
-    <div className="card-grid card-grid-three">
-      {workItems.map((item) => (
-        <article className="content-card project-card" key={item.title}>
-          <ProjectGraphic accent={item.accent} />
-          <div className="card-copy">
-            <p className="card-label">Selected work</p>
-            <h3>{item.title}</h3>
-            <p>{item.summary}</p>
-          </div>
-        </article>
-      ))}
-    </div>
-  );
-}
-
-export function CaseStudyGrid({ items = caseStudies, featured = false }) {
-  return (
-    <div className={`case-study-grid${featured ? " case-study-grid-featured" : ""}`}>
-      {items.map((study) => (
-        <Link
-          className="case-study-card"
-          href={`/portfolio/${study.slug}`}
-          key={study.slug}
-        >
-          <div className="case-study-media">
-            <Image
-              src={study.images[0].src}
-              alt={study.images[0].alt}
-              fill
-              sizes={featured ? "(max-width: 820px) 100vw, 48vw" : "(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"}
-            />
-          </div>
-          <div className="case-study-copy">
-            <p className="card-label">{study.brand}</p>
-            <h3>{study.title}</h3>
-            <p>{study.background}</p>
-            <span className="case-study-link">View case study <span aria-hidden="true">↗</span></span>
-          </div>
-        </Link>
       ))}
     </div>
   );

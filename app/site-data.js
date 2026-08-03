@@ -152,121 +152,6 @@ export const services = [
   },
 ];
 
-export const caseStudies = [
-  {
-    slug: "sunkist-citrush-joocies",
-    brand: "Sunkist",
-    title: "Citrush / JooCies",
-    type: "Activation concept",
-    background:
-      "Activation concept for Sunkist designed to make oranges feel more culturally relevant, desirable and portable in everyday life.",
-    insight:
-      "Accessory culture has turned cute, useful objects into status markers. People are already styling bags with charms, cases and mini objects.",
-    idea:
-      "CITRUSH: collectible orange cases that work like bag charms, so carrying a Sunkist orange feels playful, visible and social.",
-    images: [
-      {
-        src: "/case-studies/sunkist-citrush.png",
-        alt: "Sunkist Citrush collectible orange case concept and pop-up activation mockup.",
-      },
-      {
-        src: "/case-studies/sunkist-pop-up.png",
-        alt: "Sunkist Citrush pop-up activation mockup in a shopping mall.",
-      },
-    ],
-  },
-  {
-    slug: "aia-rethink-healthy",
-    brand: "AIA",
-    title: "Rethink Healthy",
-    type: "Creative platform exploration",
-    background:
-      "Creative platform exploration for AIA aimed at challenging narrow stereotypes of what “healthy” looks like.",
-    insight:
-      "Health advertising often shows a narrow aspirational ideal. Many people do not see themselves in it, so the category can feel distant or judgmental.",
-    idea:
-      "Use simple expectation-flipping headlines to expose bias about who can be perceived as healthy, and make the platform feel more inclusive and human.",
-    images: [
-      {
-        src: "/case-studies/aia-direction-one.png",
-        alt: "AIA Rethink Healthy poster concepts showing different ideas of health.",
-      },
-      {
-        src: "/case-studies/aia-direction-six.png",
-        alt: "AIA Rethink Healthy poster series displayed in outdoor settings.",
-      },
-    ],
-  },
-  {
-    slug: "qeelin-social-content-system",
-    brand: "Qeelin",
-    title: "Social campaign / content system",
-    type: "Social-first retainer proposal",
-    background:
-      "Social-first retainer proposal for Qeelin focused on strengthening luxury desirability through richer storytelling.",
-    insight:
-      "Luxury audiences respond more strongly to heritage, symbolism and craft than to static product posts alone.",
-    idea:
-      "Build an editorial content system around cultural meaning, product symbolism and modern styling so the feed feels more cohesive and like a branded luxury world.",
-    images: [
-      {
-        src: "/case-studies/qeelin-content-system.png",
-        alt: "Qeelin audience and content-pillar strategy presentation.",
-      },
-      {
-        src: "/case-studies/qeelin-content-examples.png",
-        alt: "Qeelin social campaign content-system examples.",
-      },
-    ],
-  },
-  {
-    slug: "tropicana-twister-juicester",
-    brand: "Tropicana",
-    title: "Tropicana Twister launch",
-    type: "Campaign platform",
-    background:
-      "Campaign platform for Tropicana Twister built around interrupting dull everyday moments with a more playful burst of energy.",
-    insight:
-      "The daily grind flattens mood and energy, so the brand should behave like a playful jolt rather than a passive product ad.",
-    idea:
-      "Introduce Juicester, a larger-than-life brand character who crashes into boring moments and makes them juicier.",
-    images: [
-      {
-        src: "/case-studies/tropicana-juicester.png",
-        alt: "Tropicana Twister Juicester campaign character presentation.",
-      },
-      {
-        src: "/case-studies/tropicana-script.png",
-        alt: "Tropicana Twister script example featuring the Juicester character.",
-      },
-    ],
-  },
-  {
-    slug: "hongkong-bank-foundation-website",
-    brand: "Hongkong Bank Foundation",
-    title: "Website revamp",
-    type: "Website rebrand and copywriting",
-    background:
-      "Redo the entire HBF website with rebranding and new copywriting.",
-    insight:
-      "The Foundation needed a digital home that could bring its community work, programmes and stories together in one clearer experience.",
-    idea:
-      "A full website revamp supported by new copywriting, alongside social content and activation ideas for volunteer appreciation and engagement.",
-    images: [
-      {
-        src: "/case-studies/hbf-website.png",
-        alt: "Hongkong Bank Foundation website revamp presentation.",
-      },
-      {
-        src: "/case-studies/hbf-activations.png",
-        alt: "Hongkong Bank Foundation social content and activation examples.",
-      },
-    ],
-  },
-];
-
-export const workItems = caseStudies;
-
 /* ---------------------------------------------------------------------------
    Portfolio page content (2026 design)
 --------------------------------------------------------------------------- */
@@ -773,7 +658,7 @@ export const homeWork = {
       discipline: "Activation Campaign",
       image: "/home/work-joocies.webp",
       imageAlt: "Sunkist Joocies activation campaign artwork.",
-      href: "/portfolio/sunkist-citrush-joocies",
+      href: "/portfolio",
     },
     {
       title: "HBF Website",
@@ -781,7 +666,7 @@ export const homeWork = {
       discipline: "Website Copy",
       image: "/home/work-hbf.webp",
       imageAlt: "The Hongkong Bank Foundation website homepage.",
-      href: "/portfolio/hongkong-bank-foundation-website",
+      href: "/portfolio",
     },
     {
       title: "APAC Vision Health Survey",
