@@ -3,7 +3,7 @@ import "./home.css";
 import "./portfolio.css";
 
 export const metadata = {
-  metadataBase: new URL("https://www.alexandracolgan.com"),
+  metadataBase: new URL("https://alexandracolgan.com"),
   title: {
     default: "Alexandra Colgan — Freelance Creative + Copywriter in Hong Kong",
     template: "%s | Alexandra Colgan",
@@ -24,7 +24,7 @@ export const metadata = {
     title: "Alexandra Colgan — Freelance Creative + Copywriter in Hong Kong",
     description:
       "Creative campaigns, branding and copy. Hong Kong-based, available for freelance projects.",
-    url: "https://www.alexandracolgan.com",
+    url: "https://alexandracolgan.com",
     siteName: "Alexandra Colgan",
     locale: "en_HK",
     type: "website",
@@ -45,7 +45,7 @@ export const metadata = {
     images: ["/og.png"],
   },
   alternates: {
-    canonical: "https://www.alexandracolgan.com",
+    canonical: "https://alexandracolgan.com",
   },
   category: "portfolio",
 };
