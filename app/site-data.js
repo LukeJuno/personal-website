@@ -241,7 +241,7 @@ export const portfolioWork = [
     type: "Website rebrand and copywriting",
     background: "Redo the entire HBF website with rebranding and new copywriting.",
     insight:
-      "The Foundation needed a digital home that could bring its community work, programmes and stories together in one clearer experience.",
+      "The Foundation needed a digital home that could bring its community work, programs and stories together in one clearer experience.",
     idea: "A full website revamp supported by new copywriting, alongside social content and activation ideas for volunteer appreciation and engagement.",
     image: "/home/work-hbf.webp",
     imageAlt: "The Hongkong Bank Foundation website homepage.",
@@ -263,7 +263,7 @@ export const portfolioWork = [
     title: "APAC Vision Health Survey",
     type: "Social video",
     background:
-      "Develop video assets that bring the APAC Vision Health Survey to life, creating new opportunities to engage key stakeholders across APAC on the need to prioritise vision health.",
+      "Develop video assets that bring the APAC Vision Health Survey to life, creating new opportunities to engage key stakeholders across APAC on the need to prioritize vision health.",
     insight:
       "The survey data was comprehensive, but in order to easily reach stakeholders and everyday people the findings needed a format they'd actually watch and pass along.",
     idea: "A social video summarising the survey's key findings through animated graphics, built to travel across APAC markets.",
@@ -278,7 +278,7 @@ export const portfolioWork = [
     background:
       "The first ever World of Frozen was coming to HK Disneyland. We needed to create buzz for this grand opening.",
     insight:
-      "We made Arendelle feel like a real tourist destination for both Hong Kongers and SEA travellers.",
+      "We made Arendelle feel like a real tourist destination for both Hong Kongers and SEA travelers.",
     idea: "We invited people to travel, explore and experience the culture and offerings of Arendelle through a series of tourism-style OOH, contextual, and banner ads.",
     image: "/case-studies/visit-arendelle.webp",
     imageAlt: "Tourism Arendelle launch campaign key art for Hong Kong Disneyland's World of Frozen.",

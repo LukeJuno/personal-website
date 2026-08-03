@@ -6,6 +6,11 @@ export const metadata = {
   title: tab.metaTitle,
   description: tab.metaDescription,
   alternates: { canonical: "currently" },
+  openGraph: {
+    title: `${tab.metaTitle} | Alexandra Colgan`,
+    description: tab.metaDescription,
+    url: "currently",
+  },
 };
 
 export default function Page() {
