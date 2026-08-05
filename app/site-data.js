@@ -69,13 +69,13 @@ export const brands = [
   },
   {
     name: "Lotus Biscoff",
-    logo: "/brands/lotus-biscoff.png",
+    logo: "/brands/lotus-biscoff.svg",
     shape: "wide",
     scale: 1.3,
   },
   {
     name: "Pizza Hut",
-    logo: "/brands/pizza-hut.png",
+    logo: "/brands/pizza-hut.svg",
     shape: "standard",
     scale: 1.35,
   },
