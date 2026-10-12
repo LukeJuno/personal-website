@@ -59,7 +59,7 @@ export function formatPostDate(pubDate) {
   const date = new Date(pubDate);
   if (Number.isNaN(date.getTime())) return "";
   return date.toLocaleDateString("en-US", {
-    month: "long",
+    month: "short",
     day: "numeric",
     year: "numeric",
   });

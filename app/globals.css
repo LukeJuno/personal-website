@@ -1712,31 +1712,76 @@ p {
     border-color 0.24s ease;
 }
 
+.writing-page {
+  width: min(100%, var(--hp-max));
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) var(--hp-gutter) clamp(3rem, 7vw, 6rem);
+}
+
+.writing-intro {
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+}
+
+.writing-title {
+  max-width: none;
+  margin: 0 0 1rem;
+  font-size: clamp(2.6rem, 9vw, 4.75rem);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.writing-intro-copy {
+  max-width: 34rem;
+  margin: 0;
+  color: var(--body-copy);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
 .writing-list {
-  display: grid;
-  gap: 1rem;
-  margin-top: 2rem;
+  border-top: 1px solid var(--hairline);
 }
 
 .writing-row {
-  text-decoration: none;
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr) 72px;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--hairline);
   color: inherit;
+  text-decoration: none;
 }
 
-.writing-row-main {
-  display: flex;
-  align-items: center;
-  gap: 1.1rem;
-  min-width: 0;
+.writing-row-date {
+  color: var(--gold-deep);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.writing-row-title {
+  max-width: none;
+  margin: 0 0 0.25rem;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.writing-row:hover .writing-row-title {
+  color: var(--gold-deep);
+}
+
+.writing-row-excerpt {
+  margin: 0;
+  color: var(--body-muted);
+  font-size: 0.9rem;
 }
 
 .writing-row-media {
-  flex-shrink: 0;
-  width: 88px;
-  height: 88px;
-  overflow: hidden;
-  border-radius: 16px;
-  background: var(--bg-strong);
+  display: block;
+  width: 72px;
+  height: 72px;
+  background: var(--cream-strong);
 }
 
 .writing-row-media img {
@@ -1746,25 +1791,20 @@ p {
   object-fit: cover;
 }
 
-.writing-row-copy {
-  display: grid;
-  gap: 0.5rem;
-  min-width: 0;
-}
+@media (max-width: 640px) {
+  .writing-row {
+    grid-template-columns: minmax(0, 1fr) 64px;
+    gap: 0.4rem 1rem;
+  }
 
-.writing-row-title {
-  margin: 0;
-  font-size: 1.15rem;
-}
+  .writing-row-date {
+    grid-column: 1 / -1;
+  }
 
-.writing-row-excerpt {
-  margin: 0;
-  color: var(--text-muted);
-  font-size: 0.94rem;
-}
-
-.writing-row-date {
-  flex-shrink: 0;
+  .writing-row-media {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .pill {
