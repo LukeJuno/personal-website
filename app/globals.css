@@ -1712,6 +1712,61 @@ p {
     border-color 0.24s ease;
 }
 
+.writing-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.writing-row {
+  text-decoration: none;
+  color: inherit;
+}
+
+.writing-row-main {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  min-width: 0;
+}
+
+.writing-row-media {
+  flex-shrink: 0;
+  width: 88px;
+  height: 88px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--bg-strong);
+}
+
+.writing-row-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.writing-row-copy {
+  display: grid;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.writing-row-title {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.writing-row-excerpt {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+}
+
+.writing-row-date {
+  flex-shrink: 0;
+}
+
 .pill {
   display: inline-flex;
   align-items: center;

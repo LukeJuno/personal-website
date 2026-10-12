@@ -2,22 +2,25 @@ export const primaryNav = [
   { href: "/about", label: "About" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/services", label: "Services" },
+  { href: "/writing", label: "Writing" },
   { href: "/open-tabs", label: "Open Tabs" },
   { href: "/contact", label: "Contact" },
 ];
 
 // Trimmed for the top header — Services and Contact stay reachable from
-// the footer/header CTA instead. Order: About, Portfolio, Open Tabs, then
-// the "Get in touch" CTA (appended separately in site-nav.js).
+// the footer/header CTA instead. Order: About, Portfolio, Writing, Open
+// Tabs, then the "Get in touch" CTA (appended separately in site-nav.js).
 export const headerNav = [
   primaryNav.find((item) => item.href === "/about"),
   primaryNav.find((item) => item.href === "/portfolio"),
+  primaryNav.find((item) => item.href === "/writing"),
   primaryNav.find((item) => item.href === "/open-tabs"),
 ];
 
 export const footerNav = [
   { href: "/about", label: "About" },
   { href: "/portfolio", label: "Portfolio" },
+  { href: "/writing", label: "Writing" },
   { href: "/yoga", label: "Yoga" },
   { href: "/babywearing", label: "Babywearing" },
 ];
