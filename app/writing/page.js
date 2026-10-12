@@ -36,31 +36,27 @@ export default async function WritingPage() {
         </header>
 
         {posts.length ? (
-          <div className="writing-list">
+          <div className="writing-grid">
             {posts.map((post) => (
               <a
-                className="writing-row"
+                className="writing-card"
                 href={post.link}
                 target="_blank"
                 rel="noreferrer"
                 key={post.link}
               >
-                <span className="writing-row-date">
-                  {formatPostDate(post.pubDate)}
-                </span>
-                <div>
-                  <h2 className="writing-row-title">{post.title}</h2>
-                  {post.excerpt ? (
-                    <p className="writing-row-excerpt">{post.excerpt}</p>
-                  ) : null}
-                </div>
-                {post.image ? (
-                  <span className="writing-row-media">
+                <span className="writing-card-media">
+                  {post.image ? (
                     <img src={post.image} alt="" loading="lazy" />
-                  </span>
-                ) : (
-                  <span />
-                )}
+                  ) : null}
+                </span>
+                <p className="writing-card-date">
+                  {formatPostDate(post.pubDate)}
+                </p>
+                <h2 className="writing-card-title">{post.title}</h2>
+                {post.excerpt ? (
+                  <p className="writing-card-excerpt">{post.excerpt}</p>
+                ) : null}
               </a>
             ))}
           </div>
