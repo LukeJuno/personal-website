@@ -52,7 +52,7 @@ export default function SiteNav() {
           href="/contact"
           onClick={() => setIsOpen(false)}
         >
-          Get in touch <span aria-hidden="true">→</span>
+          Get in touch
         </Link>
       </nav>
     </div>
