@@ -1,6 +1,7 @@
 import "./globals.css";
 import "./home.css";
 import "./portfolio.css";
+import "./apps.css";
 
 export const metadata = {
   metadataBase: new URL("https://alexandracolgan.com"),

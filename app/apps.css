@@ -1,0 +1,411 @@
+@font-face {
+  font-family: "Fredoka";
+  src: url("/fonts/loubibi/Fredoka-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fredoka";
+  src: url("/fonts/loubibi/Fredoka-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/loubibi/Geist-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/loubibi/Geist-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Apps index ---------- */
+
+.apps-page {
+  width: min(100%, var(--hp-max));
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) var(--hp-gutter) clamp(3rem, 7vw, 6rem);
+}
+
+.apps-intro {
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+}
+
+.apps-title {
+  max-width: none;
+  margin: 0 0 1rem;
+  font-size: clamp(2.6rem, 9vw, 4.75rem);
+  line-height: 1;
+}
+
+.apps-intro-copy {
+  max-width: 34rem;
+  margin: 0;
+  color: var(--body-copy);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.app-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.75rem;
+  border: 1px solid var(--hairline);
+  border-radius: 28px;
+  background: var(--cream-strong);
+}
+
+.app-card-icon {
+  width: 88px;
+  height: 88px;
+  margin-bottom: 1.25rem;
+  border-radius: 22%;
+}
+
+.app-card-name {
+  max-width: none;
+  margin: 0 0 0.5rem;
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+
+.app-card-summary {
+  margin: 0 0 1.5rem;
+  color: var(--body-copy);
+  line-height: 1.5;
+}
+
+.app-card-button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: auto;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.app-card-button:hover,
+.app-card-button:focus-visible {
+  background: transparent;
+}
+
+/* ---------- Loubibi page ---------- */
+
+.lb {
+  --lb-sage: #9caf88;
+  --lb-moss: #4f5f43;
+  --lb-mist: #f1f3ea;
+  --lb-ink: #2f2924;
+  --lb-ink-soft: #6b6259;
+  --lb-rust: #8a4a30;
+
+  width: min(100%, var(--hp-max));
+  margin: 0 auto 1.2rem;
+  padding: clamp(0.75rem, 2vw, 1.25rem);
+  border-radius: 36px;
+  background: var(--lb-mist);
+  color: var(--lb-ink);
+  font-family: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+.lb p {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.lb h1,
+.lb h2,
+.lb h3 {
+  max-width: none;
+  margin-top: 0;
+  color: var(--lb-ink);
+  font-family: "Fredoka", "Geist", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.lb a {
+  color: var(--lb-moss);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lb a.lb-badge {
+  text-decoration: none;
+}
+
+.lb a:focus-visible,
+.lb-screens:focus-visible {
+  outline: 3px solid var(--lb-moss);
+  outline-offset: 3px;
+}
+
+.lb-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(2.5rem, 7vw, 4.5rem) clamp(1.25rem, 5vw, 3rem);
+  border-radius: 28px;
+  background: var(--lb-sage);
+  text-align: center;
+}
+
+.lb-hero-icon {
+  width: 112px;
+  height: 112px;
+  margin-bottom: 1.25rem;
+  border-radius: 24%;
+  box-shadow: 0 10px 28px rgba(47, 41, 36, 0.18);
+}
+
+.lb-title {
+  margin-bottom: 0.4rem;
+  font-size: clamp(2.8rem, 10vw, 4.5rem);
+  line-height: 1;
+}
+
+.lb .lb-tagline {
+  margin: 0 0 1.25rem;
+  font-family: "Fredoka", "Geist", system-ui, sans-serif;
+  font-size: clamp(1.25rem, 4vw, 1.7rem);
+  font-weight: 500;
+}
+
+.lb .lb-sub {
+  max-width: 32rem;
+  margin: 0 0 2rem;
+  font-size: 1.05rem;
+}
+
+.lb-badges {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.lb-badge {
+  display: inline-flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  max-width: 14rem;
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--lb-ink);
+  border-radius: 18px;
+  background: var(--lb-ink);
+  color: var(--lb-mist);
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.lb .lb-badge {
+  color: var(--lb-mist);
+}
+
+.lb-badge.is-soon {
+  border: 2px dashed rgba(47, 41, 36, 0.45);
+  background: rgba(241, 243, 234, 0.55);
+  color: var(--lb-ink-soft);
+  cursor: default;
+}
+
+.lb .lb-badge.is-soon {
+  color: var(--lb-ink-soft);
+}
+
+.lb-badge-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+.lb-badge-name {
+  font-family: "Fredoka", "Geist", system-ui, sans-serif;
+  font-size: clamp(1.05rem, 4.5vw, 1.3rem);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.lb-section {
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(0.75rem, 3vw, 2rem) 0;
+}
+
+.lb-heading {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.7rem, 5vw, 2.4rem);
+  line-height: 1.1;
+}
+
+.lb-screens {
+  display: flex;
+  gap: 1rem;
+  margin: 0 calc(-1 * clamp(0.75rem, 3vw, 2rem));
+  padding: 0.25rem clamp(0.75rem, 3vw, 2rem) 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: clamp(0.75rem, 3vw, 2rem);
+  scrollbar-color: var(--lb-sage) transparent;
+}
+
+.lb-screen {
+  flex: 0 0 auto;
+  width: min(70vw, 280px);
+  height: auto;
+  border-radius: 28px;
+  scroll-snap-align: start;
+  box-shadow: 0 8px 24px rgba(47, 41, 36, 0.12);
+}
+
+.lb-features {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lb-feature {
+  padding: 1.5rem;
+  border-radius: 28px;
+  background: #e1e8d6;
+}
+
+.lb-feature:nth-child(6n + 2) {
+  background: #f4e8c9;
+}
+
+.lb-feature:nth-child(6n + 3) {
+  background: #e6ecf3;
+}
+
+.lb-feature:nth-child(6n + 4) {
+  background: #f3e0e3;
+}
+
+.lb-feature:nth-child(6n + 5) {
+  background: #f1e6f6;
+}
+
+.lb-feature:nth-child(6n) {
+  background: #f0dccf;
+}
+
+.lb-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.lb-feature-icon img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.lb-feature h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.lb-feature p {
+  margin: 0;
+}
+
+.lb-privacy,
+.lb-contact {
+  text-align: center;
+}
+
+.lb .lb-privacy-line {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+
+.lb-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+}
+
+.lb-email {
+  font-size: 1.1rem;
+}
+
+.lb-fine {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(0.75rem, 3vw, 2rem) 1.5rem;
+  color: var(--lb-ink-soft);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.lb-fine p {
+  margin: 0 0 1rem;
+  color: var(--lb-ink-soft);
+  font-size: 0.8rem;
+}
+
+.lb-fine a {
+  color: var(--lb-ink-soft);
+}
+
+@media (min-width: 640px) {
+  .lb-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .lb-features {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lb-screens {
+    margin: 0;
+    padding-inline: 0;
+  }
+}
