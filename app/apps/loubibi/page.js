@@ -53,16 +53,16 @@ export default function LoubibiPage() {
     <SiteShell>
       <div className="lb">
         <section className="lb-hero">
+          <h1 className="lb-title">Loubibi</h1>
           <Image
-            className="lb-hero-icon"
-            src="/apps/loubibi/icon.webp"
-            alt="Loubibi app icon: a smiling baby face with three curls on a sage green background"
-            width={112}
-            height={112}
+            className="lb-banner"
+            src="/apps/loubibi/banner.webp"
+            alt="Loubibi. Logging the little moments. The baby-face icon forms the O in the logo, surrounded by sleep, diaper, feeding, pumping and growth icons."
+            width={2000}
+            height={857}
+            sizes="(max-width: 1200px) 100vw, 1200px"
             priority
           />
-          <h1 className="lb-title">Loubibi</h1>
-          <p className="lb-tagline">Logging the little moments.</p>
           <p className="lb-sub">
             A free baby tracker for sleep, feeds, pumps, diapers and growth.
             Simple logging in a couple of taps: one-handed, in the dark, and
