@@ -284,23 +284,12 @@ path {
   border-radius: 999px;
 }
 
+/* Hover and current page: the text turns mustard, no box. */
 .site-nav a:hover,
-.site-nav a.is-active {
-  color: var(--text);
-  background: var(--cream-strong);
-}
-
-/* Footer links: a visible cream pill on hover (white disappears on the
-   page background). Padding is offset so the text stays aligned. */
-.site-footer a {
-  padding: 0.3rem 0.8rem;
-  margin-left: -0.8rem;
-  border-radius: 999px;
-}
-
+.site-nav a.is-active,
 .site-footer a:hover {
-  color: var(--text);
-  background: var(--cream-strong);
+  color: var(--gold);
+  background: none;
 }
 
 .inline-link:hover {
@@ -1871,6 +1860,7 @@ p {
 }
 
 .footer-nav {
+  justify-self: start;
   grid-auto-flow: column;
   grid-template-columns: repeat(2, max-content);
   grid-template-rows: auto repeat(3, auto);
