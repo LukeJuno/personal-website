@@ -1828,7 +1828,7 @@ p {
 
 .footer-main {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(130px, 0.5fr) minmax(130px, 0.5fr);
+  grid-template-columns: minmax(0, 1.3fr) minmax(230px, 0.9fr) minmax(130px, 0.5fr);
   gap: clamp(3rem, 8vw, 8rem);
   padding-bottom: clamp(1.5rem, 3vw, 2.25rem);
 }
@@ -1856,6 +1856,18 @@ p {
   display: grid;
   align-content: start;
   gap: 0.8rem;
+}
+
+.footer-nav {
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: auto repeat(3, auto);
+  column-gap: 2.5rem;
+}
+
+.footer-nav .footer-heading {
+  grid-row: 1;
+  grid-column: 1 / -1;
 }
 
 .footer-heading {
