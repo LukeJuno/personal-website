@@ -24,7 +24,7 @@ export default function AppsPage() {
         <header className="apps-intro">
           <p className="section-kicker">Apps</p>
           <h1 className="apps-title">Apps</h1>
-          <p className="apps-intro-copy">Apps I've made.</p>
+          <p className="apps-intro-copy">Apps I've made. This space is where I'm experimenting vibe coding with AI.</p>
         </header>
 
         <ul className="apps-grid">
