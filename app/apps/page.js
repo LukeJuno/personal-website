@@ -30,26 +30,39 @@ export default function AppsPage() {
 
         <ul className="apps-grid">
           {apps.map((app) => (
-            <li className="app-card" key={app.slug}>
-              <Image
-                className="app-card-icon"
-                src={app.icon}
-                alt=""
-                width={88}
-                height={88}
-              />
-              <h2 className="app-card-name">{app.name}</h2>
-              {app.caption ? (
-                <p className="app-card-caption">{app.caption}</p>
-              ) : null}
-              <p className="app-card-summary">{app.summary}</p>
-              <Link
-                className="app-card-button"
-                href={app.href}
-                aria-label={`View ${app.name}`}
-              >
-                View app
-              </Link>
+            <li className="app-row" key={app.slug}>
+              {app.logo ? (
+                <Image
+                  className="app-row-logo"
+                  src={app.logo}
+                  alt=""
+                  width={876}
+                  height={264}
+                  unoptimized
+                />
+              ) : (
+                <Image
+                  className="app-row-icon"
+                  src={app.icon}
+                  alt=""
+                  width={88}
+                  height={88}
+                />
+              )}
+              <div className="app-row-text">
+                <h2 className="app-row-name">{app.name}</h2>
+                {app.caption ? (
+                  <p className="app-card-caption">{app.caption}</p>
+                ) : null}
+                <p className="app-card-summary">{app.summary}</p>
+                <Link
+                  className="app-card-button"
+                  href={app.href}
+                  aria-label={`View ${app.name}`}
+                >
+                  View app
+                </Link>
+              </div>
             </li>
           ))}
         </ul>
