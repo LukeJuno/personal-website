@@ -90,6 +90,13 @@
   line-height: 1.1;
 }
 
+.app-card-caption {
+  margin: 0 0 0.6rem;
+  color: var(--gold-deep);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 .app-card-summary {
   margin: 0 0 1.5rem;
   color: var(--body-copy);

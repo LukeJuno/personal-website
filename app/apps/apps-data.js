@@ -5,6 +5,7 @@ export const apps = [
     href: "/apps/loubibi",
     name: "Loubibi",
     icon: "/apps/loubibi/icon.webp",
+    caption: "This is Loubibi, my first app “baby” made for my own baby.",
     summary:
       "A free baby tracker for sleep, feeds, pumps, diapers and growth.",
   },
