@@ -208,7 +208,6 @@ path {
   margin-left: calc(50% - 50vw);
   padding: 0.85rem max(1.5rem, calc((100vw - 1380px) / 2 + 1.5rem));
   border: 0;
-  border-bottom: 1px solid var(--line);
   border-radius: 0;
   background: #f7f2e8;
   box-shadow: none;
@@ -249,6 +248,23 @@ path {
   height: 2.1rem;
 }
 
+/* The header logo is a touch larger than the footer's. */
+.site-header .wordmark {
+  height: 3rem;
+}
+
+@media (max-width: 1080px) {
+  .site-header .wordmark {
+    height: 2.6rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header .wordmark {
+    height: 2.3rem;
+  }
+}
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -269,7 +285,9 @@ path {
   justify-content: flex-end;
   gap: clamp(0.25rem, 0.7vw, 0.75rem);
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--text);
 }
 
@@ -285,11 +303,12 @@ path {
   border-radius: 999px;
 }
 
+/* Hover and current page: the text turns mustard, no box. */
 .site-nav a:hover,
 .site-nav a.is-active,
 .site-footer a:hover {
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.34);
+  color: var(--gold);
+  background: none;
 }
 
 .inline-link:hover {
@@ -1815,9 +1834,9 @@ p {
   margin-top: 1.2rem;
   padding-block: clamp(1.75rem, 4vw, 2.75rem);
   padding-inline: clamp(3rem, 6vw, 5rem);
-  border: 1px solid var(--line);
-  border-radius: 32px;
-  background: var(--panel-strong);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .site-footer p,
@@ -1829,7 +1848,7 @@ p {
 
 .footer-main {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(130px, 0.5fr) minmax(130px, 0.5fr);
+  grid-template-columns: minmax(0, 1.3fr) minmax(230px, 0.9fr) minmax(130px, 0.5fr);
   gap: clamp(3rem, 8vw, 8rem);
   padding-bottom: clamp(1.5rem, 3vw, 2.25rem);
 }
@@ -1857,6 +1876,19 @@ p {
   display: grid;
   align-content: start;
   gap: 0.8rem;
+}
+
+.footer-nav {
+  justify-self: start;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: auto repeat(3, auto);
+  column-gap: 2.5rem;
+}
+
+.footer-nav .footer-heading {
+  grid-row: 1;
+  grid-column: 1 / -1;
 }
 
 .footer-heading {

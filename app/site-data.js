@@ -3,6 +3,7 @@ export const primaryNav = [
   { href: "/portfolio", label: "Portfolio" },
   { href: "/services", label: "Services" },
   { href: "/writing", label: "Writing" },
+  { href: "/apps", label: "Apps" },
   { href: "/open-tabs", label: "Open Tabs" },
   { href: "/contact", label: "Contact" },
 ];
@@ -14,6 +15,7 @@ export const headerNav = [
   primaryNav.find((item) => item.href === "/about"),
   primaryNav.find((item) => item.href === "/portfolio"),
   primaryNav.find((item) => item.href === "/writing"),
+  primaryNav.find((item) => item.href === "/apps"),
   primaryNav.find((item) => item.href === "/open-tabs"),
 ];
 
@@ -21,6 +23,7 @@ export const footerNav = [
   { href: "/about", label: "About" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/writing", label: "Writing" },
+  { href: "/apps", label: "Apps" },
   { href: "/yoga", label: "Yoga" },
   { href: "/babywearing", label: "Babywearing" },
 ];

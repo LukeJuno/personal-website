@@ -186,22 +186,11 @@
   color: var(--gold-deep);
   font-size: 0.9375rem;
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 2px;
   transition: color 0.18s ease;
-}
-
-.hp-inline-link::after {
-  content: "→";
-  transition: transform 0.18s ease;
 }
 
 .hp-inline-link:hover {
   color: var(--gold);
-}
-
-.hp-inline-link:hover::after {
-  transform: translateX(3px);
 }
 
 /* -------------------------------------------------------------------- bands */
@@ -561,10 +550,6 @@
   margin-bottom: 1.125rem;
 }
 
-.tab-page-back::before {
-  content: "←";
-}
-
 .tab-page-back:hover {
   color: var(--gold);
 }
@@ -803,7 +788,6 @@
 .tab-projects h2 a {
   color: var(--gold-deep);
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
 }
 
 .tab-projects h2 a:hover {
@@ -1337,8 +1321,7 @@ a.contact-info-text:hover {
   margin: 0;
 }
 
-/* "Read more →", quiet and small, with the fine mustard rule already
-   built into .hp-inline-link's border-bottom. */
+/* "Read more", quiet and small. */
 .ot-row-more {
   font-size: 0.75rem;
   margin-top: 0.125rem;
