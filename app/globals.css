@@ -248,6 +248,23 @@ path {
   height: 2.1rem;
 }
 
+/* The header logo is a touch larger than the footer's. */
+.site-header .wordmark {
+  height: 3rem;
+}
+
+@media (max-width: 1080px) {
+  .site-header .wordmark {
+    height: 2.6rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header .wordmark {
+    height: 2.3rem;
+  }
+}
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -1872,13 +1889,6 @@ p {
 .footer-nav .footer-heading {
   grid-row: 1;
   grid-column: 1 / -1;
-}
-
-/* Side by side with Find Me, centre the heading over the two columns. */
-@media (min-width: 821px) {
-  .footer-nav .footer-heading {
-    text-align: center;
-  }
 }
 
 .footer-heading {
