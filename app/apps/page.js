@@ -4,7 +4,7 @@ import SiteShell from "../site-shell";
 import { apps } from "./apps-data";
 
 const pageDescription =
-  "Small, simple apps by Alexandra Colgan, starting with Loubibi, a calm baby tracker.";
+  "Apps by Alexandra Colgan, starting with Loubibi, a free baby tracker for sleep, feeds, pumps, diapers and growth.";
 
 export const metadata = {
   title: "Apps",
@@ -24,7 +24,7 @@ export default function AppsPage() {
         <header className="apps-intro">
           <p className="section-kicker">Apps</p>
           <h1 className="apps-title">Apps</h1>
-          <p className="apps-intro-copy">Small, simple apps I've made.</p>
+          <p className="apps-intro-copy">Apps I've made.</p>
         </header>
 
         <ul className="apps-grid">

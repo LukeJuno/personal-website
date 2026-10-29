@@ -6,7 +6,7 @@ export const apps = [
     name: "Loubibi",
     icon: "/apps/loubibi/icon.webp",
     summary:
-      "A calm, simple baby tracker for sleep, feeds, diapers, pumping and growth.",
+      "A free baby tracker for sleep, feeds, pumps, diapers and growth.",
   },
 ];
 
