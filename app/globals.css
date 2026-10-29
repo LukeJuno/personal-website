@@ -285,10 +285,22 @@ path {
 }
 
 .site-nav a:hover,
-.site-nav a.is-active,
-.site-footer a:hover {
+.site-nav a.is-active {
   color: var(--text);
   background: rgba(255, 255, 255, 0.34);
+}
+
+/* Footer links: a visible cream pill on hover (white disappears on the
+   page background). Padding is offset so the text stays aligned. */
+.site-footer a {
+  padding: 0.3rem 0.8rem;
+  margin-left: -0.8rem;
+  border-radius: 999px;
+}
+
+.site-footer a:hover {
+  color: var(--text);
+  background: var(--cream-strong);
 }
 
 .inline-link:hover {
@@ -1868,6 +1880,13 @@ p {
 .footer-nav .footer-heading {
   grid-row: 1;
   grid-column: 1 / -1;
+}
+
+/* Side by side with Find Me, centre the heading over the two columns. */
+@media (min-width: 821px) {
+  .footer-nav .footer-heading {
+    text-align: center;
+  }
 }
 
 .footer-heading {
