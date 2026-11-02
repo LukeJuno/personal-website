@@ -130,9 +130,9 @@
   display: inline-flex;
   align-items: center;
   padding: 0.7rem 1.4rem;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--gold-button);
   border-radius: 999px;
-  background: var(--gold);
+  background: var(--gold-button);
   color: var(--text);
   font-family: var(--font-display);
   font-weight: 700;

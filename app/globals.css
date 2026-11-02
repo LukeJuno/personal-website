@@ -52,6 +52,7 @@
   --sage: #7c8a54;
   --sage-light: #a9b98a;
   --gold: #c9992e;
+  --gold-button: #e5a93d;
   --gold-deep: #8a6d1e;
   --gold-light: #d4b15a;
   --body-copy: #4a4838;
@@ -272,7 +273,7 @@ path {
   gap: 0.35rem;
   padding: 0.55rem 1rem;
   border-radius: 4px;
-  background: var(--gold);
+  background: var(--gold-button);
   color: var(--text);
   font-weight: 600;
 }

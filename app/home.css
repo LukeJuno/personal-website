@@ -54,6 +54,24 @@
   margin: 0 0 1.125rem 0;
 }
 
+.hp-kicker-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--gold-button);
+  border-radius: 999px;
+  background: #fbe6c2;
+  color: #7a4e0c;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.hp-kicker-pill::before {
+  content: "✦";
+}
+
 .hp-kicker-light {
   color: var(--gold-light);
 }
@@ -128,8 +146,8 @@
   padding: 0.875rem 1.875rem;
   border: 1px solid transparent;
   border-radius: 999px;
-  background: var(--gold);
-  color: var(--cream);
+  background: var(--gold-button);
+  color: var(--text);
   font-size: 0.9375rem;
   line-height: 1;
   text-decoration: none;
@@ -1087,7 +1105,7 @@ a.contact-info-text:hover {
   padding: 0.875rem 1.875rem;
   border: 0;
   border-radius: 8px;
-  background: var(--gold);
+  background: var(--gold-button);
   color: var(--text);
   font-family: var(--font-display);
   font-size: 1rem;
