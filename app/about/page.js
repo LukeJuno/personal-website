@@ -19,8 +19,13 @@ export const metadata = {
   },
 };
 
+// Alexandra has lived in Hong Kong since 2004; the figure updates on each deploy.
+const yearsInHongKong = new Date().getFullYear() - 2004;
+
 const aboutFacts = [
   { number: "10", label: "Years as an advertising copywriter" },
+  { number: "30+", label: "Brands I\u2019ve worked with" },
+  { number: String(yearsInHongKong), label: "Years in Hong Kong" },
   { number: "10+", label: "Years of yoga practice" },
   { number: "200", label: "Hours of teacher training" },
   { number: "2", label: "Apps I\u2019ve built so far" },

@@ -1422,7 +1422,7 @@ a.contact-info-text:hover {
 
 @media (min-width: 900px) {
   .about-facts-grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2rem 1.25rem;
   }
 }
