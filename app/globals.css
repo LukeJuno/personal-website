@@ -73,47 +73,6 @@
   --hp-max: 1280px;
 }
 
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #221c15;
-  --bg-strong: #2d261d;
-  --bg-elevated: rgba(39, 31, 23, 0.88);
-  --panel: rgba(48, 38, 28, 0.9);
-  --panel-strong: #34291f;
-  --text: #fff8ed;
-  --text-soft: #eadcc6;
-  --text-muted: #cdbba1;
-  --line: rgba(255, 228, 181, 0.12);
-  --line-strong: rgba(255, 228, 181, 0.24);
-  --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
-  --shadow-soft: 0 14px 36px rgba(0, 0, 0, 0.22);
-  --accent: #efbf51;
-  --accent-bright: #d6a53c;
-  --accent-soft: rgba(239, 191, 81, 0.16);
-  --mustard-wash: #3f4a30;
-  --sage-wash: #484634;
-  --clay-wash: #564735;
-
-  /* Homepage palette, dark theme */
-  --cream: #221c15;
-  --cream-strong: #2b241a;
-  --forest: #333c26;
-  --forest-deep: #262d1c;
-  --forest-line: #414a30;
-  --sage: #7c8a54;
-  --sage-light: #97a878;
-  --gold: #d6a53c;
-  --gold-deep: #d4b15a;
-  --gold-light: #e2c274;
-  --body-copy: #e3dbc9;
-  --body-muted: #b9b09a;
-  --on-forest: #fff8ed;
-  --on-forest-soft: #dcd6be;
-  --on-forest-dim: #c7c1a7;
-  --on-forest-faint: #9aa085;
-  --hairline: rgba(255, 228, 181, 0.14);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -230,18 +189,6 @@ path {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.wordmark .wordmark-dark {
-  display: none;
-}
-
-:root[data-theme="dark"] .wordmark .wordmark-light {
-  display: none;
-}
-
-:root[data-theme="dark"] .wordmark .wordmark-dark {
-  display: block;
 }
 
 .wordmark-compact {
@@ -565,10 +512,6 @@ p {
   line-height: 1.45;
 }
 
-:root[data-theme="dark"] .portrait-note {
-  background: rgba(58, 46, 29, 0.92);
-}
-
 .home-page {
   --home-cream: #fffaf1;
   --home-green: #dce2bb;
@@ -876,21 +819,6 @@ p {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-:root[data-theme="dark"] .home-page {
-  --home-cream: #30271e;
-  --home-green: #454c37;
-  --home-green-deep: #d9c77e;
-  --home-mustard: #8b6825;
-  --home-mustard-deep: #f0c85e;
-  color: var(--text);
-}
-
-:root[data-theme="dark"] .home-statement-copy p,
-:root[data-theme="dark"] .home-tab-link small,
-:root[data-theme="dark"] .home-browse-copy > p:last-child {
-  color: var(--text-soft);
 }
 
 .home-intro {
@@ -1387,22 +1315,6 @@ p {
   .home-process-grid {
     grid-template-columns: 1fr;
   }
-}
-
-:root[data-theme="dark"] .home-intro {
-  --about-bg: #2a231b;
-  --about-ink: #f1e8d9;
-  --about-muted: #d1c5b8;
-  --about-line: rgba(241, 232, 217, 0.58);
-  background: var(--about-bg);
-}
-
-:root[data-theme="dark"] .home-intro-copy p,
-:root[data-theme="dark"] .home-highlight > p:last-child,
-:root[data-theme="dark"] .home-portfolio-heading > div:last-child p,
-:root[data-theme="dark"] .home-project-copy > p:last-child,
-:root[data-theme="dark"] .home-cta-copy > p {
-  color: var(--text-soft);
 }
 
 .section-grid {

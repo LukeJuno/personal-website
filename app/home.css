@@ -1069,10 +1069,6 @@ a.contact-info-text:hover {
   color: #a23b1e;
 }
 
-:root[data-theme="dark"] .form-status-error {
-  color: #e5896a;
-}
-
 .form-privacy-note {
   font-size: 0.875rem;
   line-height: 1.5;

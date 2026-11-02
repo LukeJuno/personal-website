@@ -19,14 +19,6 @@ export default function Wordmark({ compact = false }) {
         height={LOCKUP_HEIGHT}
         priority
       />
-      <Image
-        className="wordmark-dark"
-        src="/brand/ac-lockup-dark.svg"
-        alt=""
-        width={LOCKUP_WIDTH}
-        height={LOCKUP_HEIGHT}
-        priority
-      />
     </span>
   );
 }
