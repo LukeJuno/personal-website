@@ -19,6 +19,14 @@ export const metadata = {
   },
 };
 
+const aboutFacts = [
+  { number: "10+", label: "Years of yoga practice" },
+  { number: "200", label: "Hours of teacher training" },
+  { number: "2", label: "Apps I\u2019ve built so far" },
+  { number: "2", label: "Little girls" },
+  { number: "1", label: "Crazy cat" },
+];
+
 export default function AboutPage() {
   return (
     <SiteShell>
@@ -80,6 +88,20 @@ export default function AboutPage() {
           <Link className="hp-button hp-button-sage" href="/open-tabs">
             Check out what I&rsquo;m doing
           </Link>
+        </section>
+
+        <section className="about-facts" aria-labelledby="about-facts-title">
+          <h2 className="hp-heading" id="about-facts-title">
+            A few things about me
+          </h2>
+          <ul className="about-facts-grid">
+            {aboutFacts.map((fact) => (
+              <li className="about-fact" key={fact.label}>
+                <span className="about-fact-number">{fact.number}</span>
+                <span className="about-fact-label">{fact.label}</span>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section className="hp-band hp-band-cream hp-center">

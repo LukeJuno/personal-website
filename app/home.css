@@ -1393,6 +1393,54 @@ a.contact-info-text:hover {
   margin: 0 0 2rem 0;
 }
 
+.about-facts {
+  max-width: var(--hp-max);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--hp-gutter);
+}
+
+.about-facts .hp-heading {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.about-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  gap: 2rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-fact-number {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 1;
+  color: var(--gold-deep);
+}
+
+.about-fact:nth-child(3n + 2) .about-fact-number {
+  color: var(--sage);
+}
+
+.about-fact:nth-child(3n + 3) .about-fact-number {
+  color: var(--forest);
+}
+
+.about-fact-label {
+  color: var(--body-copy);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
 .about-cta-quote {
   font-size: 1.5rem;
   line-height: 1.5;
