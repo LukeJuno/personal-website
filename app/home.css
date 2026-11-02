@@ -1437,15 +1437,19 @@ a.contact-info-text:hover {
   font-family: var(--font-display);
   font-size: clamp(2.75rem, 5vw, 3.75rem);
   line-height: 1;
+  color: #587a8b;
+}
+
+.about-fact:nth-child(4n + 2) .about-fact-number {
+  color: #a6441f;
+}
+
+.about-fact:nth-child(4n + 3) .about-fact-number {
+  color: #7c7420;
+}
+
+.about-fact:nth-child(4n + 4) .about-fact-number {
   color: var(--gold-deep);
-}
-
-.about-fact:nth-child(3n + 2) .about-fact-number {
-  color: var(--sage);
-}
-
-.about-fact:nth-child(3n + 3) .about-fact-number {
-  color: var(--forest);
 }
 
 .about-fact-label {

@@ -23,7 +23,7 @@ export const metadata = {
 const yearsInHongKong = new Date().getFullYear() - 2004;
 
 const aboutFacts = [
-  { number: "10", label: "Years as an advertising copywriter" },
+  { number: "10+", label: "Years as an advertising copywriter" },
   { number: "30+", label: "Brands I\u2019ve worked with" },
   { number: String(yearsInHongKong), label: "Years in Hong Kong" },
   { number: "10+", label: "Years of yoga practice" },
