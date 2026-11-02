@@ -20,6 +20,7 @@ export const metadata = {
 };
 
 const aboutFacts = [
+  { number: "10", label: "Years as an advertising copywriter" },
   { number: "10+", label: "Years of yoga practice" },
   { number: "200", label: "Hours of teacher training" },
   { number: "2", label: "Apps I\u2019ve built so far" },
