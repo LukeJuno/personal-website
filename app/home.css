@@ -1407,17 +1407,11 @@ a.contact-info-text:hover {
 
 .about-facts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
-  gap: 2rem 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem 1.5rem;
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-@media (min-width: 560px) {
-  .about-facts-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 900px) {
@@ -1425,6 +1419,14 @@ a.contact-info-text:hover {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2rem 1.25rem;
   }
+}
+
+.about-fact-stack {
+  display: grid;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .about-fact {
@@ -1440,15 +1442,15 @@ a.contact-info-text:hover {
   color: #587a8b;
 }
 
-.about-fact:nth-child(4n + 2) .about-fact-number {
+.about-fact-group:nth-child(4n + 2) .about-fact-number {
   color: #a6441f;
 }
 
-.about-fact:nth-child(4n + 3) .about-fact-number {
+.about-fact-group:nth-child(4n + 3) .about-fact-number {
   color: #7c7420;
 }
 
-.about-fact:nth-child(4n + 4) .about-fact-number {
+.about-fact-group:nth-child(4n + 4) .about-fact-number {
   color: var(--gold-deep);
 }
 

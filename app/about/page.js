@@ -22,15 +22,24 @@ export const metadata = {
 // Alexandra has lived in Hong Kong since 2004; the figure updates on each deploy.
 const yearsInHongKong = new Date().getFullYear() - 2004;
 
+// Each group stacks related numbers in one column.
 const aboutFacts = [
-  { number: "10+", label: "Years as an advertising copywriter" },
-  { number: "30+", label: "Brands I\u2019ve worked with" },
-  { number: String(yearsInHongKong), label: "Years in Hong Kong" },
-  { number: "10+", label: "Years of yoga practice" },
-  { number: "200", label: "Hours of teacher training" },
-  { number: "2", label: "Apps I\u2019ve built so far" },
-  { number: "2", label: "Little girls" },
-  { number: "1", label: "Crazy cat" },
+  [
+    { number: "10+", label: "Years as an advertising copywriter" },
+    { number: "30+", label: "Brands I\u2019ve worked with" },
+  ],
+  [
+    { number: "10+", label: "Years of yoga practice" },
+    { number: "200", label: "Hours of teacher training" },
+  ],
+  [
+    { number: "2", label: "Apps I\u2019ve built so far" },
+    { number: String(yearsInHongKong), label: "Years in Hong Kong" },
+  ],
+  [
+    { number: "2", label: "Little girls" },
+    { number: "1", label: "Crazy cat" },
+  ],
 ];
 
 export default function AboutPage() {
@@ -101,10 +110,16 @@ export default function AboutPage() {
             A few things about me
           </h2>
           <ul className="about-facts-grid">
-            {aboutFacts.map((fact) => (
-              <li className="about-fact" key={fact.label}>
-                <span className="about-fact-number">{fact.number}</span>
-                <span className="about-fact-label">{fact.label}</span>
+            {aboutFacts.map((group) => (
+              <li className="about-fact-group" key={group[0].label}>
+                <ul className="about-fact-stack">
+                  {group.map((fact) => (
+                    <li className="about-fact" key={fact.label}>
+                      <span className="about-fact-number">{fact.number}</span>
+                      <span className="about-fact-label">{fact.label}</span>
+                    </li>
+                  ))}
+                </ul>
               </li>
             ))}
           </ul>
