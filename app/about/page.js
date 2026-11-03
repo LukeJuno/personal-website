@@ -33,7 +33,7 @@ const aboutFacts = [
     { number: "200", label: "Hours of teacher training" },
   ],
   [
-    { number: "2", label: "Apps I\u2019ve built so far" },
+    { number: "2", label: "Apps built so far" },
     { number: String(yearsInHongKong), label: "Years in Hong Kong" },
   ],
   [
@@ -67,6 +67,26 @@ export default function AboutPage() {
               sizes="(max-width: 860px) 92vw, 44vw"
             />
           </div>
+        </section>
+
+        <section className="about-facts" aria-labelledby="about-facts-title">
+          <h2 className="hp-heading" id="about-facts-title">
+            A few things about me
+          </h2>
+          <ul className="about-facts-grid">
+            {aboutFacts.map((group) => (
+              <li className="about-fact-group" key={group[0].label}>
+                <ul className="about-fact-stack">
+                  {group.map((fact) => (
+                    <li className="about-fact" key={fact.label}>
+                      <span className="about-fact-number">{fact.number}</span>
+                      <span className="about-fact-label">{fact.label}</span>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section className="hp-band hp-band-sage">
@@ -103,26 +123,6 @@ export default function AboutPage() {
           <Link className="hp-button hp-button-sage" href="/open-tabs">
             Check out what I&rsquo;m doing
           </Link>
-        </section>
-
-        <section className="about-facts" aria-labelledby="about-facts-title">
-          <h2 className="hp-heading" id="about-facts-title">
-            A few things about me
-          </h2>
-          <ul className="about-facts-grid">
-            {aboutFacts.map((group) => (
-              <li className="about-fact-group" key={group[0].label}>
-                <ul className="about-fact-stack">
-                  {group.map((fact) => (
-                    <li className="about-fact" key={fact.label}>
-                      <span className="about-fact-number">{fact.number}</span>
-                      <span className="about-fact-label">{fact.label}</span>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
         </section>
 
         <section className="hp-band hp-band-cream hp-center">
