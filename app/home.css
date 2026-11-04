@@ -54,6 +54,24 @@
   margin: 0 0 1.125rem 0;
 }
 
+.hp-kicker-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--gold-button);
+  border-radius: 999px;
+  background: #fbe6c2;
+  color: #7a4e0c;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.hp-kicker-pill::before {
+  content: "✦";
+}
+
 .hp-kicker-light {
   color: var(--gold-light);
 }
@@ -128,8 +146,8 @@
   padding: 0.875rem 1.875rem;
   border: 1px solid transparent;
   border-radius: 999px;
-  background: var(--gold);
-  color: var(--cream);
+  background: var(--gold-button);
+  color: var(--text);
   font-size: 0.9375rem;
   line-height: 1;
   text-decoration: none;
@@ -186,22 +204,11 @@
   color: var(--gold-deep);
   font-size: 0.9375rem;
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 2px;
   transition: color 0.18s ease;
-}
-
-.hp-inline-link::after {
-  content: "→";
-  transition: transform 0.18s ease;
 }
 
 .hp-inline-link:hover {
   color: var(--gold);
-}
-
-.hp-inline-link:hover::after {
-  transform: translateX(3px);
 }
 
 /* -------------------------------------------------------------------- bands */
@@ -561,10 +568,6 @@
   margin-bottom: 1.125rem;
 }
 
-.tab-page-back::before {
-  content: "←";
-}
-
 .tab-page-back:hover {
   color: var(--gold);
 }
@@ -803,7 +806,6 @@
 .tab-projects h2 a {
   color: var(--gold-deep);
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
 }
 
 .tab-projects h2 a:hover {
@@ -1085,10 +1087,6 @@ a.contact-info-text:hover {
   color: #a23b1e;
 }
 
-:root[data-theme="dark"] .form-status-error {
-  color: #e5896a;
-}
-
 .form-privacy-note {
   font-size: 0.875rem;
   line-height: 1.5;
@@ -1107,7 +1105,7 @@ a.contact-info-text:hover {
   padding: 0.875rem 1.875rem;
   border: 0;
   border-radius: 8px;
-  background: var(--gold);
+  background: var(--gold-button);
   color: var(--text);
   font-family: var(--font-display);
   font-size: 1rem;
@@ -1337,8 +1335,7 @@ a.contact-info-text:hover {
   margin: 0;
 }
 
-/* "Read more →", quiet and small, with the fine mustard rule already
-   built into .hp-inline-link's border-bottom. */
+/* "Read more", quiet and small. */
 .ot-row-more {
   font-size: 0.75rem;
   margin-top: 0.125rem;
@@ -1383,17 +1380,115 @@ a.contact-info-text:hover {
   margin-bottom: 0;
 }
 
+.about-hero {
+  padding-block: clamp(2rem, 5vw, 3.5rem);
+}
+
+.about-hero-lead {
+  max-width: none;
+  margin: 0 0 1.5rem;
+  color: var(--gold-deep);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.about-hero-copy {
+  max-width: 32rem;
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.about-hero-copy p {
+  margin: 0 0 1.1rem;
+  color: var(--text);
+}
+
+.about-hero-copy p:last-child {
+  margin-bottom: 0;
+}
+
 .about-personal {
-  max-width: 42.5rem;
+  max-width: 62rem;
   margin: 0 auto;
-  padding: clamp(3.5rem, 8vw, 5.625rem) var(--hp-gutter);
+  padding: clamp(2.5rem, 5vw, 3.5rem) var(--hp-gutter);
 }
 
 .about-personal-copy {
+  max-width: 52rem;
   font-size: 1.125rem;
   line-height: 1.75;
   color: var(--text);
   margin: 0 0 2rem 0;
+}
+
+.about-facts {
+  max-width: var(--hp-max);
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3rem) var(--hp-gutter);
+}
+
+.about-facts .hp-heading {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.about-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 900px) {
+  .about-facts-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem 1.25rem;
+  }
+}
+
+.about-fact-stack {
+  display: grid;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-fact-number {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 5vw, 3.75rem);
+  line-height: 1;
+  color: #587a8b;
+}
+
+.about-fact-group:nth-child(4n + 2) .about-fact-number {
+  color: #a6441f;
+}
+
+.about-fact-group:nth-child(4n + 3) .about-fact-number {
+  color: #7c7420;
+}
+
+.about-fact-group:nth-child(4n + 4) .about-fact-number {
+  color: var(--gold-deep);
+}
+
+.about-fact-label {
+  color: var(--body-copy);
+  font-size: 1rem;
+  line-height: 1.45;
 }
 
 .about-cta-quote {

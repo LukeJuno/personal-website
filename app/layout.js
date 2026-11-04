@@ -1,6 +1,7 @@
 import "./globals.css";
 import "./home.css";
 import "./portfolio.css";
+import "./apps.css";
 
 export const metadata = {
   metadataBase: new URL("https://alexandracolgan.com"),
@@ -53,10 +54,7 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fff9ed" },
-    { media: "(prefers-color-scheme: dark)", color: "#2a2318" },
-  ],
+  themeColor: "#fff9ed",
 };
 
 export default function RootLayout({ children }) {

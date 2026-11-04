@@ -10,6 +10,8 @@ const staticRoutes = [
   "/about",
   "/portfolio",
   "/writing",
+  "/apps",
+  "/apps/loubibi",
   "/open-tabs",
   "/yoga",
   "/babywearing",

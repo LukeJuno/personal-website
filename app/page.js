@@ -18,7 +18,7 @@ export default function Home() {
         {/* ---------------------------------------------------------- HERO */}
         <section className="hp-hero">
           <div className="hp-hero-copy">
-            <p className="hp-kicker">{homeHero.kicker}</p>
+            <p className="hp-kicker hp-kicker-pill">{homeHero.kicker}</p>
             <h1 className="hp-hero-title">
               {homeHero.title}{" "}
               <span className="hp-underline">{homeHero.titleAccent}</span>
