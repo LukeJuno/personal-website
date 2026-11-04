@@ -1411,12 +1411,13 @@ a.contact-info-text:hover {
 }
 
 .about-personal {
-  max-width: 42.5rem;
+  max-width: 62rem;
   margin: 0 auto;
   padding: clamp(2.5rem, 5vw, 3.5rem) var(--hp-gutter);
 }
 
 .about-personal-copy {
+  max-width: 52rem;
   font-size: 1.125rem;
   line-height: 1.75;
   color: var(--text);
