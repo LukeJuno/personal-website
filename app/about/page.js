@@ -46,13 +46,31 @@ export default function AboutPage() {
   return (
     <SiteShell>
       <div className="hp">
-        <section className="hp-hero">
+        <section className="hp-hero about-hero">
           <div className="hp-hero-copy">
             <p className="hp-kicker">About</p>
             <h1 className="hp-hero-title">Hi, I&rsquo;m Alexandra.</h1>
-            <p className="hp-hero-intro">
+            <p className="hp-hero-intro about-hero-lead">
               A Hong Kong-based creative and copywriter.
             </p>
+            <div className="about-intro about-hero-copy">
+            <p>
+              I work with clients who have something to say but need help
+              working out the best way to say it.
+            </p>
+            <p>
+              Sometimes that means brainstorming what a brand is and how
+              they want to present themselves. Other times it means
+              thinking of an idea for a campaign, getting into the weeds of
+              a website, or writing a script, or creating a series of
+              social content pieces.
+            </p>
+            <p>
+              I&rsquo;ve been doing this for close to ten years. I&rsquo;m
+              interested in good thinking, useful writing and work that
+              feels like it came from actual people.
+            </p>
+          </div>
           </div>
 
           <div className="hp-portrait">
@@ -87,27 +105,6 @@ export default function AboutPage() {
               </li>
             ))}
           </ul>
-        </section>
-
-        <section className="hp-band hp-band-sage">
-          <div className="about-intro">
-            <p>
-              I work with clients who have something to say but need help
-              working out the best way to say it.
-            </p>
-            <p>
-              Sometimes that means brainstorming what a brand is and how
-              they want to present themselves. Other times it means
-              thinking of an idea for a campaign, getting into the weeds of
-              a website, or writing a script, or creating a series of
-              social content pieces.
-            </p>
-            <p>
-              I&rsquo;ve been doing this for close to ten years. I&rsquo;m
-              interested in good thinking, useful writing and work that
-              feels like it came from actual people.
-            </p>
-          </div>
         </section>
 
         <section className="about-personal">
